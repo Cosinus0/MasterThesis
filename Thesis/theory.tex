@@ -65,7 +65,7 @@ R_p = \mid r_p \mid &^2
 
 The amplitude transmission coefficient and transmission can be equivalently formulated\marginpar{Complex refractive index fresnel eq can also be expressed}. 
 
-\section{Fresenel equations for the ambient-layer-substrate model}
+\section{Fresenel equations for the ambient-thin film-substrate model}
 The light reflecting and transmitting in this system will interfere both constructive and destructively. To model the optical interference, both the fresnel equation for reflection and transmission will be used:
 
 \begin{align}
@@ -73,6 +73,29 @@ r_{jk,p} = \frac{N_k\cos(\theta_j)-N_j\cos(\theta_k)}{N_k\cos(\theta_j)+N_j\cos(
 t_{jk,p} = \frac{2N_j\cos(\theta_j)}{N_k\cos(\theta_j)+N_j\cos(\theta_k)} \quad t_{jk,s} = \frac{2N_j\cos(\theta_j)}{N_j\cos(\theta_j)+N_k\cos(\theta_k)} 
 \end{align}
 
-The subscripts denote the reflection and transmission at definite interface. For example $r_{jk,p} = r_{01,p}$, denotes the reflection at the ambient-layer interface.
+The subscripts denote the reflection and transmission at definite interface. For example $r_{jk,p} = r_{01,p}$, denotes the reflection at the ambient-layer interface. In the ambient-thin film-substrate model, light at the ambient-thin film interface will be both reflected and transmitted into the layer. The transmitted ray will then be reflected and transmitted at the thin film-substrate interface. The reflected and transmitted phenomenon will proceed through out the thin film. The change in phase at the interface is given by $\exp(-i\beta)$. Figure \ref{fig:beta} represents the ambient-thin film-substrate model, this figure will be used to define the phase variation $\beta$.
+
+The phase of the reflected ray will vary at the the ambient-thin film interface. This variation can be expressed as $K_0\bar{AD}$, where $K_0=\frac{2\pi n_o}{\lambda}$ is the propagation number in air. The phase variation of the transmitted ray is expressed as $K_1(\bar{AB} + \bar{BC})$, where $K_1=\frac{2\pi n_1}{\lambda}$, propagation number in the thin film. The length difference can be denoted as $\bar{AB} + \bar{BC} - \bar{AD}$, thus the phase variation of this length difference is:
+
+\begin{equation}\label{eq:phasealpha}
+\alpha = \frac{2\pi n_1}{\lambda}(\bar{AB} + \bar{BC}) - \frac{2\pi n_0}{\lambda}\bar{AD}
+\end{equation}
+
+Using snells law, $\bar{AD}=\bar{AC}\sin(\theta_0)$ and $\bar{AC}=2d\tan(\theta_1)$ as seen from figure \ref{fig:beta}, this reduces $\bar{AD}$ to:
+
+
+\begin{align}
+\sin(\theta_0) &= \frac{n_1}{n_0}\sin(\theta_1)\\
+\bar{AD}&= 2d\frac{\sin(\theta_1)}{\cos(\theta_1)}\sin(\theta_0)\\
+\implies \bar{AD}&= 2d\frac{\sin(\theta_1)^2}{\cos(\theta_1)}\frac{n_1}{n_0}
+\end{align}
+
+Inserting this into equation \ref{eq:phasealpha}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{figbeta.png}
+\caption{}
+\label{fig:beta}
+\end{figure}  
         
 \end{document}
