@@ -3,18 +3,20 @@
 \chapter{Theory}
 
 \section{Electromagnetic Radiation}
+
+\section{Reflectance and Transmittance}
 	
 \section{Fresnel equations for the ambient-substrate model}
 When light is reflected upon a surface at an oblique angle, light is reflected and transmitted. Lights electric field is grouped into two oscillation directions which can be defined by two planes, the parallel plane p and the perpendicular plane s. The same applies for lights magnetic field. The parallel plane is defined by the incident and reflected light and the perpendicular plane is perpendicular to the parallel plane. Theory of light regards the two oscillation directions as the p-polarisation and s-polarisation.
 
 Light is reflected and transmitted at the interface of the ambient and substrate\marginpar{Figure and model set up}. The boundary conditions at the interface for the electric and magnetic field\marginpar{Need to understand why B-field is true} in the p-polarisation can be written as:
 
-\begin{align}
+\begin{align} \label{elbound}
 E_{i,p}\cos{(\theta_i)} &= E_{t,p}\cos{(\theta_t)} + E_{r,p}\cos{(\theta_r)}\\
 \implies E_{t,p}\cos{(\theta_t)} &= E_{i,p}\cos{(\theta_i)} - E_{r,p}\cos{(\theta_r)}
 \end{align} 
 
-\begin{equation} 
+\begin{equation} \label{magnbound}
 B_{i,p} + B_{r,p} = B_{t,p}
 \end{equation}
 
@@ -38,7 +40,7 @@ E_0 &= \frac{\omega}{K} B_0\\
 E_0 &= s B_0
 \end{align} 
 
-The constant $\frac{\omega}{K}$ is expressed as the speed $s$ of the light through a medium. In vacuum the speed is equal to the speed of light $s=c$, through a transparent medium the speed is equal to the speed of light divided by the refractive index of the medium $s =\frac{c}{n}$. The magnetic field boundary conditions can be expressed as:
+The constant $\frac{\omega}{K}$ is expressed as the speed $s$ of the light through a medium. In vacuum the speed is equal to the speed of light $s=c$, through a transparent medium the speed is equal to the speed of light divided by the refractive index of the medium $s =\frac{c}{n}$. The magnetic field boundary conditions equation \ref{magnbound} can be expressed as:
 
 \begin{align}
 \frac{E_{i,p}}{s_i} + \frac{E_{i,p}}{s_i} &= \frac{E_{t,p}}{s_t}\\
@@ -46,7 +48,7 @@ The constant $\frac{\omega}{K}$ is expressed as the speed $s$ of the light throu
 n_i(E_{i,p}+E_{r,p}) &= n_tE_{t,p}
 \end{align} 
 
-Though the law of reflection the angle of incident is also the angle of reflection $\theta_i=\theta_r$, placing this into the electric field boundary conditions, the electric field and magnetic field can be expressed as:
+Though the law of reflection the angle of incident is also the angle of reflection $\theta_i=\theta_r$, placing this into the electric field boundary conditions equation \ref{elbound}, the electric field and magnetic field can be expressed as:
 
 \begin{align}
 (E_{i,p}-E_{r,p})\cos(\theta_i) &= E_{t,p}\cos(\theta_t) \label{eq:E}\\
@@ -59,13 +61,13 @@ Placing equation \ref{eq:B} into equation \ref{eq:E}, the amplitude reflectance 
 E_{i,p}\cos(\theta_i)-E_{r,p}\cos(\theta_i) &= \frac{n_i}{n_t}(E_{i,p}+E_{r,p}) \cos(\theta_t) \\
 E_{i,p}\cos(\theta_i) - \frac{n_i}{n_t}E_{i,p} \cos(\theta_t) &= \frac{n_i}{n_t}E_{r,p} \cos(\theta_t) + E_{r,p} \cos(\theta_i)\\
 E_{i,p}(n_t\cos(\theta_i)-n_i\cos(\theta_t)) &= E_{r,p}(n_i\cos(\theta_t)+n_t\cos(\theta_i))\\
-r_p = \frac{E_{r,p}}{E_{i,p}} &= \frac{n_t\cos(\theta_i)-n_i\cos(\theta_t)}{n_i\cos(\theta_t)+n_t\cos(\theta_i)}\\
+r_p = \frac{E_{r,p}}{E_{i,p}} &= \frac{n_t\cos(\theta_i)-n_i\cos(\theta_t)}{n_i\cos(\theta_t)+n_t\cos(\theta_i)} \label{eq:a-srefl}\\
 R_p = \mid r_p \mid &^2 
 \end{align}
 
 The amplitude transmission coefficient and transmission can be equivalently formulated\marginpar{Complex refractive index fresnel eq can also be expressed}. 
 
-\section{Fresenel equations for the ambient-thin film-substrate model}
+\section{Fresnel equations for the ambient-thin film-substrate model}
 The light reflecting and transmitting in this system will interfere both constructive and destructively. To model the optical interference, both the fresnel equation for reflection and transmission will be used:
 
 \begin{align}
@@ -73,9 +75,9 @@ r_{jk,p} = \frac{N_k\cos(\theta_j)-N_j\cos(\theta_k)}{N_k\cos(\theta_j)+N_j\cos(
 t_{jk,p} = \frac{2N_j\cos(\theta_j)}{N_k\cos(\theta_j)+N_j\cos(\theta_k)} \quad t_{jk,s} = \frac{2N_j\cos(\theta_j)}{N_j\cos(\theta_j)+N_k\cos(\theta_k)} 
 \end{align}
 
-The subscripts denote the reflection and transmission at definite interface. For example $r_{jk,p} = r_{01,p}$, denotes the reflection at the ambient-layer interface. In the ambient-thin film-substrate model, light at the ambient-thin film interface will be both reflected and transmitted into the layer. The transmitted ray will then be reflected and transmitted at the thin film-substrate interface. The reflected and transmitted phenomenon will proceed through out the thin film. The change in phase at the interface is given by $\exp(-i\beta)$. Figure \ref{fig:beta} represents the ambient-thin film-substrate model, this figure will be used to define the phase variation $\beta$.
+The subscripts denote the reflection and transmission at definite interface. For example $r_{jk,p} = r_{01,p}$, denotes the reflection at the ambient-thin film interface. In the ambient-thin film-substrate model, light at the ambient-thin film interface will be both reflected and transmitted into the layer. The transmitted ray will then be reflected and transmitted at the thin film-substrate interface. The reflected and transmitted phenomenon will proceed through out the thin film. The change in phase at the interface is given by $\exp(-i\beta)$. Figure \ref{fig:beta} represents the ambient-thin film-substrate model, this figure will be used to define the phase variation $\beta$.
 
-The phase of the reflected ray will vary at the the ambient-thin film interface. This variation can be expressed as $K_0\bar{AD}$, where $K_0=\frac{2\pi n_o}{\lambda}$ is the propagation number in air. The phase variation of the transmitted ray is expressed as $K_1(\bar{AB} + \bar{BC})$, where $K_1=\frac{2\pi n_1}{\lambda}$, propagation number in the thin film. The length difference can be denoted as $\bar{AB} + \bar{BC} - \bar{AD}$, thus the phase variation of this length difference is:
+The phase of the reflected ray will vary at the the ambient-thin film interface. This variation can be expressed as $K_0\bar{AD}$, where $K_0=\frac{2\pi n_o}{\lambda}$, is the propagation number in air. The phase variation of the transmitted ray is expressed as $K_1(\bar{AB} + \bar{BC})$, where $K_1=\frac{2\pi n_1}{\lambda}$, is the propagation number in the thin film. The length difference can be denoted as $\bar{AB} + \bar{BC} - \bar{AD}$, thus the phase variation of this length difference is:
 
 \begin{equation}\label{eq:phasealpha}
 \alpha = \frac{2\pi n_1}{\lambda}(\bar{AB} + \bar{BC}) - \frac{2\pi n_0}{\lambda}\bar{AD}
@@ -90,12 +92,66 @@ Using snells law, $\bar{AD}=\bar{AC}\sin(\theta_0)$ and $\bar{AC}=2d\tan(\theta_
 \implies \bar{AD}&= 2d\frac{\sin(\theta_1)^2}{\cos(\theta_1)}\frac{n_1}{n_0}
 \end{align}
 
-Inserting this into equation \ref{eq:phasealpha}
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figbeta.png}
-\caption{}
+\caption{Light rays from the left will be reflected and transmitted at point A. The reflected light will experience at phase change at point A. The transmitted light will proceed to point B, where it will reflect undergoing a phase change then transmitting at point C. The phase difference between the primary and secondary ray can be calculated by $\alpha = K_1(\bar{AB}+\bar{BC})-K_0(\bar{AD})$}
 \label{fig:beta}
 \end{figure}  
-        
+
+Inserting this into equation \ref{eq:phasealpha}, and $\bar{AB}=\bar{BC}=\frac{d}{\cos(\theta_1)}$, as seen from figure \ref{fig:beta}, the equation is reduced to:
+
+\begin{align}
+\alpha &= \frac{2\pi n_1}{\lambda}\frac{2d}{\cos(\theta_1)}-\frac{2\pi n_0}{\lambda}\frac{2d \sin(\theta_1)^2n_1}{\cos(\theta_0)n_0}\\
+&= \frac{4d\pi n_1}{\lambda}\bigg(\frac{1-\sin(\theta_1)^2}{\cos(\theta_1)}\bigg)\\
+&= \frac{4d\pi n_1}{\lambda}\cos(\theta_1)
+\end{align}
+
+$\alpha$ is the total phase difference of the transmitted beam thus the expression $\alpha=2\beta$ must hold. $\beta$ is called the film phase thickness. \marginpar{$\beta$ can also be expressed in comples ref index.}
+
+\begin{equation}
+\beta=\frac{2\pi d}{\lambda} n_1\cos(\theta_1)
+\end{equation}  
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{figrefl.png}
+\caption{}
+\label{fig:reflect}
+\end{figure}
+
+Using figure \ref{fig:reflect} as a reference the amplitude reflection coefficient can be expressed as the sum of the reflected waves. The first time the ray meets the ambient-thin film interface, the ray will reflect and transmit. The reflected ray $r_{01}$ can be calculated using equation \ref{eq:a-srefl}. The transmitted ray will proceed to the next interface reflect back to the ambient-thin film interface and transmit, giving the second reflected wave in the sum expressed as $t_{01}r_{12}t_{10}\exp(-i2\beta)$. The factor $\exp(-i2\beta)$ comes from the phase difference due to the two interactions at the thin film-substrate interface and thin film-ambient interface. The phase difference factor can be collected multiplied onto the expression since  $\varphi = A\exp(i(\omega t-(Kx+2\beta)+\delta))=A\exp(i(\omega t-(Kx)+\delta))\exp(-i2\beta)$. The total amplitude reflection coefficient can be expressed:
+
+\begin{equation}
+r_{012} = r_{01} + t_{01}t_{10}r_{12}\exp(-i2\beta) + t_{01}t_{10}r_{10}r_{12}^2\exp(-i4\beta)+ t_{01}t_{10}r_{10}^2r_{12}^3\exp(-i6\beta)+ \cdots
+\end{equation}  
+The amplitude reflection coefficient becomes an infinite geometric series which can be reduced using $y=\frac{a}{(1-r)}$, leading to the coefficient being rewritten to:
+
+\begin{equation} \label{eq:r012big}
+r_{012}=r_{01}+\frac{t_{01}t_{10}r_{12}\exp(-i2\beta)}{1-r_{10}r_{12}\exp(-i2\beta)}
+\end{equation}
+
+The equation \ref{eq:r012big} can be reduced to a more simple equation using $r_{10}=-r_{01}$ and $t_{01}t_{10}=1-r_{01}^2$:
+
+\begin{equation}
+r_{012}= \frac{r_{01}+r_{12}\exp(-i2\beta)}{1+r_{01}r_{12}\exp(-i2\beta)}
+\end{equation} 
+
+The following fresnel equation, reflectance and Snell's law for this model are expressed as:
+
+\begin{align}
+r_{012,p} = \frac{r_{01,p}+r_{12,p}\exp(-i2\beta)}{1+r_{01,p}r_{12,p}\exp(-i2\beta)} \quad r_{012,s}= \frac{r_{01,s}+r_{12,s}\exp(-i2\beta)}{1+r_{01,s}r_{12,s}\exp(-i2\beta)}\\
+t_{012,p} = \frac{t_{01,p}t_{12,p}\exp(-i\beta)}{1+r_{01,p}r_{12,p}\exp(-i2\beta)} \quad t_{012,s} = \frac{t_{01,s}t_{12,s}\exp(-i\beta)}{1+r_{01,s}r_{12,s}\exp(-i2\beta)}
+\end{align}
+
+\begin{equation}
+R_p=\mid r_{012,p} \mid^2 \quad R_s=\mid r_{012,s} \mid^2
+\end{equation}
+
+\begin{equation}
+N_0\sin(\theta_0)=N_1\sin(\theta_1)=N_2\sin(\theta_2)
+\end{equation} 
+
+\section{Fresnel equations for a multilayer model}      
 \end{document}
