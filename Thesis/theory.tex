@@ -3,24 +3,20 @@
 \chapter{Theory}
 
 \section{Electromagnetic Radiation}
+Electromagnetic radiation can be expressed as one dimensional sinusoidal waves with the given form:
 
-\section{Reflectance and Transmittance}
-	
-\section{Fresnel equations for the ambient-substrate model}
-When light is reflected upon a surface at an oblique angle, light is reflected and transmitted. Lights electric field is grouped into two oscillation directions which can be defined by two planes, the parallel plane p and the perpendicular plane s. The same applies for lights magnetic field. The parallel plane is defined by the incident and reflected light and the perpendicular plane is perpendicular to the parallel plane. Theory of light regards the two oscillation directions as the p-polarisation and s-polarisation.
-
-Light is reflected and transmitted at the interface of the ambient and substrate\marginpar{Figure and model set up}. The boundary conditions at the interface for the electric and magnetic field\marginpar{Need to understand why B-field is true} in the p-polarisation can be written as:
-
-\begin{align} \label{elbound}
-E_{i,p}\cos{(\theta_i)} &= E_{t,p}\cos{(\theta_t)} + E_{r,p}\cos{(\theta_r)}\\
-\implies E_{t,p}\cos{(\theta_t)} &= E_{i,p}\cos{(\theta_i)} - E_{r,p}\cos{(\theta_r)}
-\end{align} 
-
-\begin{equation} \label{magnbound}
-B_{i,p} + B_{r,p} = B_{t,p}
+\begin{equation}
+\varphi = A\sin(Kx-\omega t+\delta),
 \end{equation}
+where $A$ is the wave amplitude, $K=\frac{2\pi}{\lambda}$ is the propagations number and $\lambda$ is the wave length, angular frequency $\omega = 2\pi\nu$ where $\nu$ is the frequency, time $t$ and initial phase $\delta$.
+From electromagnetic theory, the radiation is composed of an electric field and magnetic field that are both perpendicular to the direction of propagation. Both fields can be expressed as one-dimension sinusoidal wave\marginpar{Find out why}:
 
-The subscripts of the electric and magnetic field denote the incident ray $i$, reflected ray $r$ and transmitted ray $t$ in the p-polarisation $p$ plane. The same boundary conditions for the s-polarisation can be expressed. This introduction to the fresnel equations will use the p-polarisation light. The boundary conditions of the magnetic field need to be reformulated to express the electric field, this is done in the following way. The Maxwell-Faraday equation and one dimension wave equations for the electric and magnetic field are expressed as:
+\begin{align}
+E=E_0\exp[i(\omega t-Kx+\delta)]\\
+B=B_0\exp[i(\omega t-Kx+\delta)]
+\end{align}
+
+The relationship between the electric field and magnetic field is given by $E=cB$, and can be derived using the Maxwell-Faraday equation and one dimension wave equations for the electric and magnetic field:
 
 \begin{equation}
 \frac{\partial E}{\partial x} = - \frac{\partial B}{\partial t}
@@ -40,7 +36,37 @@ E_0 &= \frac{\omega}{K} B_0\\
 E_0 &= s B_0
 \end{align} 
 
-The constant $\frac{\omega}{K}$ is expressed as the speed $s$ of the light through a medium. In vacuum the speed is equal to the speed of light $s=c$, through a transparent medium the speed is equal to the speed of light divided by the refractive index of the medium $s =\frac{c}{n}$. The magnetic field boundary conditions equation \ref{magnbound} can be expressed as:
+The constant $\frac{\omega}{K}$ is expressed as the speed $s$ of the light through a medium. In vacuum the speed is equal to the speed of light $s=c$, through a transparent medium the speed is equal to the speed of light divided by the refractive index of the medium $s =\frac{c}{n}$.  
+
+
+\section{Reflectance and Transmittance}
+When light is reflected upon a surface at an oblique angle, light is reflected and transmitted. Lights electric field is grouped into two oscillation directions which can be defined by two planes, the parallel plane p and the perpendicular plane s. The same applies for lights magnetic field. The parallel plane is defined by the incident and reflected light and the perpendicular plane is perpendicular to the parallel plane. Theory of light regards the two oscillation directions as the p-polarisation and s-polarisation. The reflectance of both p-polarisation and s-polarisation are defined by the ratio of reflected light intensity by the incident light intensity.
+
+\begin{equation}
+R_{p} \equiv \frac{I_{r,p}}{I_{i,p}} = \frac{\mid E_{r,p} \mid^2}{\mid E_{i,p} \mid^2} = \mid r_{p} \mid^2 \quad R_{s} \equiv \frac{I_{r,s}}{I_{i,s}} = \frac{\mid E_{r,s} \mid^2}{\mid E_{i,s} \mid^2} = \mid r_{s} \mid^2
+\end{equation}
+
+The transmittance can also be expressed using the intensity ratio, $I = n \mid E \mid^2$ and the ratio cross-sectional area for the transmitted and incident ray.
+
+\begin{align}
+T_p &\equiv \frac{I_{r,p}\cos(\theta_t)}{I_{i,p}\cos(\theta_i)} = \frac{n_t\cos(\theta_t)}{n_i\cos(\theta_i)}\frac{\mid E_{tp} \mid^2}{\mid E_{ip} \mid^2} = \frac{n_t\cos(\theta_t)}{n_i\cos(\theta_i)} \mid t_{p} \mid^2\\
+T_s &\equiv \frac{I_{r,s}\cos(\theta_t)}{I_{i,s}\cos(\theta_i)} = \frac{n_t\cos(\theta_t)}{n_i\cos(\theta_i)}\frac{\mid E_{ts} \mid^2}{\mid E_{is} \mid^2} = \frac{n_t\cos(\theta_t)}{n_i\cos(\theta_i)} \mid t_{s} \mid^2\\
+\end{align}
+
+When the extinction coefficient in the refractive index is zero $k=0$, the sum of the reflectance and transmittance is equal to one $R_p + T_p = 1 \quad R_s + T_s = 1 $. If the extinction coefficient is greater than 0 $k>0$, then the sum becomes less than one $R_p + T_p < 1 \quad R_s + T_s < 1 $.	
+\section{Fresnel equations for the ambient-substrate model}
+Light is reflected and transmitted at the interface of the ambient and substrate\marginpar{Figure and model set up}. The boundary conditions at the interface for the electric and magnetic field\marginpar{Need to understand why B-field is true} in the p-polarisation can be written as:
+
+\begin{align} \label{elbound}
+E_{i,p}\cos{(\theta_i)} &= E_{t,p}\cos{(\theta_t)} + E_{r,p}\cos{(\theta_r)}\\
+\implies E_{t,p}\cos{(\theta_t)} &= E_{i,p}\cos{(\theta_i)} - E_{r,p}\cos{(\theta_r)}
+\end{align} 
+
+\begin{equation} \label{magnbound}
+B_{i,p} + B_{r,p} = B_{t,p}
+\end{equation}
+
+The subscripts of the electric and magnetic field denote the incident ray $i$, reflected ray $r$ and transmitted ray $t$ in the p-polarisation $p$ plane. The same boundary conditions for the s-polarisation can be expressed. This introduction to the Fresnel equations will use the p-polarisation light. The boundary conditions of the magnetic field need to be reformulated to express the electric field, this is done using the relation $E=cB$. The magnetic field boundary conditions equation \ref{magnbound} can be expressed as:
 
 \begin{align}
 \frac{E_{i,p}}{s_i} + \frac{E_{i,p}}{s_i} &= \frac{E_{t,p}}{s_t}\\
