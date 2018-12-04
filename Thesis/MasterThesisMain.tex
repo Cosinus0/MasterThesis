@@ -7,8 +7,10 @@
 \usepackage{subfiles}
 \usepackage{url}
 \usepackage{titling}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr,ragged2e}
 \pagestyle{fancy}
+\fancyhead[LE,RO]{\itshape \nouppercase \rightmark}
+\fancyhead[LO,RE]{\itshape \nouppercase Chapter \arabic{chapter}}
 %Math Packages
 \usepackage{amsmath}
 \usepackage{amsthm}
