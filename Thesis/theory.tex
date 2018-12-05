@@ -3,13 +3,18 @@
 \chapter{Theory}
 
 \section{Electromagnetic Radiation}
-Electromagnetic radiation can be expressed as one dimensional sinusoidal waves with the given form:
+Electromagnetic radiation can be expressed as one dimensional sinusoidal wave using either $\cos$ or $\sin$:
 
-\begin{equation}
+\begin{equation}\label{eq:1dwave}
 \varphi = A\sin(Kx-\omega t+\delta),
 \end{equation}
 where $A$ is the wave amplitude, $K=\frac{2\pi}{\lambda}$ is the propagations number and $\lambda$ is the wave length, angular frequency $\omega = 2\pi\nu$ where $\nu$ is the frequency, time $t$ and initial phase $\delta$.
-From electromagnetic theory, the radiation is composed of an electric field and magnetic field that are both perpendicular to the direction of propagation. Both fields can be expressed as one-dimension sinusoidal wave\marginpar{Find out why}:
+From electromagnetic theory, the radiation is composed of an electric field and magnetic field that are both perpendicular to the direction of propagation. Both fields can be expressed as one-dimension complex sinusoidal wave. A complex number can be expressed as $C= a + ib =Re(C) + i Im(C) =r\cos(\theta)+ir\sin(\theta)$. Using Eulers formula $\exp(i\theta)=\cos(\theta)+i\sin(\theta)$, the one dimension sinusoidal wave can be expressed as:
+
+\begin{equation}\label{eq:1dcwave}
+\varphi=A\cos(\omega t- Kx +\delta) = Re \{A\exp[i(\omega t- Kx +\delta)]\} = A\exp[i(\omega t - Kx + \delta)]
+\end{equation}
+The wave travels to the right if the phase is $(\omega t - Kx)$ and to the left if the phase is $(\omega t + Kx)$. Changing the order of the first two terms in the phase does not change the propagation of the wave, only the initial phase $\delta$. The wave equation in equation \ref{eq:1dwave} uses $\sin$ in the expression but the complex wave in equation \ref{eq:1dcwave} uses $\cos$, it is the same representation of the wave just moved $2\pi$ in the positive direction. The electric field and magnetic field can be expressed as:
 
 \begin{align}
 E=E_0\exp[i(\omega t-Kx+\delta)]\\
@@ -36,8 +41,33 @@ E_0 &= \frac{\omega}{K} B_0\\
 E_0 &= s B_0
 \end{align} 
 
-The constant $\frac{\omega}{K}$ is expressed as the speed $s$ of the light through a medium. In vacuum the speed is equal to the speed of light $s=c$, through a transparent medium the speed is equal to the speed of light divided by the refractive index of the medium $s =\frac{c}{n}$.  
+The constant $\frac{\omega}{K}$ is expressed as the speed $s$ of the light through a medium. In vacuum the speed is equal to the speed of light $s=c$, through a transparent medium the speed is equal to the speed of light divided by the refractive index of the medium $s =\frac{c}{n}$. 
 
+\section{Refractive index} 
+Light travelling from one medium to another will undergo change. The speed of the light and the wavelength will change, but not the frequency. The refractive index is a material constant which describes the change and are mostly greater than $1$. The refractive index is defined as:
+
+\begin{equation}
+n \equiv \frac{c}{s}
+\end{equation}
+Where $c$ is the speed of light and $s$ is the speed of light in the medium. The amplitude of the wave will decrease in the medium because the propagations number $K=\frac{2\pi n}{\lambda}$ increases: 
+
+\begin{equation}
+E = E_0\exp[i(\omega t - \frac{2\pi n}{\lambda}x + \delta)]
+\end{equation}
+
+The change is wavelength is $\lambda = \frac{\lambda_0}{n}$, where $\lambda_0$ is the wavelength before entering the medium. The medium can also absorb light, a term is added to the refractive index to (MISSING WORD) this, and is called the extinction coefficient $k$.
+
+\begin{equation}
+N=n-ik
+\end{equation}
+
+Placing the complex refractive index into equation \ref{eq:E}, it can be seen that the waves amplitude will decrease exponentially.
+
+\begin{equation}
+E = E_0\exp[i(\omega t - \frac{2\pi N}{\lambda}x + \delta)] = E_0\exp(-\frac{2\pi k}{\lambda}x)\exp[i(\omega t - \frac{2\pi n}{\lambda}x + \delta)]
+\end{equation}
+
+It needs to be stated that if the phase of the wave is expressed as $(Kx-\omega t)$ and the complex refractive index is given by $N=n-ik$, the exponentially factor will be positive which is incorrect. If the phase of the wave is expressed as $(Kx-\omega t)$ the complex refractive index must be defined as $N=n+ik$.
 
 \section{Reflectance and Transmittance}
 When light is reflected upon a surface at an oblique angle, light is reflected and transmitted. Lights electric field is grouped into two oscillation directions which can be defined by two planes, the parallel plane p and the perpendicular plane s. The same applies for lights magnetic field. The parallel plane is defined by the incident and reflected light and the perpendicular plane is perpendicular to the parallel plane. Theory of light regards the two oscillation directions as the p-polarisation and s-polarisation. The reflectance of both p-polarisation and s-polarisation are defined by the ratio of reflected light intensity by the incident light intensity.
