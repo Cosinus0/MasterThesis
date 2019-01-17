@@ -1,5 +1,5 @@
-function [beta] = filmphasethickness(lamda,n_k,theta_k,d)
+function [beta] = filmphasethickness(lamda,n_k,d)
 
-beta = (2.*pi.*d.*n_k.*cosd(theta_k))./(lamda);
+beta = (2.*pi.*d.*n_k)./(lamda);
 
 end

@@ -1,11 +1,16 @@
 clear all
 close all
 
+nm = 10^-9;
 
-n_j = 1;
-n_k = 1.5;
+n_0 = 1;
+n_1 = 1.5;
+n_2 = 5.5;
+d = 450.*nm;
+lamda = [400:700].*nm;
 
-theta_j = 0;
-theta_k = 0;
+r_012 = fresnel_am_tf_s(n_0,n_1,n_2,d,lamda);
 
-[A,B,C,D] = fresnel_am_s(n_j,n_k,theta_j,theta_k);
+R_012 = r_012.*conj(r_012);
+
+plot(lamda,R_012)
