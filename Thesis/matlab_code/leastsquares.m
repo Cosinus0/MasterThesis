@@ -1,6 +1,10 @@
 clear all
 close all
 
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%
+% Least squares for thickness % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%
 % Physics %
 %%%%%%%%%%%
@@ -32,18 +36,29 @@ n_2 = transpose(disp(:,2));
 % Thickness %
 %%%%%%%%%%%%%
 
-d = 1087.*nm;
+d = [1:1:2000].*nm;
+
+
+sumsq = zeros(length(d),1);
+
+for int = 1:length(d)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reflectance Calculations %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-r_012 = fresnel_am_tf_s(n_0,n_1,n_2,d,lamda);
+r_012 = fresnel_am_tf_s(n_0,n_1,n_2,d(int),lamda);
 
 R_012 = r_012.*conj(r_012);
 
-plot(lamda.*10^9,R_012,x,y)
-title('Fresnel Reflectance vs. Nanocalc Simulation Reflectance')
-xlabel('Wavelength nm')
-ylabel('Reflectance')
-legend('Fresnel','Simulation')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Calculating least squares %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+deltay = R_012 - transpose(y);
+sqdeltay = deltay.^2;
+sumsq(int,1) = sum(sqdeltay);
+
+end
+
+%%%% sumsq(1086) and sumsq(1087) 
