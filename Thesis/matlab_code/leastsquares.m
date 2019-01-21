@@ -1,9 +1,11 @@
 clear all
 close all
 
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%
-% Least squares for thickness % 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%
+% Least squares for thickness,  % 
+% for wafer_calculation.m,      %
+% before fixed fresnel function %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%
 % Physics %

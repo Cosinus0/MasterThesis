@@ -32,7 +32,7 @@ n_2 = transpose(disp(:,2));
 % Thickness %
 %%%%%%%%%%%%%
 
-d = 1087.*nm;
+d = 450.*nm;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reflectance Calculations %
