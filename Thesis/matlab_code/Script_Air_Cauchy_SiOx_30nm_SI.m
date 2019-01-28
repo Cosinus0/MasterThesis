@@ -10,7 +10,7 @@ close all
 % Load data %
 %%%%%%%%%%%%%
 
-load Air_Cauchy_SiOx_30nm__SI.xy
+load Air_Cauchy_SiOx(30nm)_SI.xy
 
 x = Air_Cauchy_SiOx_30nm__SI(:,1);
 y = Air_Cauchy_SiOx_30nm__SI(:,2);
