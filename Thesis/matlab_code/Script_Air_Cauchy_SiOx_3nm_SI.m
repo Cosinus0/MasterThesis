@@ -10,10 +10,10 @@ close all
 % Load data %
 %%%%%%%%%%%%%
 
-load Air_Cauchy_SiOx_SI.xy
+load Air_Cauchy_SiOx(3nm)_SI.xy
 
-x = Air_Cauchy_SiOx_SI(:,1);
-y = Air_Cauchy_SiOx_SI(:,2);
+x = Air_Cauchy_SiOx_3nm__SI(:,1);
+y = Air_Cauchy_SiOx_3nm__SI(:,2);
 
 
 %%%%%%%%%%%
@@ -49,13 +49,13 @@ n_3 = transpose(disp2(:,2));
 %%%%%%%%%%%%%
 
 d1 = 1000.*nm;
-d2 = 30.*nm;
+d2 = 3.*nm;
 
 %%%%%%%%%%%%%%%%
 % Calculations %
 %%%%%%%%%%%%%%%%
 
-r_0123 = fresnel_am_tf_lay_s(n_0,n_1,n_2,n_3,d1,d2,lamda);
+r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d1,d2,lamda);
 
 R_0123 = r_0123.*conj(r_0123);
 
