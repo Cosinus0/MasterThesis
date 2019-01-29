@@ -1,4 +1,26 @@
 \documentclass[MasterThesisMain.tex]{subfiles}
 \begin{document}
 	\chapter{Method}
+	
+	\section{Reflectance measurements in the nanocalc spectrometer}
+The nanocalc spectrometer measures three light intensities which will be called a measurement onwards. The three measurements are a reference measurement (ref), a dark measurement (dark) and a thin-film measurement (meas). The nanocalc software refers to these measurements by the name given in the parenthesis. The reflectance measurement is the amount of light reflected with respect to the amount of light incident to the thin-film wafer. This is expressed as:
+
+\begin{equation}\label{eq:nanocalcrefl}
+R_{sample} = \frac{I_{sample}}{I_{incident}}
+\end{equation}
+
+The spectrometer does not measure the intensity of the incident light, therefore the reflectance of the substrate is used to isolate the incident light intensity and inserted into equation \ref{eq:nanocalcrefl}. The reflectance of the substrate is used because it is easily calculated using the Fresnel equations as described in chapter $[\mathtt{Insert link to chapter}]$.
+
+\begin{align}\label{eq:nanocalcrefl2}
+R_{ref} = \frac{I_{ref}}{I_{incident}}\\
+\implies  I_{incident} = \frac{I_{ref}}{R_{ref}}
+\end{align}
+
+Inserting equation \ref{eq:nanocalcrefl2} in equation \ref{eq:nanocalcrefl}, the reflectance for the sample is expressed with out the incident light intensity:
+
+\begin{equation}
+R_{sample} = \frac{I_{sample}}{I_{ref}} \cdot R_{ref}
+\end{equation}
+
+The intensity of light reflected by the sample is 
 \end{document}
