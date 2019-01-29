@@ -53,9 +53,9 @@ r_012 = fresnel_am_tf_s(n_0,n_1,n_2,d(int),lamda);
 
 R_012 = r_012.*conj(r_012);
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Calculating least squares %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Calculating Sum of squares %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 deltay = R_012 - transpose(y);
 sqdeltay = deltay.^2;

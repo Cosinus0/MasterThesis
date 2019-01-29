@@ -37,6 +37,7 @@ n_1 = cauchy(wavelength,A,B,C); %Dont not use lamda in nanometers.
 load dispersion_Si(100).dat
 disp = dispersion_Si_100_(251:1:892,:);
 n_2 = transpose(disp(:,2));
+%n_2 = transpose(disp(:,2))-1i.*transpose(disp(:,3));
 
 %%%%%%%%%%%%%
 % Thickness %
@@ -55,3 +56,11 @@ R_012 = r_012.*conj(r_012);
 
 plot(lamda,R_012,x.*nm,y)
 legend('Fresnel','Simulation')
+
+%%%%%%%%%%%%%%%%%%
+% Sum of Squares %
+%%%%%%%%%%%%%%%%%%
+
+deltay = R_012 - transpose(y);
+sqdeltay = deltay.^2;
+sumsq = sum(sqdeltay);
