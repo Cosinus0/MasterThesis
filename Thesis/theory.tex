@@ -69,7 +69,7 @@ E = E_0\exp[i(\omega t - \frac{2\pi N}{\lambda}x + \delta)] = E_0\exp(-\frac{2\p
 
 It needs to be stated that if the phase of the wave is expressed as $(Kx-\omega t)$ and the complex refractive index is given by $N=n-ik$, the exponentially factor will be positive which is incorrect. If the phase of the wave is expressed as $(Kx-\omega t)$ the complex refractive index must be defined as $N=n+ik$.
 
-\section{Reflectance and Transmittance}
+\section{Reflectance and Transmittance}\label{ch:reflect/trans}
 When light is reflected upon a surface at an oblique angle, light is reflected and transmitted. Lights electric field is grouped into two oscillation directions which can be defined by two planes, the parallel plane p and the perpendicular plane s. The same applies for lights magnetic field. The parallel plane is defined by the incident and reflected light and the perpendicular plane is perpendicular to the parallel plane. Theory of light regards the two oscillation directions as the p-polarisation and s-polarisation. The reflectance of both p-polarisation and s-polarisation are defined by the ratio of reflected light intensity by the incident light intensity.
 
 \begin{equation}
@@ -84,7 +84,7 @@ T_s &\equiv \frac{I_{r,s}\cos(\theta_t)}{I_{i,s}\cos(\theta_i)} = \frac{n_t\cos(
 \end{align}
 
 When the extinction coefficient in the refractive index is zero $k=0$, the sum of the reflectance and transmittance is equal to one $R_p + T_p = 1 \quad R_s + T_s = 1 $. If the extinction coefficient is greater than 0 $k>0$, then the sum becomes less than one $R_p + T_p < 1 \quad R_s + T_s < 1 $.	
-\section{Fresnel equations for the ambient-substrate model}
+\section{Fresnel equations for the ambient-substrate model}\label{ch:fresnelref}
 Light is reflected and transmitted at the interface of the ambient and substrate\marginpar{Figure and model set up}. The boundary conditions at the interface for the electric and magnetic field\marginpar{Need to understand why B-field is true} in the p-polarisation can be written as:
 
 \begin{align} \label{elbound}
@@ -123,7 +123,7 @@ R_p = \mid r_p \mid &^2
 
 The amplitude transmission coefficient and transmission can be equivalently formulated\marginpar{Complex refractive index fresnel eq can also be expressed}. 
 
-\section{Fresnel equations for the ambient-thin film-substrate model}
+\section{Fresnel equations for the ambient-thin film-substrate model}\label{ch:fresnel2lay}
 The light reflecting and transmitting in this system will interfere both constructive and destructively. To model the optical interference, both the fresnel equation for reflection and transmission will be used:
 
 \begin{align}
@@ -209,7 +209,7 @@ R_p=\mid r_{012,p} \mid^2 \quad R_s=\mid r_{012,s} \mid^2
 N_0\sin(\theta_0)=N_1\sin(\theta_1)=N_2\sin(\theta_2)
 \end{equation} 
 
-\section{Fresnel equations for a multilayer model} 
+\section{Fresnel equations for a multilayer model}\label{ch:fresnelmulti} 
 
 \begin{figure}
 \centering
