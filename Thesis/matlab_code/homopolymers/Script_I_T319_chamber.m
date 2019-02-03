@@ -58,6 +58,4 @@ xlabel('Wavelength nm')
 ylabel('Reflectance')
 legend('Reflectance','Fresnel')
 
-deltay = R_0123(2:642) - transpose(y);
-sqdeltay = deltay.^2;
-sumsq = sum(sqdeltay);
+

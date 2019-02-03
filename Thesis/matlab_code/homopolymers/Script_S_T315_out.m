@@ -54,7 +54,7 @@ r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,lamda);
 R_0123 = r_0123.*conj(r_0123); 
 
 plot(lamda.*10^9,R_0123,x,y)
-title('Measured reflectance vs. Fresnel model')
+title({'S-T315 Out','Measured reflectance vs. Fresnel model'})
 xlabel('Wavelength nm')
 ylabel('Reflectance')
 legend('Reflectance','Fresnel')
