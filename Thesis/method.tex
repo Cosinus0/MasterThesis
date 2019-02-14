@@ -3,7 +3,42 @@
 	\chapter{Experimental method}\label{experimentalmethod}
 	
 	\section{Polymers}
-	
+Polymers are long chains of molecular units called mers, linked together by covalent bonds. Polymers are both found in biological system and synthesised by chemists. Polymers are described by its properties such as its chemistry, stereochemistry, architecture and what phase it is in. 
+
+A polymers chemistry is what the polymer is built of. The following polymers used in this thesis will be listed: 
+
+
+\newcommand\setpolymerdelim[2]{\def\delimleft{#1}\def\delimright{#2}}
+\def\makebraces[#1,#2]#3#4#5{%
+\edef\delimhalfdim{\the\dimexpr(#1+#2)/2}%
+\edef\delimvshift{\the\dimexpr(#1-#2)/2}%
+\chemmove{%
+\node[at=(#4),yshift=(\delimvshift)]
+{$\left\delimleft\vrule height\delimhalfdim depth\delimhalfdim
+width0pt\right.$};%
+\node[at=(#5),yshift=(\delimvshift)]
+{$\left.\vrule height\delimhalfdim depth\delimhalfdim
+width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
+\setpolymerdelim[]
+Polystyrene \ce{(C8H8)_n}:
+\chemfig{-[@{left,0.3},1.5]C(-[:90]*6(=-=-=-))(-[6]H)-C(-[2]H)(-[6]H)-[@{right,0.8}]}
+\makebraces[90pt,30pt]{n}{left}{right}
+\bigskip
+
+
+\setpolymerdelim[]
+Polyisoprene \ce{(C5H8)_n}:
+\chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
+\makebraces[10pt,15pt]{n}{left}{right}
+
+\setpolymerdelim[]
+Poly(methyl methacrylate) \ce{(C5O2H8)_n}:
+\chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
+\makebraces[10pt,15pt]{n}{left}{right}
+
+
+
+
 \section{The Experimental Setup}
 The experimental setup is comprised of a NanoCalc XR and a Halogen light source(HL-2000-FHSA) which can produce wavelengths of \SI{360}{\nano\meter} to \SI{2400}{\nano\meter}. When the samples are being measured they are either placed on the ocean optics single point stage(ADD PICTURE) or in the test chamber(ADD PICTURE) made by the RUC workshop/machinists for x-ray scattering experiments. The NanoCalc is comprised of a spectrometer and an internal light source as seen in the figure \ref{fig:nanocalcsetup}, which can produce wavelengths of \SI{250}{\nano\meter} to \SI{1050}{\nano\meter} and measure thicknesses of \SI{10}{\nano\meter} to \SI{100}{\micro\meter}. The NanoCalc XR is connected to a computer where the NanoCalc software is installed and operated. For the experiments the halogen light source is used since it has a larger output power then the internal light source of the NanoCalc XR. The larger intensity output is need when performing experiments in the test chamber. To reiterate, white light is produced in the light source(HL-2000-FHSA), which travels through optical fiber and strikes that sample. The reflected light travels back through the optical fiber and the intensity across every wavelength of the white light is collected in the spectrometer and is sent to the NanoCalc software.  
 	
