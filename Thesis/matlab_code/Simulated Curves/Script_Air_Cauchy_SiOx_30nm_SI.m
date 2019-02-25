@@ -68,7 +68,7 @@ legend('Fresnel','Simulation')
 % Sum of Squares %
 %%%%%%%%%%%%%%%%%%
 
-
-deltay = R_0123 - transpose(y);
+n = length(wavelength);
+deltay = transpose(y) - R_0123;
 sqdeltay = deltay.^2;
-sumsq = sum(sqdeltay);
+sumsq = sum(sqdeltay)./n;

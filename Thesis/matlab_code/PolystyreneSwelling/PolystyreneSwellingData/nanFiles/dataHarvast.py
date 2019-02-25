@@ -12,13 +12,11 @@ for i in range(1,471+1):
 	# Open file
 
 	my_file = open("psswellingrun2_%d.nan" %i,"r")
-	data = csv.reader(my_file, delimiter=',')
-
-	# saves csv data into reflectance array
-
-	for row,value in data:
-		if line[0].isdigit():
-		model.append(float(row[1]))
+	for line in my_file:
+		if "[data]" in line:
+			break
+	for line in my_file:
+		model.append(float(line.split(",")[1]))
 
 	# Close file
 

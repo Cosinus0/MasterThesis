@@ -1,6 +1,31 @@
-# Find out your current working directory
-import os
-print(os.getcwd())
+import csv
+import numpy 
 
-for line in open(filename, 'r'):
-    item = line.rstrip()
+runninglist = []
+
+# Initialise array
+
+for i in range(1,17+1):
+
+	reflectance = []
+
+	# Open file
+
+	my_file = open("homopolymers20190207_%d.dat" %i,"r")
+	data = csv.reader(my_file, delimiter=';')
+
+	# saves csv data into reflectance array
+
+	for row in data:
+		if "#" in row[0]:
+			continue
+		reflectance.append(float(row[1]))
+
+	# Close file
+
+	my_file.close()
+
+	runninglist.append(reflectance)
+
+a = numpy.array(runninglist)
+numpy.savetxt("PSreflectance", a, delimiter =",")
