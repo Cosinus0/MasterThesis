@@ -77,68 +77,104 @@ CHESS Dec 17 and May 18
 
 \end{frame}
 
-	\begin{frame}{Thin Film Thickness}
+%	\begin{frame}{Thin Film Thickness}
+%	
+%	\begin{minipage}{0.47\textwidth}
+%	    \begin{itemize}
+%	    \item Experimental techniques: Atomic Force Microscopy, Ellipsometry and x-ray reflectometry
+%	    \item Spectroscopic Reflectometry
+%	    \begin{itemize}
+%	    \item In-situ
+%	    \item Harsh environment
+%	    \item Small enough for test chamber and testing stage
+%	    \end{itemize}
+%	    \item Complement GISAXS measurements 
+%	    \end{itemize}
+%	\end{minipage}
+%	\begin{minipage}{0.5\textwidth}
+%	    \begin{figure}
+%	    \includegraphics[scale=0.025,angle=-90]{stepwafer.JPG}
+%	    \end{figure}
+%	\end{minipage}
+%	\end{frame}
 	
-	\begin{minipage}{0.47\textwidth}
-	    \begin{itemize}
-	    \item Experimental techniques: Atomic Force Microscopy, Ellipsometry and x-ray reflectometry
-	    \item Spectroscopic Reflectometry
-	    \begin{itemize}
-	    \item In-situ
-	    \item Harsh environment
-	    \item Small enough for test chamber and testing stage
-	    \end{itemize}
-	    \item Complement GISAXS measurements 
-	    \end{itemize}
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-	    \begin{figure}
-	    \includegraphics[scale=0.025,angle=-90]{stepwafer.JPG}
-	    \end{figure}
-	\end{minipage}
 	
- 
-	\end{frame}
+		\section{Experimental Setup}
+		
+		\begin{frame}{Components}
+		NanoCalc XR, Halogen Light Source, Test Chamber and Single Point Stage
+		
+		\begin{minipage}{0.47\textwidth}
+		\begin{figure}
+		\includegraphics[scale=0.04,angle=-90]{setup1.JPG}
+		\end{figure}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+		\begin{figure}
+		\includegraphics[scale=0.04,angle=-90]{setup2.JPG}
+		\end{figure}
+		\end{minipage}
+	
+		\end{frame}
+		
+		\begin{frame}{Components Cont.}
+		\begin{minipage}{0.47\textwidth}
+		\begin{figure}
+		\includegraphics[scale=0.04]{setup3.JPG}
+		\end{figure}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+		\begin{figure}
+		\includegraphics[scale=0.04]{setup4.JPG}
+		\end{figure}
+		\end{minipage}
+		\end{frame}
 	
 	\section{Problem Formulation}
-	\begin{frame}{}
+	\begin{frame}{Problem Formulation}
+	What can White Light Spectroscopic Reflectometry infer with respect to SVA swelling experiments using the homopolymers: Polystyrene, Polyisoprene and Poly(methyl methacrylate)? 
 	
+	Can the same modelling of homopolymers be used with respect to Polystyrene-b-Polyisoprene?
+	
+	Model:
+	\begin{itemize}
+	\item Change in refractive index of the ambient 
+	\item Change in refractive index of the thinfilm
+	\item In-situ thickness measurements
+	\end{itemize}  
 	\end{frame}
 	
-	\section{Experimental Setup}
-	
-	\begin{frame}{Components}
-	NanoCalc XR, Halogen Light Source, Test Chamber and Single Point Stage
-	
-	\begin{minipage}{0.47\textwidth}
-	\begin{figure}
-	\includegraphics[scale=0.04,angle=-90]{setup1.JPG}
-	\end{figure}
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-	\begin{figure}
-	\includegraphics[scale=0.04,angle=-90]{setup2.JPG}
-	\end{figure}
-	\end{minipage}
 
-	\end{frame}
-	
-	\begin{frame}{Components Cont.}
-	\begin{minipage}{0.47\textwidth}
-	\begin{figure}
-	\includegraphics[scale=0.04]{setup3.JPG}
-	\end{figure}
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-	\begin{figure}
-	\includegraphics[scale=0.04]{setup4.JPG}
-	\end{figure}
-	\end{minipage}
-	\end{frame}
 	
 	\section{Light}
-	\begin{frame}{What is it?}
-	Electromagnetic Radiation
+	\begin{frame}{Electromagnetic Radiation}
+	\begin{minipage}{0.47\textwidth}
+			\begin{figure}
+			\includegraphics[scale=0.3]{EM.png}
+			\end{figure}
+			\end{minipage}
+			\begin{minipage}{0.5\textwidth}
+			\begin{figure}
+			\includegraphics[scale=0.3]{unpol.png}
+			\end{figure}
+			\end{minipage}
+	\end{frame}
+	
+	\begin{frame}{Light Spectrum and Spectrometer}
+				\begin{minipage}{0.47\textwidth}
+				\begin{figure}
+				\includegraphics[scale=0.25]{light.png}
+				\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+				\begin{figure}
+				\includegraphics[scale=0.25]{prism.png}
+				\end{figure}
+				\begin{figure}
+				\includegraphics[scale=0.15]{spectrometer.jpg}
+				\end{figure}
+				\end{minipage}
+	
 	\end{frame}
 	
 	
@@ -188,13 +224,18 @@ CHESS Dec 17 and May 18
 	
 	\begin{minipage}{0.47\textwidth}
 	
-	\begin{equation*} \label{eq:r012big}
-	r_{012}=r_{01}+\frac{t_{01}t_{10}r_{12}\exp(-i2\beta)}{1-r_{10}r_{12}\exp(-i2\beta)}
-	\end{equation*}
+	%\begin{equation*} \label{eq:r012big}
+	%r_{012}=r_{01}+\frac{t_{01}t_{10}r_{12}\exp(-i2\beta)}{1-r_{10}r_{12}\exp(-i2\beta)}
+	%\end{equation*}
 		
 	\begin{equation*}\label{eq:2layerreflect}
 	r_{012}= \frac{r_{01}+r_{12}\exp(-i2\beta)}{1+r_{01}r_{12}\exp(-i2\beta)}
-	\end{equation*} 
+	\end{equation*}
+	
+	\begin{equation*}
+	R_{012} = \mid r_{012} \mid ^2 
+	\end{equation*}
+	 
 	\end{minipage}
 	\begin{minipage}{0.5\textwidth}
 	\begin{equation*}
@@ -202,7 +243,31 @@ CHESS Dec 17 and May 18
 	\end{equation*}
 	\end{minipage}	
 	\end{frame}
-	
+
+
+\section{Results}
+
+\begin{frame}{Solvent Vapor Annealing of Polystyrene in Toluene}
+asd
+\end{frame}
+
+\section{Why look at structure?}
+
+\begin{frame}{Structure in Nature}
+\includegraphics[width=\textwidth]{structure.png}
+\end{frame}
+
+\begin{frame}{Structure in Polymers}
+
+\end{frame}
+
+
+
+
+%  OLD SLIDES
+%
+%
+%	
 %	\begin{frame}{Fresnel equations - multilayers}
 %	
 %	\begin{figure}
@@ -239,32 +304,17 @@ CHESS Dec 17 and May 18
 %	\end{minipage}
 %	\end{frame}
 	
-	\begin{frame}{Polymer refractive index dispersion}
-	Cauchy empirical equation for the refractive index in the visible light range.
-	
-	\begin{equation*}
-	n(\lambda) = A + \frac{B}{\lambda^2} + \frac{C}{\lambda^4}
-	\end{equation*}
-	
-	These constants can be found using ellipsometry.
-	
-	Which dispersion to use? Can Cauchy be used for more exotic polymers?   
-	\end{frame}
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%	\begin{frame}{Polymer refractive index dispersion}
+%	Cauchy empirical equation for the refractive index in the visible light range.
+%	
+%	\begin{equation*}
+%	n(\lambda) = A + \frac{B}{\lambda^2} + \frac{C}{\lambda^4}
+%	\end{equation*}
+%	
+%	These constants can be found using ellipsometry.
+%	
+%	Which dispersion to use? Can Cauchy be used for more exotic polymers?   
+%	\end{frame}
 %	\section{Preliminary Results}
 %	
 %	\begin{frame}{Substrate Results}

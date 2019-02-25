@@ -25,6 +25,11 @@ lamda = (450:900);%.*nm;
         n_3 = transpose(disp_3(:,2)) -1i.*transpose(disp_3(:,3));
         
         d_2 = 2.*nm;
+        
+        
+set(gca,'nextplot','replacechildren');
+v = VideoWriter('PSsva.avi');
+open(v);
 
 figure
 for i=1:471
@@ -50,7 +55,14 @@ legend('Air refrI','Running air refrI')
 % plot((1:471).*10,framevalues(:,3),1:i,framevalues(1:i,3))
 % legend('Thickness','Running Thickness')
 
+   frame = getframe(gcf);
+   writeVideo(v,frame);
+
 
 pause(0.1);
 
+
+
 end
+
+close(v);
