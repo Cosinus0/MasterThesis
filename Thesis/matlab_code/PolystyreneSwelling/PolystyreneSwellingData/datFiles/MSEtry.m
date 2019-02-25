@@ -3,6 +3,8 @@ close all
 
 tic
 
+ =5=22  % Safe guard so i dont run it again and delete my frame values
+
 %%%%%%%%%%%
 % Physics %
 %%%%%%%%%%%
@@ -15,7 +17,7 @@ air = [1:0.1:1.5];
 thinfilm = [1.1:0.1:1.9];
 thickness = [200:1:500];
 
-MSE = [];
+framevalues = [];
 
 %%%%%%%%%%%%%
 % Load data %
@@ -24,7 +26,12 @@ MSE = [];
 load PSreflectance
 
 x = wavelength(51:501);
-y = PSreflectance(1,(51:501));
+
+for z = 1:length(PSreflectance(:,1))
+
+y = PSreflectance(z,(51:501));
+
+MSE = [];
 
 %%%%%%%%%%%%%%%%%%%%
 % Reflective Index %
@@ -93,6 +100,15 @@ n_0 = air(k);
             end
     end
 end
+
+[row,column] = find(MSE==min(min(MSE(:,4))));
+tempvalue = MSE(row,:,:,:);
+
+framevalues = vertcat(framevalues,tempvalue);
+
+end
+
+%save('frame_val.mat','framevalues')
 
 
 toc

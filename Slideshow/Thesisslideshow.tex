@@ -100,6 +100,11 @@ CHESS Dec 17 and May 18
  
 	\end{frame}
 	
+	\section{Problem Formulation}
+	\begin{frame}{}
+	
+	\end{frame}
+	
 	\section{Experimental Setup}
 	
 	\begin{frame}{Components}
@@ -131,17 +136,23 @@ CHESS Dec 17 and May 18
 	\end{minipage}
 	\end{frame}
 	
-	\begin{frame}{NanoCalc Software}
-	
-	\begin{figure}
-	\includegraphics[width=\textwidth]{nanocalc.png}
-	\end{figure}
-	
-	\begin{equation*}
-	Reflectance = \frac{Meas-Dark}{Ref} \cdot R_{sub}
-	\end{equation*}
-	
+	\section{Light}
+	\begin{frame}{What is it?}
+	Electromagnetic Radiation
 	\end{frame}
+	
+	
+	%\begin{frame}{NanoCalc Software}
+	
+	%\begin{figure}
+	%\includegraphics[width=\textwidth]{nanocalc.png}
+	%\end{figure}
+	
+	%\begin{equation*}
+	%Reflectance = \frac{Meas-Dark}{Ref} \cdot R_{sub}
+	%\end{equation*}
+	
+	%\end{frame}
 	
 	\section{Preliminary Models}
 	
@@ -192,41 +203,41 @@ CHESS Dec 17 and May 18
 	\end{minipage}	
 	\end{frame}
 	
-	\begin{frame}{Fresnel equations - multilayers}
-	
-	\begin{figure}
-	\centering
-	\begin{minipage}{0.5\textwidth}
-	\centering
-	\includegraphics[scale=0.2]{figmulti1re.png}
-	\end{minipage}\quad
-	\begin{minipage}{0.5\textwidth}
-	\begin{figure}
-	\centering
-	\includegraphics[scale=0.2]{figmulti2re.png}
-	\end{figure}
-	\end{minipage}
-	\end{figure}
-	
-	\end{frame}
-	
-	\begin{frame}{Fresnel equations - multilayers Cont.}
-	
-	\begin{minipage}{0.47\textwidth}
-	\begin{equation*}
-	r_{123}= \frac{r_{12}+r_{23}\exp(-i2\beta_2)}{1+r_{12}r_{23}\exp(-i2\beta_2)}
-	\end{equation*}
-	
-	\begin{equation*}
-	r_{0123}= \frac{r_{01}+r_{123}\exp(-i2\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}
-	\end{equation*}
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-		\begin{equation*}
-		\beta=\frac{2\pi d}{\lambda} n\cos(\theta)
-		\end{equation*}
-	\end{minipage}
-	\end{frame}
+%	\begin{frame}{Fresnel equations - multilayers}
+%	
+%	\begin{figure}
+%	\centering
+%	\begin{minipage}{0.5\textwidth}
+%	\centering
+%	\includegraphics[scale=0.2]{figmulti1re.png}
+%	\end{minipage}\quad
+%	\begin{minipage}{0.5\textwidth}
+%	\begin{figure}
+%	\centering
+%	\includegraphics[scale=0.2]{figmulti2re.png}
+%	\end{figure}
+%	\end{minipage}
+%	\end{figure}
+%	
+%	\end{frame}
+%	
+%	\begin{frame}{Fresnel equations - multilayers Cont.}
+%	
+%	\begin{minipage}{0.47\textwidth}
+%	\begin{equation*}
+%	r_{123}= \frac{r_{12}+r_{23}\exp(-i2\beta_2)}{1+r_{12}r_{23}\exp(-i2\beta_2)}
+%	\end{equation*}
+%	
+%	\begin{equation*}
+%	r_{0123}= \frac{r_{01}+r_{123}\exp(-i2\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}
+%	\end{equation*}
+%	\end{minipage}
+%	\begin{minipage}{0.5\textwidth}
+%		\begin{equation*}
+%		\beta=\frac{2\pi d}{\lambda} n\cos(\theta)
+%		\end{equation*}
+%	\end{minipage}
+%	\end{frame}
 	
 	\begin{frame}{Polymer refractive index dispersion}
 	Cauchy empirical equation for the refractive index in the visible light range.
@@ -240,120 +251,134 @@ CHESS Dec 17 and May 18
 	Which dispersion to use? Can Cauchy be used for more exotic polymers?   
 	\end{frame}
 	
-	\section{Preliminary Results}
-	
-	\begin{frame}{Substrate Results}
-		\begin{figure}
-		\centering
-		\includegraphics[width=\textwidth]{sub1.png}
-		\end{figure}
-		\end{frame}
-		
-		\begin{frame}{Substrate Results}
-			\begin{figure}
-			\centering
-			\includegraphics[width=\textwidth]{sub2.png}
-			\end{figure}
-			\end{frame}
-			
-			\begin{frame}{Substrate Results}
-						\begin{figure}
-						\centering
-						\includegraphics[width=\textwidth]{topsil.png}
-						\end{figure}
-						\end{frame}
-						
-		\begin{frame}{Dark and Ref of Topsil in the test chamber}
-		\begin{figure}
-		\centering
-		\includegraphics[scale=0.35]{darkref1.png}
-		\end{figure}
-		\end{frame}
-		\begin{frame}{Dark and Ref of Topsil in the test chamber}
-		\begin{figure}
-		\centering
-		\includegraphics[scale=0.35]{darkref2.png}
-		\end{figure}
-		\end{frame}
-	
-		\begin{frame}{Polystyrene Results}
-			\begin{figure}
-			\centering
-			\includegraphics[width=\textwidth]{p1.png}
-			\end{figure}
-			\end{frame}
-	
-	\begin{frame}{Polystyrene Results}
-		\begin{figure}
-		\centering
-		\includegraphics[width=\textwidth]{p2.png}
-		\end{figure}
-	\end{frame}
-	
-	\begin{frame}{Polystyrene Results}
-		\begin{figure}
-		\centering
-		\includegraphics[width=\textwidth]{p3.png}
-		\end{figure}
-		\end{frame}
-		
-		\begin{frame}{Isoprene Results}
-				\begin{figure}
-				\centering
-				\includegraphics[width=\textwidth]{i1.png}
-				\end{figure}
-				\end{frame}
-				
-\begin{frame}{Isoprene Results}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{i2.png}
-\end{figure}
-\end{frame}
 
-\begin{frame}{Isoprene Results}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{i3.png}
-\end{figure}
-\end{frame}
 
-\begin{frame}{Methyl Methacrylate Results}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{m1.png}
-\end{figure}
-\end{frame}
 
-\begin{frame}{Methyl Methacrylate Results}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{m2.png}
-\end{figure}
-\end{frame}
 
-\begin{frame}{Methyl Methacrylate Results}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{m3.png}
-\end{figure}
-\end{frame}
 
-\begin{frame}{Future plans}
-\begin{itemize}
-\item Tools to analyse reflectance curves.
-\item Model the lens in test chamber setup.
-\item Refine the experimental protocol.
-\item Investigate the polymers.
-\item Begin to investigate diblock polymers.
-\item Begin to investigate other options for modelling the polymers.
-\end{itemize}
 
-\begin{figure}
-\centering
-\includegraphics[scale = 0.2]{differentmodels.png}
-\end{figure}
-\end{frame}
+
+
+
+
+
+
+
+
+%	\section{Preliminary Results}
+%	
+%	\begin{frame}{Substrate Results}
+%		\begin{figure}
+%		\centering
+%		\includegraphics[width=\textwidth]{sub1.png}
+%		\end{figure}
+%		\end{frame}
+%		
+%		\begin{frame}{Substrate Results}
+%			\begin{figure}
+%			\centering
+%			\includegraphics[width=\textwidth]{sub2.png}
+%			\end{figure}
+%			\end{frame}
+%			
+%			\begin{frame}{Substrate Results}
+%						\begin{figure}
+%						\centering
+%						\includegraphics[width=\textwidth]{topsil.png}
+%						\end{figure}
+%						\end{frame}
+%						
+%		\begin{frame}{Dark and Ref of Topsil in the test chamber}
+%		\begin{figure}
+%		\centering
+%		\includegraphics[scale=0.35]{darkref1.png}
+%		\end{figure}
+%		\end{frame}
+%		\begin{frame}{Dark and Ref of Topsil in the test chamber}
+%		\begin{figure}
+%		\centering
+%		\includegraphics[scale=0.35]{darkref2.png}
+%		\end{figure}
+%		\end{frame}
+%	
+%		\begin{frame}{Polystyrene Results}
+%			\begin{figure}
+%			\centering
+%			\includegraphics[width=\textwidth]{p1.png}
+%			\end{figure}
+%			\end{frame}
+%	
+%	\begin{frame}{Polystyrene Results}
+%		\begin{figure}
+%		\centering
+%		\includegraphics[width=\textwidth]{p2.png}
+%		\end{figure}
+%	\end{frame}
+%	
+%	\begin{frame}{Polystyrene Results}
+%		\begin{figure}
+%		\centering
+%		\includegraphics[width=\textwidth]{p3.png}
+%		\end{figure}
+%		\end{frame}
+%		
+%		\begin{frame}{Isoprene Results}
+%				\begin{figure}
+%				\centering
+%				\includegraphics[width=\textwidth]{i1.png}
+%				\end{figure}
+%				\end{frame}
+%				
+%\begin{frame}{Isoprene Results}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{i2.png}
+%\end{figure}
+%\end{frame}
+%
+%\begin{frame}{Isoprene Results}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{i3.png}
+%\end{figure}
+%\end{frame}
+%
+%\begin{frame}{Methyl Methacrylate Results}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{m1.png}
+%\end{figure}
+%\end{frame}
+%
+%\begin{frame}{Methyl Methacrylate Results}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{m2.png}
+%\end{figure}
+%\end{frame}
+%
+%\begin{frame}{Methyl Methacrylate Results}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{m3.png}
+%\end{figure}
+%\end{frame}
+%
+%\begin{frame}{Future plans}
+%\begin{itemize}
+%\item Tools to analyse reflectance curves.
+%\item Model the lens in test chamber setup.
+%\item Refine the experimental protocol.
+%\item Investigate the polymers.
+%\item Begin to investigate diblock polymers.
+%\item Begin to investigate other options for modelling the polymers.
+%\end{itemize}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[scale = 0.2]{differentmodels.png}
+%\end{figure}
+%\end{frame}
 
 
 
