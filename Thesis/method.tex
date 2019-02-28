@@ -5,32 +5,33 @@
 	\section{Polymers}
 Polymers are long chains of molecular units called mers, linked together by covalent bonds. Polymers are both found in biological system and synthesised by chemists. Polymers are described by its properties such as its chemistry, stereochemistry, architecture and what phase it is in. 
 
-A polymers chemistry is what the polymer is built of. The following polymers used in this thesis will be listed: 
+A polymers chemistry is what the polymer is built of. %Polystyrene has the following chemistry: 
 
 
-%\newcommand\setpolymerdelim[2]{\def\delimleft{#1}\def\delimright{#2}}
-%\def\makebraces[#1,#2]#3#4#5{%
-%\edef\delimhalfdim{\the\dimexpr(#1+#2)/2}%
-%\edef\delimvshift{\the\dimexpr(#1-#2)/2}%
-%\chemmove{%
-%\node[at=(#4),yshift=(\delimvshift)]
-%{$\left\delimleft\vrule height\delimhalfdim depth\delimhalfdim
-%width0pt\right.$};%
-%\node[at=(#5),yshift=(\delimvshift)]
-%{$\left.\vrule height\delimhalfdim depth\delimhalfdim
-%width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
+\newcommand\setpolymerdelim[2]{\def\delimleft{#1}\def\delimright{#2}}
+\def\makebraces[#1,#2]#3#4#5{%
+\edef\delimhalfdim{\the\dimexpr(#1+#2)/2}%
+\edef\delimvshift{\the\dimexpr(#1-#2)/2}%
+\chemmove{%
+\node[at=(#4),yshift=(\delimvshift)]
+{$\left\delimleft\vrule height\delimhalfdim depth\delimhalfdim
+width0pt\right.$};%
+\node[at=(#5),yshift=(\delimvshift)]
+{$\left.\vrule height\delimhalfdim depth\delimhalfdim
+width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
-%\setpolymerdelim[]
-%Polystyrene \ce{(C8H8)_n}:
-%\chemfig{-[@{left,0.3},1.5]C(-[:90]*6(=-=-=-))(-[6]H)-C(-[2]H)(-[6]H)-[@{right,0.8}]}
-%\makebraces[90pt,30pt]{n}{left}{right}
-%\bigskip
+\setpolymerdelim[]
+Polystyrene \ce{(C8H8)_n}:
+\chemfig{-[@{left,0.3},1.5]C(-[:90]*6(=-=-=-))(-[6]H)-C(-[2]H)(-[6]H)-[@{right,0.8}]}
+\makebraces[90pt,30pt]{n}{left}{right}
+\bigskip
 
+%Polyisoprene has the following chemistry:
 
-%\setpolymerdelim[]
-%Polyisoprene \ce{(C5H8)_n}:
-%\chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
-%\makebraces[10pt,15pt]{n}{left}{right}
+\setpolymerdelim[]
+Polyisoprene \ce{(C5H8)_n}:
+\chemfig{[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2[@{right,0.8}]}
+\makebraces[10pt,15pt]{n}{left}{right}
 
 %\setpolymerdelim[]
 %Poly(methyl methacrylate) \ce{(C5O2H8)_n}:
@@ -122,7 +123,7 @@ In this section the experimental protocol for both taking measurements without t
 
 \subsection{With Optics}
 \begin{enumerate}
-\item Take a continuous dark measurement with the optic fiber in the optics and adjust the light intensity, such that the dark measurements maximum is at 100$\%$ of the y-axis.
+\item Take a continuous dark measurement with the optic fiber with a dark cloth in the optics where the thin film would lie and adjust the light intensity, such that the dark measurements maximum is at 100$\%$ of the y-axis.
 \item Clear the dark measurement.
 \item Take the optics as a whole and point it away from anything that can reflect. Take a dark measurement.
 \item Place a blank silicon wafer into the test chamber and place the optics into the test chamber. Take a reference measurement.

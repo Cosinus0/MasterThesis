@@ -3,7 +3,7 @@ close all
 
 tic
 
- =5=22  % Safe guard so i dont run it again and delete my frame values
+% =5=22  % Safe guard so i dont run it again and delete my frame values
 
 %%%%%%%%%%%
 % Physics %
@@ -18,6 +18,7 @@ thinfilm = [1.1:0.1:1.9];
 thickness = [200:1:500];
 
 framevalues = [];
+fullMSE = [];
 
 %%%%%%%%%%%%%
 % Load data %
@@ -105,6 +106,8 @@ end
 tempvalue = MSE(row,:,:,:);
 
 framevalues = vertcat(framevalues,tempvalue);
+
+
 
 end
 
