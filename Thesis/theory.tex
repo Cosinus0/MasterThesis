@@ -147,29 +147,29 @@ The phase of the reflected ray will vary at the the ambient-thin film interface.
 \alpha = \frac{2\pi N_1}{\lambda}(\bar{AB} + \bar{BC}) - \frac{2\pi N_0}{\lambda}\bar{AD}.
 \end{equation}
 
-Using snells law, $\bar{AD}=\bar{AC}\sin(\theta_0)$ and $\bar{AC}=2d\tan(\theta_1)$ as seen from figure \ref{fig:beta}, this reduces $\bar{AD}$ to:
+Using snells law, $\bar{AD}=\bar{AC}\sin(\theta_0)$ and $\bar{AC}=2d_1\tan(\theta_1)$ as seen from figure \ref{fig:beta}, this reduces $\bar{AD}$ to:
 
 
 \begin{align}
 \sin(\theta_0) &= \frac{N_1}{N_0}\sin(\theta_1)\\
-\bar{AD}&= 2d\frac{\sin(\theta_1)}{\cos(\theta_1)}\sin(\theta_0)\\
-\implies \bar{AD}&= 2d\frac{\sin(\theta_1)^2}{\cos(\theta_1)}\frac{N_1}{N_0}.
+\bar{AD}&= 2d_1\frac{\sin(\theta_1)}{\cos(\theta_1)}\sin(\theta_0)\\
+\implies \bar{AD}&= 2d_1\frac{\sin(\theta_1)^2}{\cos(\theta_1)}\frac{N_1}{N_0}.
 \end{align}
 
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{figbetare.png}
+\includegraphics[width=\textwidth]{figbeta.png}
 \caption{Light rays from the left will be reflected and transmitted at point A. The reflected light will experience at phase change at point A. The transmitted light will proceed to point B, where it will reflect undergoing a phase change then transmitting at point C. The phase difference between the primary and secondary ray can be calculated by $\alpha = K_1(\bar{AB}+\bar{BC})-K_0(\bar{AD})$.}
 \label{fig:beta}
 \end{figure}  
 
-Inserting this into equation \ref{eq:phasealpha}, and $\bar{AB}=\bar{BC}=\frac{d}{\cos(\theta_1)}$, as seen from figure \ref{fig:beta}, the equation is reduced to:
+Inserting this into equation \ref{eq:phasealpha}, and $\bar{AB}=\bar{BC}=\frac{d_1}{\cos(\theta_1)}$, as seen from figure \ref{fig:beta}, the equation is reduced to:
 
 \begin{align}
-\alpha &= \frac{2\pi N_1}{\lambda}\frac{2d}{\cos(\theta_1)}-\frac{2\pi N_0}{\lambda}\frac{2d \sin(\theta_1)^2N_1}{\cos(\theta_0)N_0}\\
-&= \frac{4d\pi N_1}{\lambda}\bigg(\frac{1-\sin(\theta_1)^2}{\cos(\theta_1)}\bigg)\\
-&= \frac{4d\pi N_1}{\lambda}\cos(\theta_1).
+\alpha &= \frac{2\pi N_1}{\lambda}\frac{2d_1}{\cos(\theta_1)}-\frac{2\pi N_0}{\lambda}\frac{2d_1 \sin(\theta_1)^2N_1}{\cos(\theta_0)N_0}\\
+&= \frac{4d_1\pi N_1}{\lambda}\bigg(\frac{1-\sin(\theta_1)^2}{\cos(\theta_1)}\bigg)\\
+&= \frac{4d_1\pi N_1}{\lambda}\cos(\theta_1).
 \end{align}
 
 $\alpha$ is the total phase difference of the transmitted beam thus the expression $\alpha=2\beta$ must hold. $\beta$ is called the film phase thickness and given as: 
