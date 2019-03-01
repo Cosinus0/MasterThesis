@@ -2,10 +2,10 @@
 \begin{document}
 	\chapter{Experimental method}\label{experimentalmethod}
 	
-	\section{Polymers}
-Polymers are long chains of molecular units called mers, linked together by covalent bonds. Polymers are both found in biological system and synthesised by chemists. Polymers are described by its properties such as its chemistry, stereochemistry, architecture and what phase it is in. 
+\section{Polymers}
+Polymers are long chains of molecular units called mers, linked together by covalent bonds. Polymers are both found in biological system and synthesised by chemists. Polymers are described by its properties such as its chemistry, stereochemistry, architecture and what phase it is in \cite{jones2002soft}. 
 
-A polymers chemistry is what the polymer is built of. %Polystyrene has the following chemistry: 
+A polymers chemistry is what the polymer is built of. The following polymers used in this thesis are listed: 
 
 
 \newcommand\setpolymerdelim[2]{\def\delimleft{#1}\def\delimright{#2}}
@@ -33,12 +33,14 @@ Polyisoprene \ce{(C5H8)_n}:
 \chemfig{[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2[@{right,0.8}]}
 \makebraces[10pt,15pt]{n}{left}{right}
 
-%\setpolymerdelim[]
-%Poly(methyl methacrylate) \ce{(C5O2H8)_n}:
+\setpolymerdelim[]
+Poly(methyl methacrylate) \ce{(C5O2H8)_n}:
 %\chemfig{-[@{left,0.3},1.5]CH_2-C(-[6]CH_3)-CH_2-[@{right,0.8}]}
 %\makebraces[10pt,15pt]{n}{left}{right}
 
-With different structures, the polymers display different properties. The different properties of the polymer is also dependant on how the repeating molecular units are bonded together, this is called the polymers stereochemistry. This will not be taken into account during the modelling of the thin films. The polymers architecture describes the general structure of the polymer. The polymers can be linear, branched or cross-linked. Linear polymers are long chains of monomers with bonds that are rigid to a certain degree, and cannot rotate freely, and are normally strong structures. Branched polymers are long chains with side chains attached to the main chain. Theses side chains can be comprised of monomers and reactive groups. Branched polymers are normally more softer and less crystalline that linear polymers. Cross-linked polymers are two or more side chains joined together forming a loose two dimensional network. Cross-linked polymers are more rigid and burn rather than melt when heated. The architecture of a polymer can also be expressed with the degree of polymerisation, $N$, which characterises the average number of mers units in the chain. It is defined as:
+With different structures, the polymers display different properties. The different properties of the polymer is also dependant on how the repeating molecular units are bonded together, this is called the polymers stereochemistry. This will not be taken into account during the modelling of the thin films. The polymers architecture describes the general structure of the polymer. The polymers can be linear, branched or cross-linked. Linear polymers are long chains of monomers with bonds that are rigid to a certain degree, and cannot rotate freely, and are normally strong structures. Branched polymers are long chains with side chains attached to the main chain. Theses side chains can be comprised of monomers and reactive groups. Branched polymers are normally more softer and less crystalline that linear polymers. Cross-linked polymers are two or more side chains joined together forming a loose two dimensional network. Cross-linked polymers are more rigid and burn rather than melt when heated. 
+
+The architecture of a polymer can also be expressed with the degree of polymerisation, $N$, which characterises the average number of mers units in the chain. It is defined as:
 
 \begin{equation}
 N_n = \frac{\bar{M}_n}{\bar{m}},
@@ -56,15 +58,50 @@ where $x_i$ is the fraction of the number of chains with a corresponding size ra
 PDI = \frac{\bar{M}_w}{\bar{M}_n},
 \end{equation} 
 
-where $\bar{M}_w$ is the weight average molecular weight and $\bar{M}_n$ is the number average molecular weight.
+where $\bar{M}_w$ is the weight average molecular weight and $\bar{M}_n$ is the number average molecular weight \cite{strobl2007physics}.
 
 In this thesis i will be working with homo-polymers and block-co-polymers. Homo-polymers are long chains of the same repeating monomer, where block-co-polymers are two homo-polymers linearly bonded.
 
-The polymers can also be in a physical state at a given temperature. The chemistry and architecture defines at what temperature the polymer undergos a phase transition. A polymer can melt and transition into a liquid, which is often very viscous with viscoelastic properties. A polymer has trouble crystallising, polymers are most often in a glassy phase which can be described as amorphous since it looks both like a liquid and a solid. A polymer can crystallise but the crystallisation is not complete because of the polymers architecture. This is called a semi-crystalline state where the polymer has regions behaving liquid like and glass like. And lastly a polymer can be in a liquid crystalline state which involves rigid polymers forming layers. 
+The polymers can also be in a physical state at a given temperature. The chemistry and architecture defines at what temperature the polymer undergos a phase transition. A polymer can melt and transition into a liquid, which is often very viscous with viscoelastic properties. A polymer has trouble crystallising, polymers are most often in a glassy phase which can be described as amorphous since it looks both like a liquid and a solid. A polymer can crystallise but the crystallisation is not complete because of the polymers architecture. This is called a semi-crystalline state where the polymer has regions behaving liquid like and glass like. And lastly a polymer can be in a liquid crystalline state which involves rigid polymers forming layers \cite{petty2008molecular}. 
+
+\section{Spin Coating thin films}
 
 
 \section{The Experimental Setup}
-The experimental setup is comprised of a NanoCalc XR and a Halogen light source(HL-2000-FHSA) which can produce wavelengths of \SI{360}{\nano\meter} to \SI{2400}{\nano\meter}. When the samples are being measured they are either placed on the ocean optics single point stage(ADD PICTURE) or in the test chamber(ADD PICTURE) made by the RUC workshop/machinists for x-ray scattering experiments. The NanoCalc is comprised of a spectrometer and an internal light source as seen in the figure \ref{fig:nanocalcsetup}, which can produce wavelengths of \SI{250}{\nano\meter} to \SI{1050}{\nano\meter} and measure thicknesses of \SI{10}{\nano\meter} to \SI{100}{\micro\meter}. The NanoCalc XR is connected to a computer where the NanoCalc software is installed and operated. For the experiments the halogen light source is used since it has a larger output power then the internal light source of the NanoCalc XR. The larger intensity output is need when performing experiments in the test chamber. To reiterate, white light is produced in the light source(HL-2000-FHSA), which travels through optical fiber and strikes that sample. The reflected light travels back through the optical fiber and the intensity across every wavelength of the white light is collected in the spectrometer and is sent to the NanoCalc software.  
+The experimental setup is comprised of a NanoCalc XR and a Halogen light source(HL-2000-FHSA) seen in figure \ref{fig:speclight}, which can produce wavelengths of \SI{360}{\nano\meter} to \SI{2400}{\nano\meter}. When the samples are being measured they are either placed on the ocean optics single point stage seen in figure \ref{fig:Singlestage} or in the test chamber seen in figure \ref{fig:SVAchamber} made by the RUC workshop/machinists for x-ray scattering experiments. The NanoCalc is comprised of a spectrometer and an internal light source as seen in the figure \ref{fig:nanocalcsetup}, which can produce wavelengths of \SI{250}{\nano\meter} to \SI{1050}{\nano\meter} and measure thicknesses of \SI{10}{\nano\meter} to \SI{100}{\micro\meter}. The NanoCalc XR is connected to a computer where the NanoCalc software is installed and operated. For the experiments the halogen light source is used since it has a larger output power then the internal light source of the NanoCalc XR. The larger intensity output is need when performing experiments in the test chamber. 
+
+For experiments done in this thesis white light is produced in the light source(HL-2000-FHSA), which travels through optical fiber and strikes that sample. The reflected light travels back through the optical fiber and the intensity across every wavelength of the white light is collected in the spectrometer and is sent to software created by in house and saved to a file.  
+	
+	\begin{figure}[ht] 
+	  \begin{minipage}[b]{0.5\linewidth}
+	    \centering
+	    \includegraphics[width=.5\linewidth,angle=-90]{setup1.JPG} 
+	    \caption{SVA experiment area}
+	    \label{fig:exparea}  
+	    \vspace{4ex}
+	  \end{minipage}%%
+	  \begin{minipage}[b]{0.5\linewidth}
+	    \centering
+	    \includegraphics[width=.5\linewidth,angle=-90]{setup2.JPG} 
+	    \caption{NanoCalc XR and a Halogen light source(HL-2000-FHSA)}
+	    \label{fig:speclight} 
+	    \vspace{4ex}
+	  \end{minipage} 
+	  \begin{minipage}[b]{0.5\linewidth}
+	    \centering
+	    \includegraphics[width=.5\linewidth]{setup3.JPG} 
+	    \caption{Single point stage} 
+	    \label{fig:Singlestage}
+	    \vspace{4ex}
+	  \end{minipage}%% 
+	  \begin{minipage}[b]{0.5\linewidth}
+	    \centering
+	    \includegraphics[width=.5\linewidth]{setup4.JPG} 
+	    \caption{SVA experiment chamber}
+	    \label{fig:SVAchamber} 
+	    \vspace{4ex}
+	  \end{minipage} 
+	\end{figure}
 	
 	\begin{figure}
 	\centering
@@ -77,31 +114,32 @@ The experimental setup is comprised of a NanoCalc XR and a Halogen light source(
 The NanoCalc spectrometer measures three light intensities which will be called a measurement onwards. The three measurements are the dark measurement (dark), the reference measurement (ref) and the thin-film measurement (meas). The dark measurement is the amount of light received by the optical fiber from external sources. The reference measurement is the amount of light reflected from a blank silicon wafer and the thin film measurement is the amount of light reflected from the sample. From chapter \ref{ch:reflect/trans}, the reflectance of a sample can be expressed as :
 
 \begin{equation}\label{eq:nanocalcrefl}
-R_{sample} = \frac{I_{sample}}{I_{incident}}
+R_{sample} = \frac{I_{sample}}{I_{incident}}.
 \end{equation}
 
 The spectrometer does not measure the intensity of the incident light, therefore the reflectance of the substrate is used to isolate the incident light intensity and inserted into equation \ref{eq:nanocalcrefl}. The reflectance of the substrate is used because it is easily calculated using the Fresnel equations as described in chapter \ref{ch:fresnelref}.
 
 \begin{align}
 R_{ref} = \frac{I_{ref}}{I_{incident}}\\
-\implies  I_{incident} = \frac{I_{ref}}{R_{ref}} \label{eq:nanocalcrefl2}
+\implies  I_{incident} = \frac{I_{ref}}{R_{ref}} \label{eq:nanocalcrefl2}.
 \end{align}
 
 Inserting equation \ref{eq:nanocalcrefl2} in equation \ref{eq:nanocalcrefl}, the reflectance for the sample is expressed without the incident light intensity as:
 
 \begin{equation}
-R_{sample} = \frac{I_{sample}}{I_{ref}} \cdot R_{ref}
+R_{sample} = \frac{I_{sample}}{I_{ref}} \cdot R_{ref}.
 \end{equation}
 
 The reflectance of the sample is given as:
 
 \begin{equation}
-Reflectance = \frac{Meas-Dark}{Ref-Dark} \cdot R_{sub},
+Reflectance = \frac{Meas-Dark}{Ref-Dark} \cdot R_{sub}.
 \end{equation}
+
 This is the same expression given in the NanoCalc spectrometer manual \cite{nanocalcmanual}. Through reproduction of the data and curves given by the NanoCalc spectrometer, i can deduce that the reference measurement has already had the dark measurement subtracted, giving the following reflectance expression:
 
 \begin{equation}\label{eq:nanocalcreflect}
-Reflectance = \frac{Meas-Dark}{Ref} \cdot R_{sub},
+Reflectance = \frac{Meas-Dark}{Ref} \cdot R_{sub}.
 \end{equation}
 
 Placing equation \ref{eq:nanocalcreflect} equal to the reflectance equations using the Fresnel equations from chapters  \ref{ch:fresnelref}, \ref{ch:fresnel2lay} and \ref{ch:fresnelmulti}, the NanoCalc spectrometer software can fit a thickness of the sample.
@@ -130,4 +168,6 @@ In this section the experimental protocol for both taking measurements without t
 \item Save the dark and reference measurement.
 \item Take the optics off the test chamber, remove the blank silicon wafer and place in a thin film sample. Place the optics onto the test chamber. Take a measurement.
 \end{enumerate}
+
+\section{Solvent Vapour Annealing Process}
 \end{document}

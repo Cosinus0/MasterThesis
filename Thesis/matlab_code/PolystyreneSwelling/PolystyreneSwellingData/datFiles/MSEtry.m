@@ -10,42 +10,43 @@ tic
 %%%%%%%%%%%
 
 nm = 10^-9;
-wavelength = (400:1041);
+wavelength = (450:900);
 lamda = (450:900).*nm;
 
-air = [1:0.1:1.5];
-thinfilm = [1.1:0.1:1.9];
-thickness = [200:1:500];
+air = [1:0.1:1.5]; %Defining Refractive index limits.
+thinfilm = [1.1:0.1:1.9]; %Defining Refractive index limits.
+thickness = [200:1:500]; %Defining Thickness limits.
 
-framevalues = [];
-fullMSE = [];
+framevalues = []; %Define empty array where all data will be saved.
 
 %%%%%%%%%%%%%
 % Load data %
 %%%%%%%%%%%%%
 
-load PSreflectance
+load PSreflectance %Load reflectance measurements for PS -471x642- 471 SVA Measurements.
 
-x = wavelength(51:501);
+x = wavelength;
 
+% For loop for fitting each SVA measurement.
 for z = 1:length(PSreflectance(:,1))
 
 y = PSreflectance(z,(51:501));
 
-MSE = [];
+MSE = []; %Define empty array to save data for one full SVA Measurement.
 
 %%%%%%%%%%%%%%%%%%%%
 % Reflective Index %
 %%%%%%%%%%%%%%%%%%%%
 
 
-
+% For loop for fitting refractive index of Air.
 for k = 1:length(air)
 
 list = [];
     
 n_0 = air(k);
 
+        % For loop for fitting refractive index of the thin film.
         for l = 1:length(thinfilm)
         
         % A = 1.4450;
@@ -66,7 +67,7 @@ n_0 = air(k);
 %%%%%%%%%%%%%
 % Thickness %
 %%%%%%%%%%%%%
-
+            % For loop for fitting the tickness of the thinfilm.
             for m = 1:length(thickness)
 
             d_1 = thickness(m).*nm;
@@ -111,7 +112,7 @@ framevalues = vertcat(framevalues,tempvalue);
 
 end
 
-%save('frame_val.mat','framevalues')
+save('frame_val.mat','framevalues') %Saving to file
 
 
 toc
