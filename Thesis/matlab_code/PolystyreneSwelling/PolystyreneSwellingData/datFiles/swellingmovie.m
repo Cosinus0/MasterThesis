@@ -32,23 +32,23 @@ for i=1:471
     r_0123 = fresnel_am_tf_lay_sub(framevalues(i,1),framevalues(i,2),n_2,n_3,framevalues(i,3),d_2,lamda);
     R_0123 = r_0123.*conj(r_0123);
 
-subplot(2,1,1)    
-plot(wave,refldata(:,i),wave,R_0123);
-axis([450 900 0 1])
-title([num2str(i*10) 'Seconds'])
-legend('Reflectance','Fresnel')
+% subplot(2,1,1)    
+% plot(wave,refldata(:,i),wave,R_0123);
+% axis([450 900 0 1])
+% title([num2str(i*10) 'Seconds'])
+% legend('Reflectance','Fresnel')
 
-subplot(2,1,2)
-plot((1:471).*10,framevalues(:,1),(1:i).*10,framevalues(1:i,1))
-legend('Air R-I','Running air R-I')
+%subplot(2,1,2)
+%plot((1:471).*10,framevalues(:,1),(1:i).*10,framevalues(1:i,1))
+%legend('Air R-I','Running air R-I')
 
-%  subplot(2,1,1)
-%  plot((1:471).*10,framevalues(:,2),(1:i).*10,framevalues(1:i,2))
-%  legend('Thinfilm R-I','Running Thinfilm R-I')
-%  
-%  subplot(2,1,2)
-%  plot((1:471).*10,framevalues(:,3),(1:i).*10,framevalues(1:i,3))
-%  legend('Thickness','Running Thickness')
+ subplot(2,1,1)
+ plot((1:471).*10,framevalues(:,2),(1:i).*10,framevalues(1:i,2))
+ legend('Thinfilm R-I','Running Thinfilm R-I')
+ 
+  subplot(2,1,2)
+  plot((1:471).*10,framevalues(:,3),(1:i).*10,framevalues(1:i,3))
+  legend('Thickness','Running Thickness')
 
    frame = getframe(gcf);
    writeVideo(v,frame);

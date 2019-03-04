@@ -72,7 +72,7 @@ d = \left(\frac{\eta}{4\pi\rho\omega^2}\right)^{\frac{1}{2}} t^{-\frac{1}{2}},
 \end{equation}  
 where d is the predicted thickness, $\eta$ the viscosity coefficient of the polymer solution, $\rho$ solution density, $\omega$ angular velocity of the spinning and $t$ is the spinning time \cite{petty2008molecular}.
 
-\section{The Experimental Setup}
+\section{Spectrometer Setup}
 The experimental setup is comprised of a NanoCalc XR and a Halogen light source(HL-2000-FHSA) seen in figure \ref{fig:speclight}, which can produce wavelengths of \SI{360}{\nano\meter} to \SI{2400}{\nano\meter}. When the samples are being measured they are either placed on the ocean optics single point stage seen in figure \ref{fig:Singlestage} or in the test chamber seen in figure \ref{fig:SVAchamber} made by the RUC workshop/machinists for x-ray scattering experiments. The NanoCalc is comprised of a spectrometer and an internal light source as seen in the figure \ref{fig:nanocalcsetup}, which can produce wavelengths of \SI{250}{\nano\meter} to \SI{1050}{\nano\meter} and measure thicknesses of \SI{10}{\nano\meter} to \SI{100}{\micro\meter}. The NanoCalc XR is connected to a computer where the NanoCalc software is installed and operated. For the experiments the halogen light source is used since it has a larger output power then the internal light source of the NanoCalc XR. The larger intensity output is need when performing experiments in the test chamber. 
 
 For experiments done in this thesis white light is produced in the light source(HL-2000-FHSA), which travels through optical fiber and strikes that sample. The reflected light travels back through the optical fiber and the intensity across every wavelength of the white light is collected in the spectrometer and is sent to software created by in house and saved to a file and analysed in MATLAB\textsuperscript{\textregistered}.  
@@ -102,7 +102,7 @@ For experiments done in this thesis white light is produced in the light source(
 	  \begin{minipage}[b]{0.5\linewidth}
 	    \centering
 	    \includegraphics[width=.9\linewidth]{setup4.JPG} 
-	    \caption{SVA experiment chamber minus lid}
+	    \caption{SVA experiment chamber \break minus lid}
 	    \label{fig:SVAchamber} 
 	    \vspace{4ex}
 	  \end{minipage} 
@@ -150,8 +150,8 @@ Reflectance = \frac{Meas-Dark}{Ref} \cdot R_{sub}.
 Placing equation \ref{eq:nanocalcreflect} equal to the reflectance equations using the Fresnel equations from chapters  \ref{ch:fresnelref}, \ref{ch:fresnel2lay} and \ref{ch:fresnelmulti}, the NanoCalc spectrometer software can fit a thickness of the sample.
 
 
-\section{Experimental Protocol}
-In this section the experimental protocol for both taking measurements without the optics and with the optics are given. The protocol will be formulated in steps.
+\section{Reflectance measurement protocol}
+In this section the experimental protocol for both taking measurements without the optics and with the optics are given. The halogen light source has been turned on 30 minutes prior to taking the measurements and the thin films have had 30 minutes to climatise to room temperature. The protocol will be formulated in steps.
 
 \subsection{Without Optics}
 \begin{enumerate}
@@ -174,5 +174,17 @@ In this section the experimental protocol for both taking measurements without t
 \item Take the optics off the test chamber, remove the blank silicon wafer and place in a thin film sample. Place the optics onto the test chamber. Take a measurement.
 \end{enumerate}
 
+\section{MATLAB\textsuperscript{\textregistered} result fitting}
+450-900nm, MSE, Three parameters n0,n1,D1.
+
+\section{Bronkhorst mass flow meters}
+To regulate the solvent vapour annealing process, the experimental setup includes three Bronkhorst mass flow meters. One EL-Flow select(F-201CV-500) with a flow capability for $N_2$ of  $\SI{4}{\milli\litre\per\minute}$ to $\SI{750}{\milli\litre\per\minute}$, or $400$ SCCM (Standard centimetre cubed per minute at $\SI{1}{\atmos}$ and $\SI{273}{\kelvin}$). Two EL-Flow select(F-201CV-200) with a $N_2$ flow of $\SI{1.6}{\milli\litre\per\minute}$ to $\SI{300}{\milli\litre\per\minute}$, or $200$ SCCM (Standard centimetre cubed per minute at $\SI{1}{\atmos}$ and $\SI{273}{\kelvin}$) \cite{elflow}.
+
+During the both swelling processes, the SCCM will be kept constant to $200$ SCCM, with the assumption that the flowrate is constant through the system. When nitrogen flows through the bubbler and solvent the flowrate will change and thus the pressure in the SVA chamber will change. 
+
+
 \section{Solvent Vapour Annealing Process}
+
+
+
 \end{document}
