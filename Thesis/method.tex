@@ -3,11 +3,35 @@
 	\chapter{Experimental method}\label{experimentalmethod}
 	
 \section{Polymers}
-Polymers are long chains of molecular units called mers, linked together by covalent bonds. Polymers are both found in biological system and synthesised by chemists. Polymers are described by its properties such as its chemistry, stereochemistry, architecture and what phase it is in \cite{jones2002soft}. 
+Polymers are long chains of molecular units called mers, linked together by covalent bonds. Polymers are both found in biological system and synthesised by chemists. Polymers are described by their properties such as its chemistry, stereochemistry, architecture and what phase it is in \cite{jones2002soft}. A polymers chemistry is what the polymer is built of and with different structures, the polymers display different properties. The different properties of the polymer is also dependant on how the repeating molecular units are bonded together, this is called the polymers stereochemistry. This will not be taken into account during the modelling of the thin films. The polymers architecture describes the general structure of the polymer. The polymers can be linear, branched or cross-linked. Linear polymers are long chains of monomers with bonds that are rigid to a certain degree, and cannot rotate freely, and are normally strong structures. Branched polymers are long chains with side chains attached to the main chain. Theses side chains can be comprised of monomers and reactive groups. Branched polymers are normally more softer and less crystalline that linear polymers. Cross-linked polymers are two or more side chains joined together forming a loose two dimensional network. Cross-linked polymers are more rigid and burn rather than melt when heated. 
 
-A polymers chemistry is what the polymer is built of. The following polymers used in this thesis are listed: 
+The architecture of a polymer can also be expressed with the degree of polymerisation, $N$, which characterises the average number of mers units in the chain. It is defined as:
 
+\begin{equation}
+N = \frac{\bar{M}_n}{\bar{m}},
+\end{equation}
+where $\bar{M}_n$ is the number average molecular weight and $\bar{m}$ is the mer molecular weight. The number average molecular weight is defined as:
+\begin{equation}
+\bar{M}_n = \frac{\sum N_iM_i}{\sum N_i} = \sum x_iM_i,
+\end{equation}      
+where $x_i = \frac{N_i}{\sum N_i}$ is the fraction of the number of chains with a corresponding size range $i$ and $M_i$ is mean molecular weight in the size range $i$. The weight average molecular weight for a polymer is defined as:
+\begin{equation}
+\bar{M}_w=\frac{\sum N_iM_i^2}{\sum N_iM_i},
+\end{equation}
+where $N_i$ is the number of polymers with weight $M_i$. There is a dispersion of different polymer sizes in a solution, this dispersion is called the polydispersion index of the polymer and is expressed as:
 
+\begin{equation}
+PDI = \frac{\bar{M}_w}{\bar{M}_n},
+\end{equation} 
+
+where $\bar{M}_w$ is the weight average molecular weight and $\bar{M}_n$ is the number average molecular weight \cite{strobl2007physics}.
+
+The polymers can also be in a physical state at a given temperature. The chemistry and architecture defines at what temperature the polymer undergos a phase transition. A polymer can melt and transition into a liquid, which is often very viscous with viscoelastic properties. A polymer has trouble crystallising, polymers are most often in a glassy phase which can be described as amorphous since it looks both like a liquid and a solid. A polymer can crystallise but the crystallisation is not complete because of the polymers architecture. This is called a semi-crystalline state where the polymer has regions behaving liquid like and glass like. And lastly a polymer can be in a liquid crystalline state which involves rigid polymers forming layers \cite{petty2008molecular}. 
+
+\section{Polymers used Solvent Vapour Annealing}
+In this thesis i will be working with two homopolymers and one block-copolymers. Homopolymers are long chains of the same repeating monomer, where block-copolymers are two homopolymers linearly bonded.
+
+\subsection{Polymer Chemistry}
 \newcommand\setpolymerdelim[2]{\def\delimleft{#1}\def\delimright{#2}}
 \def\makebraces[#1,#2]#3#4#5{%
 \edef\delimhalfdim{\the\dimexpr(#1+#2)/2}%
@@ -21,49 +45,22 @@ width0pt\right.$};%
 width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
 \setpolymerdelim[]
-Polystyrene \ce{(C8H8)_n}:
+Polystyrene \ce{(C8H8)_N}:
 \chemfig{-[@{left,0.3},1.5]C(-[:90]*6(=-=-=-))(-[6]H)-C(-[2]H)(-[6]H)-[@{right,0.8}]}
-\makebraces[90pt,30pt]{n}{left}{right}
+\makebraces[90pt,30pt]{N}{left}{right}
 \bigskip
 
 %Polyisoprene has the following chemistry:
 
 \setpolymerdelim[]
-Polyisoprene \ce{(C5H8)_n}:
-\chemfig{[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2[@{right,0.8}]}
-\makebraces[10pt,15pt]{n}{left}{right}
+Polyisoprene \ce{(C5H8)_N}:
+\chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
+\makebraces[10pt,15pt]{N}{left}{right}
 
-\setpolymerdelim[]
-Poly(methyl methacrylate) \ce{(C5O2H8)_n}:
-%\chemfig{-[@{left,0.3},1.5]CH_2-C(-[6]CH_3)-CH_2-[@{right,0.8}]}
+%\setpolymerdelim[]
+%Poly(methyl methacrylate) \ce{(C5O2H8)_n}:
+%\chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
 %\makebraces[10pt,15pt]{n}{left}{right}
-
-With different structures, the polymers display different properties. The different properties of the polymer is also dependant on how the repeating molecular units are bonded together, this is called the polymers stereochemistry. This will not be taken into account during the modelling of the thin films. The polymers architecture describes the general structure of the polymer. The polymers can be linear, branched or cross-linked. Linear polymers are long chains of monomers with bonds that are rigid to a certain degree, and cannot rotate freely, and are normally strong structures. Branched polymers are long chains with side chains attached to the main chain. Theses side chains can be comprised of monomers and reactive groups. Branched polymers are normally more softer and less crystalline that linear polymers. Cross-linked polymers are two or more side chains joined together forming a loose two dimensional network. Cross-linked polymers are more rigid and burn rather than melt when heated. 
-
-The architecture of a polymer can also be expressed with the degree of polymerisation, $N$, which characterises the average number of mers units in the chain. It is defined as:
-
-\begin{equation}
-N_n = \frac{\bar{M}_n}{\bar{m}},
-\end{equation}
-
-where $\bar{M}_n$ is the number average molecular weight and $\bar{m}$ is the mer molecular weight. The average molecular weight is defined as:
-
-\begin{equation}
-\bar{M}_n = \sum x_iM_i,
-\end{equation}      
-
-where $x_i$ is the fraction of the number of chains with a corresponding size range $i$ and $M_i$ is mean molecular weight in the size range $i$. There is a dispersion of different polymer sizes in a solution, this dispersion is called the polydispersion index of the polymer and is expressed as:
-
-\begin{equation}
-PDI = \frac{\bar{M}_w}{\bar{M}_n},
-\end{equation} 
-
-where $\bar{M}_w$ is the weight average molecular weight and $\bar{M}_n$ is the number average molecular weight \cite{strobl2007physics}.
-
-The polymers can also be in a physical state at a given temperature. The chemistry and architecture defines at what temperature the polymer undergos a phase transition. A polymer can melt and transition into a liquid, which is often very viscous with viscoelastic properties. A polymer has trouble crystallising, polymers are most often in a glassy phase which can be described as amorphous since it looks both like a liquid and a solid. A polymer can crystallise but the crystallisation is not complete because of the polymers architecture. This is called a semi-crystalline state where the polymer has regions behaving liquid like and glass like. And lastly a polymer can be in a liquid crystalline state which involves rigid polymers forming layers \cite{petty2008molecular}. 
-
-\section{Polymers used in this thesis}
-In this thesis i will be working with homopolymers and block-copolymers. Homopolymers are long chains of the same repeating monomer, where block-copolymers are two homopolymers linearly bonded.
 
 \section{Spin Coating thin films}
 Spin coating is the deposition method used to fabricate the thin films used in this thesis. This is a wet method where a polymer is dissolved in a solution then deposited onto the semiconductor wafer, silicon wafer. The silicon wafer is rotated at a fixed low rpm to spread the polymer solution across the wafer. The rpm is increased spinning off the excess solution and will evaporate leaving a thin film with uniform thickness. This method is predicted by the following expression:
