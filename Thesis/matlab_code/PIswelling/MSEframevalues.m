@@ -3,7 +3,7 @@ close all
 
 tic
 
- =5=22  % Safe guard so i dont run it again and delete my frame values
+ %=5=22   Safe guard so i dont run it again and delete my frame values
 
 %%%%%%%%%%%
 % Physics %
