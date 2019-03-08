@@ -39,7 +39,9 @@ The Flory-Huggins interaction parameter is determine experimentally and expresse
 \end{equation} 
 where $\chi_H$ is of due to enthalpy and $\chi_S$ is due to entropy. Chemically dissimilar polymers tend to display a larger $\chi$ value than chemically similar,\cite{BCPthermo}\cite{FHpolymer}.
 
-The polymers can also be in a physical state at a given temperature. The chemistry and architecture defines at what temperature the polymer undergos a phase transition. A polymer can melt and transition into a liquid, which is often very viscous with viscoelastic properties. A polymer has trouble crystallising, polymers are most often in a glassy phase below the glass transition temperature $T_g$, a glassy phase is described as amorphous since the structure resembles both a liquid and a solid. A polymer can crystallise but the crystallisation is not complete because of the polymers architecture. This is called a semi-crystalline state where the polymer has regions behaving liquid like and glass like. And lastly a polymer can be in a liquid crystalline state which involves rigid polymers forming layers \cite{petty2008molecular}. 
+The polymers can also be in a physical state at a given temperature. The chemistry and architecture defines at what temperature the polymer undergoes a phase transition. A polymer can melt and transition into a liquid, which is often very viscous with viscoelastic properties. A polymer has trouble crystallising, polymers are most often in a glassy phase below the glass transition temperature $T_g$, a glassy phase is described as amorphous since the structure resembles both a liquid and a solid. A polymer can crystallise but the crystallisation is not complete because of the polymers architecture. This is called a semi-crystalline state where the polymer has regions behaving liquid like and glass like. And lastly a polymer can be in a liquid crystalline state which involves rigid polymers forming layers \cite{petty2008molecular}. 
+
+Micro-phase segregation of block copolymers is seen and understood as a thermodynamic process, in which the blocks of the polymer have a thermodynamic incompatibly described by Flory-Huggins interaction parameter $\chi_{AB}$, which creates a nanoscale structure. The covalent bond between block A and block B prevent macro-phase separation, and micro-phase segregation occurs.  This leads to the application of block copolymers as self-assembling structures that can be created on a surface and used for nanoscale devices. The applications span across a multitude of disciplines such as separation membranes, nanofludics, photonics and biological scaffolds. The block copolymers self-assembling properties depend on the mobility of the polymer chains before structional reorganisation can proceed. This is normally done by thermal treatements above the polymers glass transition temperature $T_g$, but with high molar mass system long annealing times are need \cite{SVABCP}.
 
 \section{Polymers used in Solvent Vapour Annealing}
 In this section the homopolymers Polystyrene and Polyisoprene and the block copolymer Polystyrene-b-Polyisoprene properties will be presented.  
@@ -63,8 +65,6 @@ Polystyrene \ce{(C8H8)_N}:
 \makebraces[90pt,30pt]{N}{left}{right}
 \bigskip
 
-%Polyisoprene has the following chemistry:
-
 \setpolymerdelim[]
 Polyisoprene \ce{(C5H8)_N}:
 \chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
@@ -75,7 +75,29 @@ Polyisoprene \ce{(C5H8)_N}:
 %\chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
 %\makebraces[10pt,15pt]{n}{left}{right}
 
+\section{Polymer Considerations}
+Before commencing solvent vapour annealing some consideration is need into what polymers, what solvent and what substrate should be used. Polystyrene has been chosen as block A of the block copolymer and Polyisoprene chosen as block B. Polystyrene is in the glassy phase at room temperature, where polyisoprene is in a rubbery phase at room temperature. The morphology of the block can shed a light on how the vapour could interact with the blocks during solvent vapour annealing. The molar mass, polymerisation of both block, polydispersion index and the interaction parameter between the two block is helpful to understand what might happen during the solvent vapour annealing process. High molar mass systems are strongly segregated and take longer to come into equilibrium than a lower molar mass system. 
+
 \subsection{Relevant values}
+
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Polymer Values} \\
+ \hline
+    & Polystyrene & Polyisoprene & PS-b-PI\\
+ \hline
+ $T_g$&   &  &   \\
+ $N$&  &  &  \\
+ $N_A$&  &  &  \\
+ $N_B$&  &  &  \\
+ $f_A$&  &  &  \\
+ $f_B$&  &  &  \\
+ $\bar{M}_n$&  &  &  \\
+ $\bar{M}_w$&  &  &  \\
+ $PDI$&  &  &  \\
+ $\chi$&  &  &  \\
+ \hline
+\end{tabular}
 
 \section{Spin Coating thin films}
 Spin coating is the deposition method used to fabricate the thin films used in this thesis. This is a wet method where a polymer is dissolved in a solution then deposited onto the semiconductor wafer, silicon wafer. The silicon wafer is rotated at a fixed low rpm to spread the polymer solution across the wafer. The rpm is increased spinning off the excess solution and will evaporate leaving a thin film with uniform thickness. This method is predicted by the following expression:
@@ -83,7 +105,7 @@ Spin coating is the deposition method used to fabricate the thin films used in t
 \begin{equation}
 d = \left(\frac{\eta}{4\pi\rho\omega^2}\right)^{\frac{1}{2}} t^{-\frac{1}{2}},
 \end{equation}  
-where d is the predicted thickness, $\eta$ the viscosity coefficient of the polymer solution, $\rho$ solution density, $\omega$ angular velocity of the spinning and $t$ is the spinning time \cite{petty2008molecular}.
+where d is the predicted thickness, $\eta$ the viscosity coefficient of the polymer solution, $\rho$ solution density, $\omega$ angular velocity of the spinning and $t$ is the spinning time \cite{petty2008molecular}. The spin coated block copolymers show defect-rich morphologies due to fast evaporation of the solvent and the polymers being in a thermal non-equilibrium \cite{PosseltBCP}.
 
 \section{Spectrometer Setup}
 The experimental setup is comprised of a NanoCalc XR and a Halogen light source(HL-2000-FHSA) seen in figure \ref{fig:speclight}, which can produce wavelengths of \SI{360}{\nano\meter} to \SI{2400}{\nano\meter}. When the samples are being measured they are either placed on the ocean optics single point stage seen in figure \ref{fig:Singlestage} or in the test chamber seen in figure \ref{fig:SVAchamber} made by the RUC workshop/machinists for x-ray scattering experiments. The NanoCalc is comprised of a spectrometer and an internal light source as seen in the figure \ref{fig:nanocalcsetup}, which can produce wavelengths of \SI{250}{\nano\meter} to \SI{1050}{\nano\meter} and measure thicknesses of \SI{10}{\nano\meter} to \SI{100}{\micro\meter}. The NanoCalc XR is connected to a computer where the NanoCalc software is installed and operated. For the experiments the halogen light source is used since it has a larger output power then the internal light source of the NanoCalc XR. The larger intensity output is need when performing experiments in the test chamber. 
@@ -197,6 +219,11 @@ During the both swelling processes, the SCCM will be kept constant to $200$ SCCM
 
 
 \section{Solvent Vapour Annealing Process}
+The solvent vapour annealing process is divided into two process, a swelling and a drying process. In the swelling process a dry polymer upon a wafer is placed into the annealing chamber and is subjected to nitrogen gas. Slowly nitrogen gas is decreased and nitrogen gas through a bubbler filled with a solvent, in this thesis toluene, is increased creating vapour in the annealing chamber. When performing SVA, a solvent is chosen that is either neutral or slightly selective towards one of the polymers in the block copolymer. Solvent uptake is also dependant on the physical state of the block copolymer and the block fraction volume. The thin film will swell due to thermodynamic driving forces associated with the entropy of mixing of vapour and polymer blocks. The swelling will continue until the chemical potential of the vapour and the solvent in the thin film is in equilibrium. A diffusion front will arise continuing through the thin film from the vapour interface through to the substrate. It is published that the vapour pressure is an important thin film thickness parameter and should be controlled throughout the annealing. The vapour pressure is dependant on the mass flow controller, temperature of the solvent and temperature of the annealing chamber. The time taken to fully swell is also dependant on how organised the dry thin film is before swelling, this leads to varying swelling time. In a solvent swollen state the mobility of the polymer chains increase and the polymer can move in the volume of the thin film. The molar mass of the polymer plays at role in the how fast the polymer self assembles and a equilibrium state may not be achieved during the swelling. In the drying step the nitrogen gas flow through the bubbler is decrease and the direct nitrogen gas flow is increased. The solvent in the thin film is evaporated and the rate in which the solvent evaporates has been seen to have an impact of the nanoscale structure, in effect of quenching an organised structure. It is documented that both fast and slow evaporation leads to organised structure in block copolymers. An ordering front forms in the thin film during the evaporation where the thin film show order closer to the vapour interface and as the front propagates through the film, order follows in its wake\cite{SVABCP}. 
+
+Structure characterisation is important during the stages of solvent vapour annealing, different experimental method illuminate different parameters. Spectral reflectometry used in this thesis will investigate how the thickness of the thin film evolves during SVA and shed light on how the refractive index for the ambient and thin film could evolve. 
+
+   
 
 
 
