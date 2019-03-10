@@ -2,6 +2,8 @@
 \begin{document}
 	\chapter{Experimental method}\label{experimentalmethod}
 	
+In this chapter a general outline of polymer classification will be outlined with the addition of a description	of the polymers used in the solvent vapour annealing experiments. The spectrometer setup will be introduced and the necessary information related to how the spectrometer measures the reflectance of the thin films and the experimental measurement protocol. The reflectance data fitting will be explained and the chapter will close with a brief description of the mass flow meters controlling the annealing and the solvent vapour annealing process. 
+	
 \section{Polymers}
 Polymers are long chains of molecular units called mers, linked together by covalent bonds. Polymers are both found in biological system and synthesised by chemists. Polymers are described by their properties such as its chemistry, stereochemistry, architecture and what phase it is in \cite{jones2002soft}. A polymers chemistry is what the polymer is built of and with different structures, the polymers display different properties. Homopolymers are polymers built of one type of mer, where block copolymers are built up of two types of mers, an A and B. The different properties of the polymer is also dependant on how the repeating molecular units are bonded together, this is called the polymers stereochemistry, for example a block copolymer can be structured as a long chain of the A polymers bonded to a long chain of the B polymer. Polymers can be polar and non-polar due to the valence electron preferring one element from another. The polymers architecture describes the general structure of the polymer, which can be linear, branched or cross-linked. Linear polymers are long chains of monomers with bonds that are rigid to a certain degree, and cannot rotate freely, and are normally strong structures. Branched polymers are long chains with side chains attached to the main chain. Theses side chains can be comprised of monomers and reactive groups. Branched polymers are normally more softer and less crystalline that linear polymers. Cross-linked polymers are two or more side chains joined together forming a loose two dimensional network. Cross-linked polymers are more rigid and burn rather than melt when heated. 
 
@@ -59,11 +61,13 @@ width0pt\right.$};%
 {$\left.\vrule height\delimhalfdim depth\delimhalfdim
 width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
+
 \setpolymerdelim[]
 Polystyrene \ce{(C8H8)_N}:
 \chemfig{-[@{left,0.3},1.5]C(-[:90]*6(=-=-=-))(-[6]H)-C(-[2]H)(-[6]H)-[@{right,0.8}]}
 \makebraces[90pt,30pt]{N}{left}{right}
 \bigskip
+
 
 \setpolymerdelim[]
 Polyisoprene \ce{(C5H8)_N}:
@@ -76,7 +80,7 @@ Polyisoprene \ce{(C5H8)_N}:
 %\makebraces[10pt,15pt]{n}{left}{right}
 
 \section{Polymer Considerations}
-Before commencing solvent vapour annealing some consideration is need into what polymers, what solvent and what substrate should be used. Polystyrene has been chosen as block A of the block copolymer and Polyisoprene chosen as block B. Polystyrene is in the glassy phase at room temperature, where polyisoprene is in a rubbery phase at room temperature. The morphology of the block can shed a light on how the vapour could interact with the blocks during solvent vapour annealing. The molar mass, polymerisation of both block, polydispersion index and the interaction parameter between the two block is helpful to understand what might happen during the solvent vapour annealing process. High molar mass systems are strongly segregated and take longer to come into equilibrium than a lower molar mass system. 
+Before commencing solvent vapour annealing some consideration is need into what polymers, what solvent and what substrate should be used. Polystyrene has been chosen as block A of the block copolymer and Polyisoprene chosen as block B. Polystyrene is in the glassy phase at room temperature, where polyisoprene is in a rubbery phase at room temperature. The morphology of the block can shed a light on how the vapour could interact with the blocks during solvent vapour annealing. The molar mass, polymerisation of both block, polydispersion index and the interaction parameter between the two block is helpful to understand what might happen during the solvent vapour annealing process. High molar mass systems are strongly segregated and take longer to come into equilibrium than a lower molar mass system. Interaction between the solvent and the polymers will also give insight into how the morphology could evolve during the solvent vapour annealing.
 
 \subsection{Relevant values}
 
@@ -108,7 +112,7 @@ d = \left(\frac{\eta}{4\pi\rho\omega^2}\right)^{\frac{1}{2}} t^{-\frac{1}{2}},
 where d is the predicted thickness, $\eta$ the viscosity coefficient of the polymer solution, $\rho$ solution density, $\omega$ angular velocity of the spinning and $t$ is the spinning time \cite{petty2008molecular}. The spin coated block copolymers show defect-rich morphologies due to fast evaporation of the solvent and the polymers being in a thermal non-equilibrium \cite{PosseltBCP}.
 
 \section{Spectrometer Setup}
-The experimental setup is comprised of a NanoCalc XR and a Halogen light source(HL-2000-FHSA) seen in figure \ref{fig:speclight}, which can produce wavelengths of \SI{360}{\nano\meter} to \SI{2400}{\nano\meter}. When the samples are being measured they are either placed on the ocean optics single point stage seen in figure \ref{fig:Singlestage} or in the test chamber seen in figure \ref{fig:SVAchamber} made by the RUC workshop/machinists for x-ray scattering experiments. The NanoCalc is comprised of a spectrometer and an internal light source as seen in the figure \ref{fig:nanocalcsetup}, which can produce wavelengths of \SI{250}{\nano\meter} to \SI{1050}{\nano\meter} and measure thicknesses of \SI{10}{\nano\meter} to \SI{100}{\micro\meter}. The NanoCalc XR is connected to a computer where the NanoCalc software is installed and operated. For the experiments the halogen light source is used since it has a larger output power then the internal light source of the NanoCalc XR. The larger intensity output is need when performing experiments in the test chamber. 
+The experimental setup is comprised of a NanoCalc XR and a Halogen light source(HL-2000-FHSA) seen in figure \ref{fig:speclight}, which can produce wavelengths of \SI{360}{\nano\meter} to \SI{2400}{\nano\meter}. When the samples are being measured they are either placed on the ocean optics single point stage seen in figure \ref{fig:Singlestage} or in the solvent vapour annealing (SVA) experimental chamber seen in figure \ref{fig:SVAchamber} made by the IMFUFA(Indsatsområdet for Studiet af Matematik og Fysik samt deres Funktioner i Undervisning, Forskning og Anvendelser) workshop for small angle x-ray scattering (SAXS) and and grazing incidence small angle x-ray scattering(GISAXS) experiments. The NanoCalc is comprised of a spectrometer and an internal light source as seen in the figure \ref{fig:nanocalcsetup}, which can produce wavelengths of \SI{250}{\nano\meter} to \SI{1050}{\nano\meter} and measure thicknesses of \SI{10}{\nano\meter} to \SI{100}{\micro\meter}. The NanoCalc XR is connected to a computer where the NanoCalc software is installed and operated. For the experiments the halogen light source is used since it has a larger output power then the internal light source of the NanoCalc XR. The larger intensity output is need when performing experiments in the SVA experimental chamber. The lid of the SVA experimental chamber holds the optical fiber and light passes through a sapphire lens before entering the chamber and illuminate the thin film. The sapphire lens is need to focus the light upon the thin film due to the distance from the optical fiber to the sample is greater than the single point stage. Throughout this thesis "with optics" will be used when referring to measurement taken using the SVA experimental chamber since the light passes through the sapphire lens. "Without optics" refers taking measurements using the single point stage.  
 
 For experiments done in this thesis white light is produced in the light source(HL-2000-FHSA), which travels through optical fiber and strikes that sample. The reflected light travels back through the optical fiber and the intensity across every wavelength of the white light is collected in the spectrometer and is sent to software created by in house and saved to a file and analysed in MATLAB\textsuperscript{\textregistered}.  
 	
@@ -137,7 +141,7 @@ For experiments done in this thesis white light is produced in the light source(
 	  \begin{minipage}[b]{0.5\linewidth}
 	    \centering
 	    \includegraphics[width=.9\linewidth]{setup4.JPG} 
-	    \caption{SVA experiment chamber \break minus lid}
+	    \caption{SVA experimental chamber \break minus lid}
 	    \label{fig:SVAchamber} 
 	    \vspace{4ex}
 	  \end{minipage} 
@@ -186,7 +190,7 @@ Placing equation \ref{eq:nanocalcreflect} equal to the reflectance equations usi
 
 
 \section{Reflectance measurement protocol}
-In this section the experimental protocol for both taking measurements without the optics and with the optics are given. The halogen light source has been turned on 30 minutes prior to taking the measurements and the thin films have had 30 minutes to climatise to room temperature. The protocol will be formulated in steps.
+In this section the experimental protocol for both taking measurements without the optics and with the optics are given. The halogen light source has been turned on 30 minutes prior to taking the measurements and the thin films have had 30 minutes to climatise to room temperature. The single point stage is set up and tested using a reference step wafer of known thicknesses. The protocol will be formulated in steps.
 
 \subsection{Without Optics}
 \begin{enumerate}
@@ -209,8 +213,13 @@ In this section the experimental protocol for both taking measurements without t
 \item Take the optics off the test chamber, remove the blank silicon wafer and place in a thin film sample. Place the optics onto the test chamber. Take a measurement.
 \end{enumerate}
 
-\section{MATLAB\textsuperscript{\textregistered} result fitting}
-450-900nm, MSE, Three parameters n0,n1,D1.
+\section{Fitting of the reflectance data}
+The mean square error is used when fitting the Fresnel equations to the reflectance measurements. The mean square error is given by:
+
+\begin{equation}
+MSE = \frac{1}{n}\sum_{i=1}^{n}\left( Y_i - \hat{Y}_i \right)^2,
+\end{equation} 
+where $n$ is equal to the amount of data points used, $Y_i$ is the measured value and $\hat{Y}_i$ is the estimated value. The fitting range is from $\SI{450}{\nano\meter}$ to $\SI{900}{\nano\meter}$. This range has been chosen ...[ARGUMENT HERE]. The parameters used in the fitting of Fresnel equations are the ambient refractive index $n_0$, the thin film refractive index $n_1$ and the thin film thickness $d_1$. The thickness for the silicon oxide layer is fixed at $\SI{2}{\nano\meter}$ and the complex refractive index values at each wavelength has been taken from Ocean Optics software. The complex refractive index for the silicon substrate has also be taken from the Ocean Optics software. Both the refractive indices for ambient and thin film are fitted for real numbers. The fitting scripts loops through the three parameter arrays calculating the mean square error for the measured reflectance data, finds the smallest mean square error value and saves the three parameters associated the smallest mean square error into an array. The next reflectance measurement is loaded in and the process begins again.
 
 \section{Bronkhorst mass flow meters}
 To regulate the solvent vapour annealing process, the experimental setup includes three Bronkhorst mass flow meters. This is important since controlling the vapour flow in different ways changes the structuring of the polymers when swelling. One EL-Flow select(F-201CV-500) with a flow capability for $N_2$ of  $\SI{4}{\milli\litre\per\minute}$ to $\SI{750}{\milli\litre\per\minute}$, or $400$ SCCM (Standard centimetre cubed per minute at $\SI{1}{\atmos}$ and $\SI{273}{\kelvin}$). Two EL-Flow select(F-201CV-200) with a $N_2$ flow of $\SI{1.6}{\milli\litre\per\minute}$ to $\SI{300}{\milli\litre\per\minute}$, or $200$ SCCM (Standard centimetre cubed per minute at $\SI{1}{\atmos}$ and $\SI{273}{\kelvin}$) \cite{elflow}.

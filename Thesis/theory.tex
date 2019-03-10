@@ -2,7 +2,7 @@
 \begin{document}
 \chapter{Theory}\label{lighttheory}
 
-\cite{fujiwara2007spectroscopic},\cite{tompkins2015spectroscopic}
+The following theory is based on chapter 2 in both \cite{fujiwara2007spectroscopic} and \cite{tompkins2015spectroscopic}. In this chapter, basic electromagnetic radiation theory, the definition for the complex refractive index and the definition for the reflectance and transmission of light is introduced. The derivation of the Fresnel equations for multilayer thin films ends the theory needed to understand how the reflectance data is modelled in the analysis chapter, chapter \ref{ch.analysis}.
 
 \section{Electromagnetic Radiation}
 Electromagnetic radiation can be expressed as a one dimensional sinusoidal wave using either $\cos$ or $\sin$:
@@ -258,4 +258,10 @@ r_{0123} = \frac{r_{01}+r_{12}\exp(-i2\beta_1)+[r_{01}r_{12}+\exp(-i2\beta_1)]r_
 %t_{0123} = \frac{t_{01}t_{12}t_{23}\exp(-i(\beta_1+\beta_2))}{1+r_{01}r_{12}\exp(-i2\beta_1)+[r_{12}+r_{01}\exp(-i2\beta_1)]r_{23}\exp(-i2\beta_2))}
 \end{equation}
 
+%The Fresnel equations are recursive and multilayer models are easily calculated using computers. For example a ten layer model can be expressed as:
+%
+%\begin{equation}
+%r_{012345678910}= \frac{r_{01}+r_{12345678910}\exp(-i2\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}
+%\end{equation}
+ 
 \end{document}
