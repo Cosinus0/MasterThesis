@@ -3,7 +3,7 @@
 \chapter{Analysis} \label{ch:analysis}
 
 \section{Light source fluctuation}
-Looking at equation \ref{eq:nanocalcreflect} which is the expression for how the spectrometer measures the reflectance of light from the thin films reveils the importance of the intensity of light being used in the measurement. A fluctuation in the intensity of light this gives repercussions for the reference measurement and dark measurement taken as both measurements are were correct at the point that they were taken and are not correct in future measurements. The question is how long does a reference and dark measurement remain valid. This studies aim is to shed light on this problem. The thin film used is polystyrene and a total of $14$ measurements were done in the SVA experimental chamber. A measurement was taken every $\SI{30}{\minute}$, a measurement was made manually at $10.47$ and the automatic measurement function commenced at $11.19$. The measurements can be seen plotted together in figure \ref{fig:daytotal}. Distinguishing which curve belongs to which time is not possible because of the limited amount of plotting colours, but two groups of reflectance curves can be seen at the $\SI{600}{\nano\meter}$ mark and again at the $\SI{900}{\nano\meter}$ mark.
+Looking at equation \ref{eq:nanocalcreflect}, which is the expression for how the spectrometer measures the reflectance of light from the thin films reveils the importance of the intensity of light being used in the measurement. A fluctuation in the intensity of light this gives repercussions for the reference measurement and dark measurement taken as both measurements are were correct at the point that they were taken and are not correct in future measurements. The question is how long does a reference and dark measurement remain valid. This study aims is to shed light on this problem. The thin film used is polystyrene and a total of $14$ measurements were done in the SVA experimental chamber. A measurement was taken every $\SI{30}{\minute}$, a measurement was made manually at $10$:$47$ and the automatic measurement function commenced at $11$:$19$. The measurements can be seen plotted together in figure \ref{fig:daytotal}. Distinguishing which curve belongs to which time is not possible because of the limited amount of plotting colours, but two groups of reflectance curves can be seen at the $\SI{600}{\nano\meter}$ mark and again at the $\SI{900}{\nano\meter}$ mark.
   
 \begin{figure}[H]
 \centering
@@ -12,21 +12,32 @@ Looking at equation \ref{eq:nanocalcreflect} which is the expression for how the
 \label{fig:daytotal}
 \end{figure}
 
-Figures \ref{fig:day1} and \ref{fig:day2} is the first reflectance measurement taken at $10.47$ plotted against the reflectance measurements taken at $12.19$,$13.49$,$15.19$ and $17.19$ respectively. The drop in reflectance 
+Figures \ref{fig:day1} and \ref{fig:day2} is the first reflectance measurement taken at $10:47$ plotted against the reflectance measurements taken at the times $12$:$19$, $13$:$49$, and $15$:$19$, $17$:$19$ respectively. In figure \ref{fig:day1}, the reflectance measurements lie close to one another. In figure \ref{fig:day2}, the drop in reflectance seen at the $\SI{600}{\nano\meter}$ mark starts at the time $15$:$19$ and continues onwards. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{lightfluct1.png}
-\caption{}
+\caption{The reflectance measurement taken at $10$:$47$ plotted with both $12$:$19$ and $13$:$49$.}
 \label{fig:day1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{lightfluct2.png}
-\caption{}
+\caption{The reflectance measurement taken at $10$:$47$ plotted with both $15$:$19$ and $17$:$49$.}
 \label{fig:day2}
 \end{figure}
+
+The reflectance difference has been plotted in figure \ref{fig:day3}. It can be seen that the difference of $10$:$47$ plotted with both $12$:$19$ and $13$:$49$ lie on top of one another and the difference of $10$:$47$ plotted with both $15$:$19$ and $17$:$49$ lie on top of one another. There is a clear difference between the two groups of plots.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{refldiffday.png}
+\caption{The reflectance difference.}
+\label{fig:day3}
+\end{figure}
+
+The conclusion to this study is that there is a $\SI{3}{\hour}$ window where the variation in the intensity from the light source does not impact the reflectance measurements. Beyond the $\SI{3}{\hour}$ period, the reflectance difference increases and can impact the reflectance measurements.
 
 	
 \section{Nano-Calc Simulated Reflectance Curves}

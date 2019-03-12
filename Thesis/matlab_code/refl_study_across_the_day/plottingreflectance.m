@@ -28,7 +28,7 @@ for q = 1: arraylength
     title('Light Source fluctuation study at different times of the day')
     xlabel('Wavelength (nm)')
     ylabel('Reflectance')
-    legend('10.47','11.19','11.49','12.19','12.49','13.19','13.49','14.19','14.49','15.19','15.49','16.19','16.49','17.19')
+    legend('10:47','11:19','11:49','12:19','12:49','13:19','13:49','14:19','14:49','15:19','15:49','16:19','16:49','17:19')
     axis([400 1041 0 1])
 
 end
