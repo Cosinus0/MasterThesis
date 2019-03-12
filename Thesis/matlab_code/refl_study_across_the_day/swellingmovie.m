@@ -15,10 +15,10 @@ time = [10.47 11.19 11.49 12.19 12.49 13.19 13.49 14.19 14.49 15.19 15.49 16.19 
 
         
         
-set(gca,'nextplot','replacechildren');
-v = VideoWriter('daystudy1.avi');
-v.FrameRate = 0.5;
-open(v);
+%set(gca,'nextplot','replacechildren');
+%v = VideoWriter('daystudy1.avi');
+%v.FrameRate = 0.5;
+%open(v);
 
 for i=1:14
     
@@ -30,9 +30,9 @@ for i=1:14
     
     pause(0.1)
     
-       frame = getframe(gcf);
-       writeVideo(v,frame);
+       %frame = getframe(gcf);
+       %writeVideo(v,frame);
 
 end
 
-close(v)
+%close(v)

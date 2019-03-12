@@ -29,32 +29,33 @@ lamda = [400:1041].*nm;
 %%%%%%%%%%%%%%%%%%%%
 
 n_0 = 1;
-A = 1.4450;
-B = 3e4;
-C = 4e7;
-n_1 = cauchy(wavelength,A,B,C); %Dont not use lamda in nanometers.
+%A = 1.4450;
+%B = 3e4;
+%C = 4e7;
+%n_1 = cauchy(wavelength,A,B,C); %Dont not use lamda in nanometers.
+n_1 = 1.5;
 
 load dispersion_Si(100).dat
 disp = dispersion_Si_100_(251:1:892,:);
-n_2 = transpose(disp(:,2));
-%n_2 = transpose(disp(:,2))-1i.*transpose(disp(:,3));
+%n_2 = transpose(disp(:,2));
+n_2 = transpose(disp(:,2))-1i.*transpose(disp(:,3));
 
 %%%%%%%%%%%%%
 % Thickness %
 %%%%%%%%%%%%%
 
-d = 1000.*nm;
+d = 1000;
 
 
 %%%%%%%%%%%%%%%%
 % Calculations %
 %%%%%%%%%%%%%%%%
 
-r_012 = fresnel_am_tf_s(n_0,n_1,n_2,d,lamda);
+r_012 = fresnel_am_tf_s(n_0,n_1,n_2,d,wavelength);
 
 R_012 = r_012.*conj(r_012);
 
-plot(lamda,R_012,x.*nm,y)
+plot(lamda,R_012,'g',x.*nm,y,'--k')
 legend('Fresnel','Simulation')
 
 %%%%%%%%%%%%%%%%%%

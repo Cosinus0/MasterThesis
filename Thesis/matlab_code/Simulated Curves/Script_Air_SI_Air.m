@@ -20,8 +20,7 @@ y = Air_SI_100__Air(:,2);
 % Physics %
 %%%%%%%%%%%
 
-nm = 10^-9;
-lamda = [400:1041].*nm;
+wavelength = [400:1041];
 
 %%%%%%%%%%%%%%%%%%%%
 % Refractive index %
@@ -31,7 +30,8 @@ n_0 = 1;
 
 load dispersion_Si(100).dat
 disp = dispersion_Si_100_(251:1:892,:);
-n_1 = transpose(disp(:,2));
+n_1 = transpose(disp(:,2))-1i.*transpose(disp(:,3));
+
 
 
 %%%%%%%%%%%%%%%%
@@ -42,4 +42,8 @@ r_01 = fresnel_am_s(n_0,n_1)
 
 R_01 = r_01.*conj(r_01);
 
-plot(lamda,R_01,x.*nm,y)
+plot(x,y,'g',wavelength,R_01,'--k')
+title([{'Fresnel reflectance equation plotted on NanoCalc simulated reflectance curve'}])
+xlabel('Wavelength(nm)')
+ylabel('Reflectance(%)')
+legend('Simulation','Fresnel')

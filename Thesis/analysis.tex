@@ -1,16 +1,74 @@
 \documentclass[MasterThesisMain.tex]{subfiles}
 \begin{document}
-	\chapter{Analysis} \label{ch.analysis}
+\chapter{Analysis} \label{ch:analysis}
+
+\section{Light source fluctuation}
+Looking at equation \ref{eq:nanocalcreflect} which is the expression for how the spectrometer measures the reflectance of light from the thin films reveils the importance of the intensity of light being used in the measurement. A fluctuation in the intensity of light this gives repercussions for the reference measurement and dark measurement taken as both measurements are were correct at the point that they were taken and are not correct in future measurements. The question is how long does a reference and dark measurement remain valid. This studies aim is to shed light on this problem. The thin film used is polystyrene and a total of $14$ measurements were done in the SVA experimental chamber. A measurement was taken every $\SI{30}{\minute}$, a measurement was made manually at $10.47$ and the automatic measurement function commenced at $11.19$. The measurements can be seen plotted together in figure \ref{fig:daytotal}. Distinguishing which curve belongs to which time is not possible because of the limited amount of plotting colours, but two groups of reflectance curves can be seen at the $\SI{600}{\nano\meter}$ mark and again at the $\SI{900}{\nano\meter}$ mark.
+  
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fluctstudytotal.png}
+\caption{14 reflectance measurements plotted representing a reflectance measurement taken every $30$ minutes. Distinguishing which curves belongs to which time is not possible, but two groups of reflectance curves can be seen at the $\SI{600}{\nano\meter}$ mark and again at the $\SI{900}{\nano\meter}$ mark.}
+\label{fig:daytotal}
+\end{figure}
+
+Figures \ref{fig:day1} and \ref{fig:day2} is the first reflectance measurement taken at $10.47$ plotted against the reflectance measurements taken at $12.19$,$13.49$,$15.19$ and $17.19$ respectively. The drop in reflectance 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{lightfluct1.png}
+\caption{}
+\label{fig:day1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{lightfluct2.png}
+\caption{}
+\label{fig:day2}
+\end{figure}
+
 	
-	\section{Nano-Calc Simulated Reflectance Curves}
+\section{Nano-Calc Simulated Reflectance Curves}
+The Nano-Calc software does not go into detail how it models and analyses the reflectance curves, a little study was need to understand the process better and test if the software uses Fresnel equation and if the functions written by myself could reproduce these curves. Using the Nano-Calc software, simulated reflectance curves were produced from three models. The first model consists of of ambient of air refractive index $1$, and the silicon substrate, the Fresnel equation can be seen in equation \ref{eq:a-srefl}. The reflectance curves can be seen in figure \ref{fig:simmodelsubst}. The second model consists of ambient of air refractive index $1$, a thin film of polymer with homogeneous refractive index $1.5$ and thickness $\SI{1000}{\nano\meter}$ and the silicon substrate, the fresnel equation can be seen in equation \ref{eq:2layerreflect}. The reflectance curves can be seen in figure \ref{fig:simmodel1}. The third model consists of ambient of air refractive index $1$, a thin film of polymer using the Cauchy dispersion equation $A=1.4450$, $B=3 \cdot 10^4$ and $C=4 \cdot 10^7$, a silicon oxide layer with thickness $\SI{2}{\nano\meter}$ and the silicon substrate, the fresnel equation can be seen in equation \ref{eq:multilayer} . The reflectance curves can be seen in figure \ref{fig:simmodel2}. The Cauchy dispersion equation is an empirical equation describing how the refractive index varies with respect to wavelength. The Cauchy dispersion equation is defined as:
+
+\begin{equation}
+n(\lambda) = A + \frac{B}{\lambda^2} + \frac{C}{\lambda^4},
+\end{equation}
+where $\lambda$ is the wavelength. This is the only time the Cauchy dispersion equation will be used, this is because the coefficients are not fully understood and it has not been implemented into the fitting protocol used on the reflectance data of the homopolymers and block copolymer. 
+
+When modelling the Fresnel equations, both the refractive index and absorption index for the silicon oxide layer and silicon substrate have been used for the complex refractive index. The dispersion for both the silicon oxide layer and silicon substrate have been taken from the Nano-Calc software and the graphs and script to produce the graphs can be seen in appendix \ref{app:dispersion}.  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{simcurvesubst.png}
+\caption{Simulated curve of the model plotted with the green curve, consists of ambient of air refractive index $1$, and the silicon substrate. The Fresnel equations plotted with the black dashed curve consists of the same model. It can be seen that the two curves fall upon each other.}
+\label{fig:simmodelsubst}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{simcurve.png}
+\caption{Simulated curve of the model plotted with the green curve, consists of ambient of air refractive index $1$, a thin film of polymer with homogeneous refractive index $1.5$ and thickness $\SI{1000}{\nano\meter}$ and the silicon substrate. The Fresnel equations plotted with the black dashed curve consists of the same model. It can be seen that the two curves fall upon each other.}
+\label{fig:simmodel1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{simcurvesiox.png}
+\caption{Simulated curve of the model plotted with the green curve, consists of ambient of air refractive index $1$, a thin film of polymer using the Cauchy dispersion equation $A=1.4450$, $B=3 \cdot 10^4$ and $C=4 \cdot 10^7$, a silicon oxide layer with thickness $\SI{2}{\nano\meter}$ and the silicon substrate. The Fresnel equations plotted with the black dashed curve consists of the same model. It can be seen that the two curves fall upon each other.}
+\label{fig:simmodel2}
+\end{figure}
+
+Two conclusions have been drawn from this study. The first is that the Fresnel equations implemented by myself in the script used in this chapter can reproduce the simulated curves used by the Nano-Calc software to model the reflectance curves. The second is that the fitting protocol for the reflectance curves will not implement the Cauchy dispersion for refractive index because it is not fully understood and it is not something the optical spectral reflectance method can fully reveil.    
 	
-	\section{Day study}
+\section{Ambient study}
 	
-	\section{Ambient study}
+\section{Polystyrene}
 	
-	\section{Polystyrene}
+\section{Polyisoprene}
 	
-	\section{Polyisoprene}
-	
-	\section{Polystyrene-b-polyisoprene}
+\section{Polystyrene-b-polyisoprene}
+
+
 \end{document}

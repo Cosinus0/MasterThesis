@@ -21,6 +21,13 @@
 \usepackage{mathtools}
 \usepackage{siunitx}
 
+\usepackage{listings}
+\lstset{inputpath=appendixscripts/}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
 %Figure Packages
 \usepackage{graphicx}
 \graphicspath{{figures/}}
@@ -83,4 +90,6 @@ Abstract here
 \newpage
 \bibliography{reference}
 \bibliographystyle{unsrt}
+
+\subfile{appendix.tex}
 \end{document}
