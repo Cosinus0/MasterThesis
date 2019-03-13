@@ -3,7 +3,7 @@
 \chapter{Analysis} \label{ch:analysis}
 
 \section{Light source fluctuation}
-Looking at equation \ref{eq:nanocalcreflect}, which is the expression for how the spectrometer measures the reflectance of light from the thin films reveils the importance of the intensity of light being used in the measurement. A fluctuation in the intensity of light this gives repercussions for the reference measurement and dark measurement taken as both measurements are were correct at the point that they were taken and are not correct in future measurements. The question is how long does a reference and dark measurement remain valid. This study aims is to shed light on this problem. The thin film used is polystyrene and a total of $14$ measurements were done in the SVA experimental chamber. A measurement was taken every $\SI{30}{\minute}$, a measurement was made manually at $10$:$47$ and the automatic measurement function commenced at $11$:$19$. The measurements can be seen plotted together in figure \ref{fig:daytotal}. Distinguishing which curve belongs to which time is not possible because of the limited amount of plotting colours, but two groups of reflectance curves can be seen at the $\SI{600}{\nano\meter}$ mark and again at the $\SI{900}{\nano\meter}$ mark.
+Looking at equation \ref{eq:nanocalcreflect}, which is the expression for how the spectrometer measures the reflectance of light from the thin films reveils the importance of the intensity of light being used in the measurement. A fluctuation in the intensity of light gives repercussions for the reference measurement and dark measurement taken as both measurements are not correct at the point they were taken and will not correct in future measurements. The question is how long does a reference and dark measurement remain valid. This study aims is to shed light on this problem. The scripts used can be found in appendix \ref{app:Lightstudy}. The thin film used is polystyrene and a total of $14$ measurements were done in the SVA experimental chamber. A measurement was taken every $\SI{30}{\minute}$, a measurement was made manually at $10$:$47$ and the automatic measurements commenced at $11$:$19$. The measurements can be seen plotted together in figure \ref{fig:daytotal}. Distinguishing which curve belongs to which time is not possible because of the limited amount of plotting colours, but two groups of reflectance curves can be seen at the $\SI{600}{\nano\meter}$ mark and again at the $\SI{900}{\nano\meter}$ mark.
   
 \begin{figure}[H]
 \centering
@@ -12,7 +12,7 @@ Looking at equation \ref{eq:nanocalcreflect}, which is the expression for how th
 \label{fig:daytotal}
 \end{figure}
 
-Figures \ref{fig:day1} and \ref{fig:day2} is the first reflectance measurement taken at $10:47$ plotted against the reflectance measurements taken at the times $12$:$19$, $13$:$49$, and $15$:$19$, $17$:$19$ respectively. In figure \ref{fig:day1}, the reflectance measurements lie close to one another. In figure \ref{fig:day2}, the drop in reflectance seen at the $\SI{600}{\nano\meter}$ mark starts at the time $15$:$19$ and continues onwards. 
+Figures \ref{fig:day1} and \ref{fig:day2} show the first reflectance measurement taken at $10:47$ plotted against the reflectance measurements taken at the times $12$:$19$, $13$:$49$, and $15$:$19$, $17$:$19$ respectively. In figure \ref{fig:day1}, the reflectance measurements lie close to one another. In figure \ref{fig:day2}, the drop in reflectance seen at the $\SI{600}{\nano\meter}$ mark starts at the time $15$:$19$ and continues onwards. 
 
 \begin{figure}[H]
 \centering
@@ -37,7 +37,7 @@ The reflectance difference has been plotted in figure \ref{fig:day3}. It can be 
 \label{fig:day3}
 \end{figure}
 
-The conclusion to this study is that there is a $\SI{3}{\hour}$ window where the variation in the intensity from the light source does not impact the reflectance measurements. Beyond the $\SI{3}{\hour}$ period, the reflectance difference increases and can impact the reflectance measurements.
+The conclusion to this study is that there is a $3$ hour window where the variation in the intensity from the light source does not impact the reflectance measurements. Beyond the $3$ hour period, the reflectance difference increases and can impact the reflectance measurements.
 
 	
 \section{Nano-Calc Simulated Reflectance Curves}
@@ -73,7 +73,24 @@ When modelling the Fresnel equations, both the refractive index and absorption i
 
 Two conclusions have been drawn from this study. The first is that the Fresnel equations implemented by myself in the script used in this chapter can reproduce the simulated curves used by the Nano-Calc software to model the reflectance curves. The second is that the fitting protocol for the reflectance curves will not implement the Cauchy dispersion for refractive index because it is not fully understood and it is not something the optical spectral reflectance method can fully reveil.    
 	
-\section{Ambient study}
+\section{Solvent vapour annealing ambient study}
+During solvent vapour annealing, nitrogen flow through the bubbler increases, increasing the toluene vapour present in the chamber. The question arises, does the refractive index of the ambient increase with the increase of toluene vapour available in the chamber. A blank silicon wafer has been used for this study. Upon the silicon wafer lies a silicon oxide layer modelled to have a thickness of $\SI{2}{\nano\meter}$. The refractive index has been allowed to vary between $1$ to $2$ with a step of $0.1$. The fitting protocol loops through each refractive index, calculating the theoretical reflectance curve from the fresnel equation \ref{eq:a-srefl}. The mean square error has been calculated for each loop and the minimum has been found and the refractive index saved into a file. The swelling protocol used has been outlined in section \ref{sec:svaprotocol} and can be seen in figure \ref{fig:slowslow}. From the mean square error fitting the refractive index is allowed to vary from $1$ to $1.3$ through the course of swelling, this can be seen in figure \ref{fig:ambientrefr}. The dotted vertical line represent the different stages in the solvent vapour annealing and the maximum flow through the bubbler has been highlighted with the red vertical dots.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ambientstudyrefr.png}
+\caption{The refractive index of the ambient has been plotted. The refractive index has been fitted by plotting the theoretical reflectance curve from the fresnel equation \ref{eq:a-srefl} and calculating the mean square error. The refractive index from the lowest mean square error has been used per reflectance measurement. The dotted vertical lines represent the swelling and deswelling step outlines in section \ref{sec:svaprotocol}. The red dotted lines indicate the period where there is maximum flow through the bubbler.}
+\label{fig:ambientrefr}
+\end{figure}
+
+The mean square error for each reflectance measurement is shown in figure \ref{fig:ambientmse}. It can be seen between the $2000$ and $3000$ second mark the refractive index is erratic, this is mirrored in the increase in the mean square error. The same happens when the fitting increases the refractive index to $1.3$, the mean square error increase then falls. During the deswelling period there is an increase in mean square error when every the refractive index decreases. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{ambientstudymse.png}
+\caption{}
+\label{fig:ambientmse}
+\end{figure}
 	
 \section{Polystyrene}
 	
