@@ -264,6 +264,16 @@ r_{0123} = \frac{r_{01}+r_{12}\exp(-i2\beta_1)+[r_{01}r_{12}+\exp(-i2\beta_1)]r_
 %r_{012345678910}= \frac{r_{01}+r_{12345678910}\exp(-i2\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}
 %\end{equation}
  
- 
-The fresnel equations have been implemented into matlab for model fitting and analysis of reflectance data and can be found in appendix \ref{app:fresnel}.  
+\section{Fresnel Equation Implementation} 
+The fresnel equations have been implemented into matlab for model fitting and analysis of reflectance data. The optical fiber used in  the spectral optical reflectance experiment is placed perpendicular to the thin film being measured. Thus the angle of incidence for the light is equal to zero, $\theta=0$, and $\cos(\theta)=1$. The p-polarisation fresnel equations and film phase thickness have been written into matlab as functions.  
+
+\begin{equation}
+r_{jk} = \frac{E_{r}}{E_{i}} = \frac{N_k-N_j}{N_j+N_k}
+\end{equation}
+
+\begin{equation}
+\beta_i=\frac{2\pi d_i}{\lambda} N_i.
+\end{equation} 
+
+The matlab functions and complex refractive indices for the silicon substrate and silicon oxide layer can be found in appendix \ref{app:fresnel}.  
 \end{document}

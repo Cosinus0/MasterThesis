@@ -46,25 +46,32 @@ The Nano-Calc software does not go into detail how it models and analyses the re
 \begin{equation}
 n(\lambda) = A + \frac{B}{\lambda^2} + \frac{C}{\lambda^4},
 \end{equation}
-where $\lambda$ is the wavelength. This is the only time the Cauchy dispersion equation will be used, this is because the coefficients are not fully understood and it has not been implemented into the fitting protocol used on the reflectance data of the homopolymers and block copolymer. 
+where $\lambda$ is the wavelength. This is the only time the Cauchy dispersion equation will be used. The coefficient A describes the refractive index when the terms with wavelength become less dominant. The Cauchy dispersion equation has not been implemented into the fitting protocol used on the reflectance data of the homopolymers and block copolymer. It is interesting nonetheless to look at the refractive index of the polymers as a function of wavelength. The cauchy dispersion equation has been plotted in figure \ref{fig:dispshort}. The coefficient have been found experimentally using ellipsometry. It can be seen in figure \ref{fig:dispshort} that polystyrene is the only polymer which is close to a constant refractive index. Polyisoprene and polystyrene-b-polyisoprenes refractive index diverges alot compared to the constant refractive index. Since the fitting of the homopolymers and Block copolymer reflectance data is done across the interval $[450,900]$, i have included the amount in which the refractive index deviates from the constant refractive index at $\SI{450}{\nano\meter}$ in red font.   
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{dispersionshort.png}
+\caption{The cauchy dispersion equation has been plotted for Polystyrene, Polyisoprene and Polystyrene-b-Polyisoprene. The amount in which the refractive index deviates from the constant refractive index at $\SI{450}{\nano\meter}$ has been included in red font.}
+\label{fig:dispshort}
+\end{figure} 
 
 When modelling the Fresnel equations, both the refractive index and absorption index for the silicon oxide layer and silicon substrate have been used for the complex refractive index. The dispersion for both the silicon oxide layer and silicon substrate have been taken from the Nano-Calc software and the graphs and script to produce the graphs can be seen in appendix \ref{app:dispersion}.  
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{simcurvesubst.png}
 \caption{Simulated curve of the model plotted with the green curve, consists of ambient of air refractive index $1$, and the silicon substrate. The Fresnel equations plotted with the black dashed curve consists of the same model. It can be seen that the two curves fall upon each other.}
 \label{fig:simmodelsubst}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{simcurve.png}
 \caption{Simulated curve of the model plotted with the green curve, consists of ambient of air refractive index $1$, a thin film of polymer with homogeneous refractive index $1.5$ and thickness $\SI{1000}{\nano\meter}$ and the silicon substrate. The Fresnel equations plotted with the black dashed curve consists of the same model. It can be seen that the two curves fall upon each other.}
 \label{fig:simmodel1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{simcurvesiox.png}
 \caption{Simulated curve of the model plotted with the green curve, consists of ambient of air refractive index $1$, a thin film of polymer using the Cauchy dispersion equation $A=1.4450$, $B=3 \cdot 10^4$ and $C=4 \cdot 10^7$, a silicon oxide layer with thickness $\SI{2}{\nano\meter}$ and the silicon substrate. The Fresnel equations plotted with the black dashed curve consists of the same model. It can be seen that the two curves fall upon each other.}
@@ -104,6 +111,20 @@ The conclusion to this study is that the ambient in the solvent vapour annealing
 \section{Polystyrene}
 	
 \section{Polyisoprene}
+Polyisoprene has been solvent vapour annealed using the protocol outlines in section \ref{sec:svaprotocol}
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{PIswelling1.png}
+\caption{}
+\label{fig:PIswelling1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{PIswelling2.png}
+\caption{}
+\label{fig:PIswelling2}
+\end{figure}
 	
 \section{Polystyrene-b-polyisoprene}
 
