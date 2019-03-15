@@ -5,7 +5,7 @@ runninglist = []
 
 # Initialise array
 
-for i in range(1,963+1):
+for i in range(2,963+1):
 
 	reflectance = []
 

@@ -5,13 +5,13 @@ runninglist = []
 
 # Initialise array
 
-for i in range(1,471+1):
+for i in range(1,963+1):
 
 	reflectance = []
 
 	# Open file
 
-	my_file = open("PSswellingrun2_%d.dat" %i,"r")
+	my_file = open("PIslowslow_%d.dat" %i,"r")
 	data = csv.reader(my_file, delimiter=';')
 
 	# saves csv data into reflectance array
@@ -28,4 +28,4 @@ for i in range(1,471+1):
 	runninglist.append(reflectance)
 
 a = numpy.array(runninglist)
-numpy.savetxt("PSreflectance", a, delimiter =",")
+numpy.savetxt("PIreflectance", a, delimiter =",")

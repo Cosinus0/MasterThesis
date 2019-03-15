@@ -1,49 +1,83 @@
 clear all
 close all
 
+%%%%%%%%%%%%%
+% Load Data %
+%%%%%%%%%%%%%
+
 load PIreflectance %Load reflectance measurements.
 refldata=PIreflectance(:,(51:501));
 
 %Load best MSE values for each frame.
 %Limits for frame_val2.mat
-    %Air=[1:0.1:1.3];
-    %Thinfilm=[1.4:0.1:2];
-    %Thickness=[250:1:550];
+%Air=[1:0.1:1.3];
+%Thinfilm=[1.4:0.1:2];
+%Thickness=[250:1:550];
 load frame_val2.mat 
 
-wave = [450:900];
-nm = 10^-9;
-lamda = (450:900);
+%%%%%%%%%%%
+% Physics %
+%%%%%%%%%%%
+
+wavelength = [450:900];
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thickness related to the solvent concentration %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+phi2 = 1-((framevalues(1,3))./(framevalues(:,3)));
 
 
-        load dispersion_SiOx.dat
-        disp_2 = dispersion_SiOx(301:1:751,:);
-        n_2 = transpose(disp_2(:,2)) -1i.*transpose(disp_2(:,3));
+%%%%%%%%%%%%%%%%%%%%
+% Refractive index %
+%%%%%%%%%%%%%%%%%%%%
 
-        load dispersion_Si(100).dat
-        disp_3 = dispersion_Si_100_(301:1:751,:);
-        n_3 = transpose(disp_3(:,2)) -1i.*transpose(disp_3(:,3));
-        
-        d_2 = 2;
-        
+load dispersion_SiOx.dat
+disp_2 = dispersion_SiOx(301:1:751,:);
+n_2 = transpose(disp_2(:,2)) -1i.*transpose(disp_2(:,3));
+
+load dispersion_Si(100).dat
+disp_3 = dispersion_Si_100_(301:1:751,:);
+n_3 = transpose(disp_3(:,2)) -1i.*transpose(disp_3(:,3));
+
+%%%%%%%%%%%%%
+% Thickness %
+%%%%%%%%%%%%%
+
+d_2 = 2;
+
+%%%%%%%%%%%%
+% Plotting %
+%%%%%%%%%%%%
+
 numframes = length(PIreflectance(:,1));
+
+figure('units','normalized','outerposition',[0 0 1 1])
+plot((1:numframes).*10,phi2)
+title('Solvent concentration in the PI during SVA')
+xlabel('Time (seconds)')
+ylabel('Solvent concentration')
+hold on
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hold off
+
         
 
 figure('units','normalized','outerposition',[0 0 1 1])
 
-set(gca,'nextplot','replacechildren');
-v = VideoWriter('PIsvaframevalue2.avi');
-v.FrameRate = 10;
-open(v);
+%set(gca,'nextplot','replacechildren');
+%v = VideoWriter('PIsvaframevalue2.avi');
+%v.FrameRate = 10;
+%open(v);
 
 
 for i=1:numframes
 
-    r_0123 = fresnel_am_tf_lay_sub(framevalues(i,1),framevalues(i,2),n_2,n_3,framevalues(i,3),d_2,lamda);
+    r_0123 = fresnel_am_tf_lay_sub(framevalues(i,1),framevalues(i,2),n_2,n_3,framevalues(i,3),d_2,wavelength);
     R_0123 = r_0123.*conj(r_0123);
 
 subplot(4,1,1)    
-plot(wave,refldata(i,:),wave,R_0123);
+plot(wavelength,refldata(i,:),wavelength,R_0123);
 axis([450 900 0 1])
 title({['PI swelling'];['Seconds =',num2str(i*10)];['MSE =',num2str(framevalues(i,4))]})
 legend('Reflectance','Fresnel')
@@ -64,8 +98,8 @@ yticks([200 300 400 500 600])
 legend('Thickness','Running Thickness')
 
 
-frame = getframe(gcf);
-writeVideo(v,frame);
+%frame = getframe(gcf);
+%writeVideo(v,frame);
 
 
 pause(0.001);
@@ -74,4 +108,4 @@ pause(0.001);
 
 end
 
-close(v);
+%close(v);
