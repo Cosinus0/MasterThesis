@@ -1,0 +1,3 @@
+funtion [r_jklmnop] = thinfilmlayer7(n_j,n_k,n_l,n_m,n_n,n_o,n_p,d_k,d_l,d_m,d_n,d_o,lamda)
+
+r_jklmno = (fresnel_am_s(n_j,n_k) + thinfilmlayer5(n_k,n_l,n_m,n_n,n_o,d_l,d_m,d_n,lamda).*exp(-2i.*filmphasethickness(lamda,n_k,d_k)))./ (1 + thinfilmlayer5(n_k,n_l,n_m,n_n,n_o,d_l,d_m,d_n,lamda).*exp(-2i.*filmphasethickness(lamda,n_k,d_k))); 

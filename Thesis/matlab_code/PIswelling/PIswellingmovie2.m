@@ -46,16 +46,16 @@ n_3 = transpose(disp_3(:,2)) -1i.*transpose(disp_3(:,3));
 
 d_2 = 2;
 
-%%
 %%%%%%%%%%%%
 % Plotting %
 %%%%%%%%%%%%
 
 numframes = length(PIreflectance(:,1));
+%%
 
 figure('units','normalized','outerposition',[0 0 1 1])
 plot((1:numframes).*10,phi2)
-title('Solvent concentration in the PI during SVA')
+title('Solvent concentration in polyisoprene during SVA')
 xlabel('Time (seconds)')
 ylabel('Solvent concentration')
 hold on
@@ -68,7 +68,7 @@ subplot(3,1,1)
 plot((1:numframes).*10,framevalues(:,1))
 title('Polyisoprene')
 xlabel('Seconds')
-ylabel('Refractive index')
+ylabel('Air Refractive index')
 yticks([1.1 1.2 1.3 1.4 1.5])
 legend('Air R-I','Running air R-I')
 hold on
@@ -78,7 +78,7 @@ hold off
 subplot(3,1,2)
 plot((1:numframes).*10,framevalues(:,2))
 xlabel('Seconds')
-ylabel('Refractive index')
+ylabel('Thin film Refractive index')
 axis([0 10000 1.4 1.9])
 yticks([1.4 1.5 1.6 1.7 1.8 1.9])
 legend('Thinfilm R-I','Running Thinfilm R-I')
@@ -90,13 +90,27 @@ subplot(3,1,3)
 plot((1:numframes).*10,framevalues(:,3))
 xlabel('Seconds')
 ylabel('Thickness')
-yticks([200 300 400 500 600])
+axis([0 10000 250 600])
+yticks([250 300 350 400 450 500 550 600])
 legend('Thickness','Running Thickness')
 hold on
-hline([300 400 500],{'b:','b:','b:'},{'','',''})
+hline([300 350 400 450 500 550],{'b:','b:','b:','b:','b:'},{'','','','',''})
 line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
 hold off
-        
+
+%%
+
+figure('units','normalized','outerposition',[0 0 1 1])
+    plot((1:numframes).*10,framevalues(:,4),'k.')
+    axis([0 10000 0 0.9])
+    title('Mean square error of polyisoprene under solvent vapour annealing')
+    xlabel('Seconds')
+    ylabel('Mean square error')
+hold on
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hold off
+
+
 %%
 figure('units','normalized','outerposition',[0 0 1 1])
 
