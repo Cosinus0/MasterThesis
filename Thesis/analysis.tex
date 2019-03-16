@@ -95,40 +95,42 @@ The mean square error for each reflectance measurement is shown in figure \ref{f
 \begin{figure}
 \centering
 \includegraphics[width = \textwidth]{ambientstudymse.png}
-\caption{The mean square error has been plotted as a function of seconds. The frames have been captured every $10$ seconds. It can be seen that the error increase every time the modelling increases or decreases the refractive index but stabilises back to a level close error before the change in refractive index.}
+\caption{The mean square error has been plotted as a function of time. The frames have been captured every $10$ time. It can be seen that the error increase every time the modelling increases or decreases the refractive index but stabilises back to a level close error before the change in refractive index.}
 \label{fig:ambientmse}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width = \textwidth]{ambientreflectancestep.png}
-\caption{Three reflectance curves has been plotted to show how the reflectance decreases during solvent vapour annealing when the toluene vapour in the chamber increases. The fresnel reflectance model equation \ref{eq:a-srefl} has been plotted for each stage in the solvent vapour annealing. The measurement at time $120$ second is modelled with a refractive index of $1$. The measurement at time $3500$ seconds is modelled with a refractive index of $1.1$. The third measurement at time $5000$ seconds is modelled with a refractive index of $1.3$.}
+\caption{Three reflectance curves has been plotted to show how the reflectance decreases during solvent vapour annealing when the toluene vapour in the chamber increases. The fresnel reflectance model equation \ref{eq:a-srefl} has been plotted for each stage in the solvent vapour annealing. The measurement at time $120$ second is modelled with a refractive index of $1$. The measurement at time $3500$ time is modelled with a refractive index of $1.1$. The third measurement at time $5000$ time is modelled with a refractive index of $1.3$.}
 \label{fig:ambientreflectance}
 \end{figure}
 
 The conclusion to this study is that the ambient in the solvent vapour annealing chamber increase during the swelling. The interval in which the refractive index of the ambient increase, lies between $1$ and $1.3$. 
 	
 \section{Polystyrene}
+Polystyrene with a static measured thickness of $\SI{275.5}{\nano\meter}$ and a refractive index $1.5975$, has been placed into the solvent vapour annealing chamber and swelled using the swelling protocol outlines in section \ref{sec:svaprotocol}. The ambient refractive index has been bounded to the interval $[1,1.3]$ with a step size $0.1$. The thin film refractive index has been bounded to the interval $[1.1,2]$ with a step size $0.1$. The thin film thickness bounded to the interval $[\SI{250}{\nano\meter},\SI{600}{\nano\meter}]$ with step size $1$ and the silicon oxide thickness set to $\SI{2}{\nano\meter}$. Figure \ref{fig:PSswelling1} shows the values found using the fitting protocol using the mean square error and have been as a function of time.  Vertical dotted lines has been added to represent at what point the the swelling protocol has increased and decreased the nitrogen and toluene vapour. Horizontal lines has been added to the thickness plot to help the reader. The thickness of the polystyrene shows a slow uptake of the toluene vapour during the first $4000$ seconds during this time the refractive index for the polystyrene has increased by $0.4$ to a refractive index of $2$. The refractive index jump from $1.6$ to $1.7$ passed the $1000$ seconds mark and the jump from $1.8$ to $2$ around the $3000$ second mark coincide with jumps in the refractive index of the ambient. The refractive index of the ambient increases slowly over the course of the first $4000$ seconds, increase after the nitrogen through the toluene has increased. There are areas in the figures where there is noise, jumps back and forth from values and a sudden decrease in thickness. The fitting has trouble fitting around the $\SI{450}{\nano\meter}$ and $\SI{500}{\nano\meter}$ interval, i believe this is the cause of the noise. This is also reflected in the mean square error figure \ref{fig:PSswelling2}. The increase of the mean square error at $1500$ mark coincide with the noise in the refractive index of the ambient and thin film, and thickness, figure \ref{fig:PSswelling1}. The increase of the square error at $2500$ and $3000$ mark shows sudden drops in the thickness values which also coincide with increase of the refractive index of the thin film. During the maximum swelling interval the mean square error increases from $0.1$ to $1$. The reflectance during this time decreases creating a gap between the fresnel reflectance equations and reflectance measurement increasing the mean square error. When a slow drying commences at the $5500$ second mark, the thickness and mean square error values drops significantly. The swelling from $\SI{300}{\nano\meter}$ to $\SI{450}{\nano\meter}$ takes roughly $1500$ seconds and deswelling to roughly the same thickness takes $500$ seconds is very interesting. The increase in the mean square error after the $6500$ second mark can be because of the noise in the thin film refractive index. The solvent concentration in the thin film as a function of time is shown in figure \ref{fig:PSswelling3}.        
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width = \textwidth]{PSswelling1.png}
-\caption{}
-\label{}
+\caption{The values for the refractive index for the ambient and thin film, and the thickness has been plotted as a function of time for polystyrene. The values have been found using the fitting protocol outlined in \ref{sec:fitting}. Vertical dotted lines have been added to denote when there is increases and decreases of nitrogen and nitrogen through the toluene. The area between the red vertical dotted lines denote the maximum flow through the toluene.}
+\label{fig:PSswelling1}
 \end{figure}
 
-\begin{figure}[H]
+
+\begin{figure}
 \centering
 \includegraphics[width = \textwidth]{PSswelling2.png}
-\caption{}
-\label{}
+\caption{The mean square error has been plotted as a function of time. The mean square error can be seen to increase at the $1500$ and $2500$ mark due to noise in the modelling and drop in thickness values. The mean square error increases from $0.1$ to $1$ during the max toluene swelling, this is due to the reflectance decreasing during this time and creating a gap between the fresnel reflectance equation and reflectance. The increase in the mean square error after the $6500$ second mark can be because of the noise in the thin film refractive index.}
+\label{fig:PSswelling2}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width = \textwidth]{PSswelling3.png}
-\caption{}
-\label{}
+\caption{The solvent concentration in the polystyrene as a function of time.}
+\label{fig:PSswelling3}
 \end{figure}
 	
 \section{Polyisoprene}

@@ -10,9 +10,9 @@ refldata=PSreflectance160319(22:length(PSreflectance160319(:,1)),(51:501));
 
 %Load best MSE values for each frame.
 %Limits
-%Air=[1:0.1:1.5];
+%Air=[1:0.1:1.3];
 %Thinfilm=[1.1:0.1:2];
-%Thickness=[250:1:550];
+%Thickness=[250:1:600];
 load PSframe_val160319.mat 
 
 %%%%%%%%%%%
@@ -58,8 +58,10 @@ plot((1:numframes).*10,phi)
 title('Solvent concentration in polystyrene during SVA')
 xlabel('Time (seconds)')
 ylabel('Solvent concentration')
+axis([0 10000 -0.1 0.5 ])
 hold on
-line1 = vline([1000 2000 3000 4000 6000 7000 8000 9000 10000],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hline([0 0.1 0.2 0.3 0.4],{'k:','k:','k:','k:','k:'},{'','','','',''})
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
 hold off
 
 %%

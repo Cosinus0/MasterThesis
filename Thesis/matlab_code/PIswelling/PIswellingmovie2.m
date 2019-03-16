@@ -58,7 +58,9 @@ plot((1:numframes).*10,phi2)
 title('Solvent concentration in polyisoprene during SVA')
 xlabel('Time (seconds)')
 ylabel('Solvent concentration')
+axis([0 10000 -0.1 0.5])
 hold on
+hline([0 0.1 0.2 0.3 0.4],{'k:','k:','k:','k:','k:'},{'','','','',''})
 line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
 hold off
 
@@ -102,7 +104,7 @@ hold off
 
 figure('units','normalized','outerposition',[0 0 1 1])
     plot((1:numframes).*10,framevalues(:,4),'k.')
-    axis([0 10000 0 0.9])
+    axis([0 10000 0 1.2])
     title('Mean square error of polyisoprene under solvent vapour annealing')
     xlabel('Seconds')
     ylabel('Mean square error')
