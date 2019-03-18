@@ -8,13 +8,11 @@ tic
 % Physics %
 %%%%%%%%%%%
 
-nm = 10^-9;
 wavelength = (450:900);
-lamda = (450:900);
 
 air = [1:0.1:1.3]; %Defining Refractive index limits.
 thinfilm = [1.5:0.1:2]; %Defining Refractive index limits.
-thickness = [100:1:200]; %Defining Thickness limits.
+thickness = [95:1:200]; %Defining Thickness limits.
 
 framevalues = []; %Define empty array where all data will be saved.
 
@@ -48,10 +46,6 @@ n_0 = air(k);
         % For loop for fitting refractive index of the thin film.
         for l = 1:length(thinfilm)
         
-        % A = 1.4450;
-        % B = 3e4;
-        % C = 4e7;
-        % n_1 = cauchy(wavelength,A,B,C);
             
         n_1 = thinfilm(l);
 
@@ -76,15 +70,10 @@ n_0 = air(k);
 % Reflectance Calculations %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-            r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,lamda); 
+            r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,wavelength); 
 
             R_0123 = r_0123.*conj(r_0123); 
 
-            %plot(lamda.*10^9,R_0123,x,y)
-            %title({'I-T319 out','Measured reflectance vs. Fresnel model'})
-            %xlabel('Wavelength nm')
-            %ylabel('Reflectance')
-            %legend('Reflectance','Fresnel')
 
 %%%%%%%
 % MSE %
@@ -92,7 +81,7 @@ n_0 = air(k);
 
             deltay = y - R_0123;
             sqdeltay = deltay.^2;
-            sumsq = sum(sqdeltay)./length(x);
+            sumsq = sum(sqdeltay);
             
             
             list = [air(k),thinfilm(l),thickness(m),sumsq];
@@ -111,7 +100,7 @@ framevalues = vertcat(framevalues,tempvalue);
 
 end
 
-%save('frame_val.mat','framevalues') %Saving to file
+Time = toc
+save('frame_val.mat','framevalues','Time') %Saving to file
 
 
-toc

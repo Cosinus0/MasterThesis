@@ -251,21 +251,7 @@ r_{0123}= \frac{r_{01}+r_{123}\exp(-i2\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}
 %t_{0123}=\frac{t_{01}t_{123}\exp(-i\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}
 \end{equation}
 
-Inserting $r_{123}$ into equations \ref{eq:multilayer} gives the expanded Fresnel equation for this multilayer model:
-
-\begin{equation}
-r_{0123} = \frac{r_{01}+r_{12}\exp(-i2\beta_1)+[r_{01}r_{12}+\exp(-i2\beta_1)]r_{23}\exp(-i2\beta_2)}{1+r_{01}r_{12}\exp(-i2\beta_1)+[r_{12}+r_{01}\exp(-i2\beta_1)]r_{23}\exp(-i2\beta_2)}.
-%t_{0123} = \frac{t_{01}t_{12}t_{23}\exp(-i(\beta_1+\beta_2))}{1+r_{01}r_{12}\exp(-i2\beta_1)+[r_{12}+r_{01}\exp(-i2\beta_1)]r_{23}\exp(-i2\beta_2))}
-\end{equation}
-
-%The Fresnel equations are recursive and multilayer models are easily calculated using computers. For example a ten layer model can be expressed as:
-%
-%\begin{equation}
-%r_{012345678910}= \frac{r_{01}+r_{12345678910}\exp(-i2\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}
-%\end{equation}
- 
-\section{Fresnel Equation Implementation} 
-The fresnel equations have been implemented into matlab for model fitting and analysis of reflectance data. The optical fiber used in  the spectral optical reflectance experiment is placed perpendicular to the thin film being measured. Thus the angle of incidence for the light is equal to zero, $\theta=0$, and $\cos(\theta)=1$. The p-polarisation fresnel equations and film phase thickness have been written into matlab as functions.  
+The fresnel equations have been implemented into matlab for model fitting and analysis of reflectance data. The optical fiber used in  the spectral optical reflectance experiment is placed perpendicular to the thin film being measured. Thus the angle of incidence for the light is equal to zero, $\theta=0$, and $\cos(\theta)=1$. The p-polarisation fresnel equations and film phase thickness have been written into matlab as functions.
 
 \begin{equation}
 r_{jk} = \frac{E_{r}}{E_{i}} = \frac{N_k-N_j}{N_j+N_k}
@@ -273,7 +259,21 @@ r_{jk} = \frac{E_{r}}{E_{i}} = \frac{N_k-N_j}{N_j+N_k}
 
 \begin{equation}
 \beta_i=\frac{2\pi d_i}{\lambda} N_i.
-\end{equation} 
+\end{equation}
 
-The matlab functions and complex refractive indices for the silicon substrate and silicon oxide layer can be found in appendix \ref{app:fresnel}.  
+The Fresnel equations are recursive and multilayer models are easily calculated using computers. A three layer polymer model, denoted with the subscript $1$,$2$,$3$ and an ambient and substrate, denoted with the subscript $0$ and $4$ respectively, can be expressed as:
+
+\begin{align}
+r_{01234}&= \frac{r_{01}+r_{1234}\exp(-i2\beta_1)}{1+r_{01}r_{1234}\exp(-i2\beta_1)} \\
+r_{1234} &= \frac{r_{12}+r_{234}\exp(-i2\beta_2)}{1+r_{12}r_{234}\exp(-i2\beta_2)} \\
+r_{234}  &= \frac{r_{23}+r_{34}\exp(-i2\beta_3)}{1+r_{23}r_{34}\exp(-i2\beta_3)} \\
+r_{jk}   &= \frac{N_k-N_j}{N_k + N_j}  
+\end{align}
+ 
+The matlab functions and complex refractive indices for the silicon substrate and silicon oxide layer can be found in appendix \ref{app:fresnel}. 
+
+
+ 
+
+  
 \end{document}
