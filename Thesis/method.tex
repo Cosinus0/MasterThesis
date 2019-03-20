@@ -43,7 +43,14 @@ where $\chi_H$ is of due to enthalpy and $\chi_S$ is due to entropy. Chemically 
 
 Polymer are found in different physical states, the most common being in a glass or rubber state. A glassy state is described as amorphous since the structure resembles both a liquid and a solid and this state is found below the polymers glass transition temperature $T_g$. A polymer can melt into a viscous state, this state is its rubber state. This state is found above the polymers glass transition temperature \cite{petty2008molecular}. 
 
-Micro-phase segregation of block copolymers is seen and understood as a thermodynamic process, in which the blocks of the polymer have a thermodynamic incompatibly described by Flory-Huggins interaction parameter $\chi_{AB}$, which creates a nanoscale structure. The covalent bond between block A and block B prevent macro-phase separation, and micro-phase segregation occurs.  This leads to the application of block copolymers as self-assembling structures which can be used nanolitography and as templates in photonics. The block copolymers self-assembling properties depend on the mobility of the polymer chains before structional reorganisation can proceed. This is normally done by thermal treatements above the polymers glass transition temperature $T_g$, but with high molar mass system long annealing times are needed \cite{SVABCP}.
+Micro-phase segregation of diblock copolymers is understood as a chemical incompatibility between the different blocks in the block copolymer. The Flory-Huggins interaction parameter $\chi_{AB}$ and the fraction composition of the copolymer $f_A$/$f_B$ are used to define the morphology of the diblock copolymer. The Flory-Huggins interaction parameter describes the free-energy cost per monomer of contacts between the A and B monomers. Positive interaction parameter indicates a net repulsion between the A and B monomers, and a negative interaction parameter indicates mixing. The covalent bond plays a role in the morphology because it prevents macro-phase separation between block A and block B of the diblock copolymer \cite{designpolymers}. The theoretical phase diagram of a diblock copolymer is shown to the left in figure \ref{fig:blockfase} and the experimental phase diagram for polystyrene-b-polyisoprene is shown to the right in figure \ref{fig:blockfase}. Diblock copolymers can be found in a variety of complex morphologies as seen in figure \ref{fig:blockfase}, the modelling and fitting of the homopolymers and diblock polymers will assume that the polymers are in a lamellar morphology denoted as L. The block copolymers self-assembling properties depend on the mobility of the polymer chains before structional reorganisation can proceed. This is normally done by thermal treatments above the polymers glass transition temperature $T_g$, but with high molar mass system long annealing times are needed \cite{SVABCP}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{PSPIphase.png}
+\caption{The theoretical phase diagram is shown to the left and the experiment phase diagram for polystyrene-b-polyisoprene shown to the right. The product of the interaction parameter and the degree of polymerisation as a function of polymer composition of the A block is plotted in both figures. The morphologies, the diblock copolymers can be found in are shown below the figures, from left to right the morphologies are, spherical, cylindrical, gyroid and lamellar. The experimental phase diagram for polystyrene-b-polyisoprene resembles the theoretical phase diagram The experimental phase diagram has one extra morphology denoted as PL \cite{designpolymers}.}
+\label{fig:blockfase}
+\end{figure}
 
 \section{Polymers used in Solvent Vapour Annealing}
 In this section the homopolymers Polystyrene and Polyisoprene and the block copolymer Polystyrene-b-Polyisoprene properties will be presented.  
@@ -74,10 +81,6 @@ Polyisoprene \ce{(C5H8)_N}:
 \chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
 \makebraces[10pt,15pt]{N}{left}{right}
 
-%\setpolymerdelim[]
-%Poly(methyl methacrylate) \ce{(C5O2H8)_n}:
-%\chemfig{-[@{left,0.3},1.5]CH_2-CH=C(-[6]CH_3)-CH_2-[@{right,0.8}]}
-%\makebraces[10pt,15pt]{n}{left}{right}
 
 \section{Polymer Considerations}
 Before commencing solvent vapour annealing some consideration is need into what polymers, what solvent and what substrate should be used. Polystyrene has been chosen as block A of the block copolymer and Polyisoprene chosen as block B. Polystyrene is in the glassy phase at room temperature, where polyisoprene is in a rubbery phase at room temperature. The morphology of the block can shed a light on how the vapour could interact with the blocks during solvent vapour annealing. The molar mass, polymerisation of both block, polydispersion index and the interaction parameter between the two block is helpful to understand what might happen during the solvent vapour annealing process. High molar mass systems are strongly segregated and take longer to come into equilibrium than a lower molar mass system. Interaction between the solvent and the polymers will also give insight into how the morphology could evolve during the solvent vapour annealing.
@@ -118,6 +121,7 @@ Before commencing solvent vapour annealing some consideration is need into what 
  Polyisoprene Swelling & PI  & 353 & $\approx\SI{200}{\nano\meter}$ & $\SI{301}{\nano\meter}$ & $1.4594$  \\
  Polystyrene-b-Polyiosprene & PS-b-PI & 370 & $\approx\SI{100}{\nano\meter}$ & $\SI{97.3}{\nano\meter}$ & $1.5659$  \\
  \hline
+ \label{tab:polymers}
 \end{tabular}
 
 \section{Spin Coating thin films}
