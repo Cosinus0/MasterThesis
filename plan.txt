@@ -1,0 +1,33 @@
+Monday Night:
+Calculate response time for the refractive indexs
+Table values from different model techqiues
+vapour refractive index for toulene -> look at liquid -> less than that maybe
+Try and make graphs bigger:
+	Thicker red lines
+
+Tuesday:
+Spin coating - ask sina
+Light source flucuations experiment again
+Discussion:
+	Light source:
+		Is it continuous or abrupt?
+	polystyrene vs. polyisoprene:
+		refractive index upper bound 1.5
+		intergration time vs. timescale
+		homogenous increase in descrete thickness vs. continuous increase in descrete thickness
+		Gap between data and fit
+		spikes in thickness isoprene vs no spikes in polystyrene
+		when fixing average n?
+	homopolymers vs. linear
+		Linear makes non sense
+		Linear AB model different from homopolymer model
+		More parameters to fit.
+
+Wednesday:
+Reading through the report:
+	More differentiation between what i do and what nanocalc does	
+
+
+Future:
+Reflectance = How does it look?	
+Parameter Contour plot
