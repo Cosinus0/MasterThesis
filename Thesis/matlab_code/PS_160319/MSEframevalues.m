@@ -99,7 +99,6 @@ PSframevalues160319 = vertcat(PSframevalues160319,tempvalue);
 
 end
 
-save('PSframe_val160319.mat','PSframevalues160319') %Saving to file
+Time = toc;
 
-
-toc
+save('PSframe_val160319.mat','PSframevalues160319','Time') %Saving to file
