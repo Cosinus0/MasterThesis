@@ -32,7 +32,7 @@ hold off
 
 
 figure('units','normalized','outerposition',[0 0 1 1])
-    plot((12:length(ambientinvestreflectance(:,1))).*10,framevalues(12:length(ambientinvestreflectance(:,1)),2).*length(wavelength),'k.')
+    plot((12:length(ambientinvestreflectance(:,1))).*10,framevalues(12:length(ambientinvestreflectance(:,1)),2).*length(wavelength),'b.')
     axis([0 11000 0 0.3])
     title('Solvent vapour annealing ambient study - MSE')
     xlabel('Seconds')

@@ -96,13 +96,13 @@ axis([0 10000 250 500])
 yticks([250 275 300 350 400 450 500])
 legend('Thickness','Running Thickness')
 hold on
-hline([300 350 400 450],{'b:','b:','b:'},{'','',''})
+hline([300 350 400 450],{'k:','k:','k:'},{'','',''})
 line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
 hold off
 
 %%
 figure('units','normalized','outerposition',[0 0 1 1])
-    plot((1:numframes).*10,PSframevalues160319(:,4),'k.')
+    plot((1:numframes).*10,PSframevalues160319(:,4),'b.')
     axis([0 10000 0 1.2])
     title('Mean square error of polystyrene during solvent vapour annealing')
     xlabel('Seconds')
