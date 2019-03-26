@@ -1,39 +1,24 @@
-Tuesday:
-Spin coating - ask sina
-Light source flucuations experiment again
-
 Discussion:
 	Light source:
 		Is it continuous or abrupt?
-	Ambient study:
-		Does n=1.3 make sense?
-	SVA:
-		Constant vapour pressure - Done
-		SVA protocol off -Done
 	Polystyrene vs. polyisoprene:
 		refractive index upper bound 1.5
 		intergration time vs. timescale
-		homogenous increase in descrete thickness vs. continuous increase in descrete thickness
-		Gap between data and fit - DONE
 		spikes in thickness isoprene vs no spikes in polystyrene
 		when fixing average n?
-	Linear:
-		Linear makes not sense - DONE
-		Linear AB model different from homopolymer model -DONE
-		More parameters to fit. - Done
 
 Which results seem resonable? -> Model assumption
 
 Wednesday:
 Reading through the report:
 	More differentiation between what i do and what nanocalc does	
+Spin coating - ask sina
+Light source flucuations experiment again
 
 
 Fill in:
 Table values from different model techqiues
 Calculate response time for the refractive indexs
-vapour refractive index for toulene -> look at liquid -> less than that maybe
-
 
 
 Saturday/Sunday:
