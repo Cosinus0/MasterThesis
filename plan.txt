@@ -1,13 +1,6 @@
 Discussion:
 	Light source:
 		Is it continuous or abrupt?
-	Polystyrene vs. polyisoprene:
-		refractive index upper bound 1.5
-		intergration time vs. timescale
-		spikes in thickness isoprene vs no spikes in polystyrene
-		when fixing average n?
-
-Which results seem resonable? -> Model assumption
 
 Wednesday:
 Reading through the report:
@@ -24,3 +17,7 @@ Calculate response time for the refractive indexs
 Saturday/Sunday:
 Reflectance = How does it look?	
 Parameter Contour plot
+	
+	Polystyrene vs. polyisoprene:
+		when fixing average n?
+		refractive index upper bound 1.5

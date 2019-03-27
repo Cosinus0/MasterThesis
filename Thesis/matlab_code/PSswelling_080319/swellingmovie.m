@@ -50,6 +50,8 @@ d_2 = 2;
 %%%%%%%%%%%%
 numframes = length(PSreflectance2(:,1));
 
+%%
+
 figure('units','normalized','outerposition',[0 0 1 1])
 
 plot((1:numframes).*10,phi)
@@ -60,7 +62,35 @@ hold on
 line1 = vline([1000 2000 3000 4000 6000 7000 8000 9000 10000],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
 hold off
 
+%%
+figure('units','normalized','outerposition',[0 0 1 1])
 
+subplot(3,1,1)
+plot((1:numframes).*10,PSframevalues2(:,1))
+axis([0 11007 1 1.5])
+title('Polystyrene with ambient refractive index upper bound 1.5')
+yticks([1 1.1 1.2 1.3 1.4 1.5])
+xlabel('Seconds')
+ylabel('Ambient refractive index')
+legend('Air R-I')
+
+subplot(3,1,2)
+plot((1:numframes).*10,PSframevalues2(:,2))
+xlabel('Seconds')
+ylabel('Thin film refractive index')
+axis([0 11007 1.4 1.9])
+yticks([1.4 1.5 1.6 1.7 1.8 1.9])
+legend('Thinfilm R-I')
+ 
+subplot(3,1,3)
+plot((1:numframes).*10,PSframevalues2(:,3))
+axis([0 11007 200 600])
+xlabel('Seconds')
+ylabel('Thickness')
+yticks([200 300 400 500 600])
+legend('Thickness')
+
+%%
 figure('units','normalized','outerposition',[0 0 1 1])
 
 % set(gca,'nextplot','replacechildren');
