@@ -2,7 +2,7 @@
 \begin{document}
 \chapter{Theory}\label{lighttheory}
 
-The following theory is based on chapter 2 in both \cite{fujiwara2007spectroscopic} and \cite{tompkins2015spectroscopic}. In this chapter, basic electromagnetic radiation theory, the definition for the complex refractive index and the definition for the reflectance and transmission of light is introduced. The derivation of the Fresnel equations for multilayer thin films ends the theory needed to understand how the reflectance data is modelled in the analysis chapter, chapter \ref{ch:results}.
+The following theory is based on chapter 2 in both \cite{fujiwara2007spectroscopic} and \cite{tompkins2015spectroscopic}. In this chapter, basic electromagnetic radiation theory, the definition for the complex refractive index and the definition for the reflectance and transmission of light is introduced. The derivation of the fresnel equations for multilayer thin films is introduced. The fresnel equations are used to model the reflectance data in the analysis chapter, chapter \ref{ch:results}.
 
 \section{Electromagnetic Radiation}
 Electromagnetic radiation can be expressed as a one dimensional sinusoidal wave using either $\cos$ or $\sin$:
@@ -10,8 +10,8 @@ Electromagnetic radiation can be expressed as a one dimensional sinusoidal wave 
 \begin{equation}\label{eq:1dwave}
 \varphi = A\sin(\omega t - Kx +\delta),
 \end{equation}
-where $A$ is the wave amplitude, $K=\frac{2\pi}{\lambda}$ is the propagations number and $\lambda$ is the wave length, angular frequency $\omega = 2\pi\nu$ where $\nu$ is the frequency, time $t$ and initial phase $\delta$.
-From electromagnetic theory, the radiation is composed of an electric field and magnetic field that are both perpendicular to the direction of propagation. Both fields can be expressed as one-dimension complex sinusoidal wave. A complex number can be expressed as $C= a + ib =Re(C) + i Im(C) =r\cos(\theta)+ir\sin(\theta)$. Using Eulers formula $\exp(i\theta)=\cos(\theta)+i\sin(\theta)$, the one dimension sinusoidal wave can be expressed as:
+where $A$ is the wave amplitude, $K=\frac{2\pi}{\lambda}$ is the propagations number and $\lambda$ is the wave length, the angular frequency denoted as $\omega = 2\pi\nu$ where $\nu$ is the frequency, time $t$ and initial phase $\delta$.
+From electromagnetic theory, the radiation is composed of an electric field and magnetic field that are both perpendicular to the direction of propagation. Both fields can be expressed as one-dimensional complex sinusoidal wave. A complex number can be expressed as $C= a + ib =Re(C) + i Im(C) =r\cos(\theta)+ir\sin(\theta)$. Using Eulers formula $\exp(i\theta)=\cos(\theta)+i\sin(\theta)$, the one dimension sinusoidal wave can be expressed as:
 
 \begin{equation}\label{eq:1dcwave}
 \varphi=A\cos(\omega t- Kx +\delta) = Re \{A\exp[i(\omega t- Kx +\delta)]\} = A\exp[i(\omega t - Kx + \delta)]. 
@@ -23,7 +23,7 @@ E=E_0\exp[i(\omega t-Kx+\delta)]\\
 B=B_0\exp[i(\omega t-Kx+\delta)].
 \end{align}
 
-The relationship between the electric field and magnetic field is given by $E=cB$, and can be derived using the Maxwell-Faraday equation and one dimension wave equations for the electric and magnetic field:
+The relationship between the electric field and magnetic field is given by $E=cB$, and can be derived using the Maxwell-Faraday equation and the one dimensional wave equations for the electric and magnetic field \cite{ohanian}:
 
 \begin{equation}
 \frac{\partial E}{\partial x} = - \frac{\partial B}{\partial t}
@@ -57,7 +57,7 @@ where $c$ is the speed of light and $s$ is the speed of light in the medium. The
 E = E_0\exp[i(\omega t - \frac{2\pi n}{\lambda}x + \delta)]\label{eq:daE}.
 \end{equation}
 
-The change is wavelength is $\lambda = \frac{\lambda_0}{n}$, where $\lambda_0$ is the wavelength before entering the medium. The medium can also absorb light, a term is added to the refractive index to correct this, and is called the extinction coefficient $k$. The complex refractive index is given:
+The change is wavelength is $\lambda = \frac{\lambda_0}{n}$, where $\lambda_0$ is the wavelength before entering the medium. The medium can also absorb light, a term is added to the refractive index to correct this. The constant $k$ is called the extinction coefficient. The complex refractive index is given:
 
 \begin{equation}
 N=n-ik.
@@ -69,10 +69,10 @@ Placing the complex refractive index into equation \ref{eq:daE}, it can be seen 
 E = E_0\exp[i(\omega t - \frac{2\pi N}{\lambda}x + \delta)] = E_0\exp(-\frac{2\pi k}{\lambda}x)\exp[i(\omega t - \frac{2\pi n}{\lambda}x + \delta)]
 \end{equation}
 
-It needs to be stated that if the phase of the wave is expressed as $(Kx-\omega t)$ and the complex refractive index is given by $N=n-ik$, the exponentially factor will be positive which is incorrect. If the phase of the wave is expressed as $(Kx-\omega t)$ the complex refractive index must be defined as $N=n+ik$.
+It needs to be stated that if the phase of the wave is expressed as $(Kx-\omega t)$ and the complex refractive index is given by $N=n-ik$, the exponentially factor will be positive which is incorrect. Therefore when the phase of the wave is expressed as $(Kx-\omega t)$ the complex refractive index must be defined as $N=n+ik$.
 
 \section{Reflectance and Transmittance}\label{ch:reflect/trans}
-When light is reflected upon a surface at an oblique angle, light is reflected and transmitted. The electric field of light is grouped into two oscillation directions which can be defined by two planes, the parallel plane p and the perpendicular plane s. The same applies for the magnetic field of light. The parallel plane is defined by the incident and reflected light and the perpendicular plane is perpendicular to the parallel plane. Theory of light regards the two oscillation directions as the p-polarisation and s-polarisation. The reflectance of both p-polarisation and s-polarisation are defined by the ratio of reflected light intensity by the incident light intensity.
+When light illuminates a surface at an oblique angle, light is reflected and transmitted. The electric field of light is grouped into two oscillation directions which can be defined by two planes, the parallel plane p and the perpendicular plane s. The same applies for the magnetic field of light. The parallel plane is defined by the incident and reflected light and the perpendicular plane is perpendicular to the parallel plane. Theory of light regards the two oscillation directions as the p-polarisation and s-polarisation. The reflectance of both p-polarisation and s-polarisation are defined by the ratio of reflected light intensity by the incident light intensity.
 
 \begin{equation}
 R_{p} \equiv \frac{I_{r,p}}{I_{i,p}} = \frac{\mid E_{r,p} \mid^2}{\mid E_{i,p} \mid^2} = \mid r_{p} \mid^2 \quad R_{s} \equiv \frac{I_{r,s}}{I_{i,s}} = \frac{\mid E_{r,s} \mid^2}{\mid E_{i,s} \mid^2} = \mid r_{s} \mid^2
@@ -109,7 +109,7 @@ B_{i,p} + B_{r,p} = B_{t,p}.
 The subscripts of the electric and magnetic field denote the incident ray $i$, reflected ray $r$ and transmitted ray $t$ in the p-polarisation $p$ plane. The same boundary conditions for the s-polarisation can be expressed. This introduction to the Fresnel equations will use the p-polarisation light. The boundary conditions of the magnetic field need to be reformulated to express the electric field, this is done using the relation $E=sB$. The magnetic field boundary conditions equation \ref{magnbound} can be expressed as:
 
 \begin{align}
-\frac{E_{i,p}}{s_i} + \frac{E_{i,p}}{s_i} &= \frac{E_{t,p}}{s_t}\\
+\frac{E_{i,p}}{s_i} + \frac{E_{r,p}}{s_i} &= \frac{E_{t,p}}{s_t}\\
 \frac{N_i}{c}(E_{i,p}+E_{r,p}) &= \frac{N_t}{c}E_{t,p}\\
 N_i(E_{i,p}+E_{r,p}) &= N_tE_{t,p}.
 \end{align} 
@@ -137,11 +137,11 @@ The amplitude transmission coefficient and transmission can be equivalently form
 The light reflecting and transmitting in this system will interfere both constructive and destructively. To model the optical interference, the Fresnel equation for reflection will be used:
 
 \begin{equation}
-r_{jk,p} = \frac{N_k\cos(\theta_j)-N_j\cos(\theta_k)}{N_k\cos(\theta_j)+N_j\cos(\theta_k)} \quad r_{jk,s} = \frac{N_j\cos(\theta_j)-N_k\cos(\theta_k)}{N_j\cos(\theta_j)+N_k\cos(\theta_k)}.
+r_{jk,p} = \frac{N_k\cos(\theta_j)-N_j\cos(\theta_k)}{N_k\cos(\theta_j)+N_j\cos(\theta_k)} %\quad r_{jk,s} = \frac{N_j\cos(\theta_j)-N_k\cos(\theta_k)}{N_j\cos(\theta_j)+N_k\cos(\theta_k)}.
 %t_{jk,p} = \frac{2N_j\cos(\theta_j)}{N_k\cos(\theta_j)+N_j\cos(\theta_k)} \quad t_{jk,s} = \frac{2N_j\cos(\theta_j)}{N_j\cos(\theta_j)+N_k\cos(\theta_k)} 
 \end{equation}
 
-The subscripts denote the reflection and transmission at definite interface. For example $r_{jk,p} = r_{01,p}$, denotes the reflection at the ambient-thin film interface. In the ambient-thin film-substrate model, light at the ambient-thin film interface will be both reflected and transmitted into the layer. The transmitted ray will then be reflected and transmitted at the thin film-substrate interface. The reflected and transmitted phenomenon will proceed through out the thin film. The change in phase at the interface is given by $\exp(-i\beta)$. Figure \ref{fig:beta} represents the ambient-thin film-substrate model, this figure will be used to define the phase variation $\beta$.
+The subscripts denote the reflection and transmission at a definite interface. For example $r_{jk,p} = r_{01,p}$, denotes the reflection at the ambient-thin film interface. In the ambient-thin film-substrate model, light at the ambient-thin film interface will be both reflected and transmitted into the layer. The transmitted ray will then be reflected and transmitted at the thin film-substrate interface. The reflected and transmitted phenomenon will proceed through out the thin film. The change in phase at the interface is given by $\exp(-i\beta)$. Figure \ref{fig:beta} represents the ambient-thin film-substrate model, this figure will be used to define the phase variation $\beta$.
 
 The phase of the reflected ray will vary at the the ambient-thin film interface. This variation can be expressed as $K_0\bar{AD}$, where $K_0=\frac{2\pi N_0}{\lambda}$, is the propagation number in air. The phase variation of the transmitted ray is expressed as $K_1(\bar{AB} + \bar{BC})$, where $K_1=\frac{2\pi N_1}{\lambda}$, is the propagation number in the thin film. The length difference can be denoted as $\bar{AB} + \bar{BC} - \bar{AD}$, thus the phase variation of this length difference is:
 
@@ -162,7 +162,7 @@ Using snells law, $\bar{AD}=\bar{AC}\sin(\theta_0)$ and $\bar{AC}=2d_1\tan(\thet
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figbeta.png}
-\caption{Light rays from the left will be reflected and transmitted at point A. The reflected light will experience at phase change at point A. The transmitted light will proceed to point B, where it will reflect undergoing a phase change then transmitting at point C. The phase difference between the primary and secondary ray can be calculated by $\alpha = K_1(\bar{AB}+\bar{BC})-K_0(\bar{AD})$.}
+\caption{Light rays from the left will be reflected and transmitted at point A. The reflected light will experience at phase change a point A. The transmitted light will proceed to point B, where it will reflect, undergoing a phase change then transmitting at point C. The phase difference between the primary and secondary ray can be calculated by $\alpha = K_1(\bar{AB}+\bar{BC})-K_0(\bar{AD})$.}
 \label{fig:beta}
 \end{figure}  
 
@@ -208,7 +208,7 @@ r_{012}= \frac{r_{01}+r_{12}\exp(-i2\beta)}{1+r_{01}r_{12}\exp(-i2\beta)}.
 The following Fresnel equation, reflectance and Snell's law for this model are expressed as:
 
 \begin{equation}
-r_{012,p} = \frac{r_{01,p}+r_{12,p}\exp(-i2\beta)}{1+r_{01,p}r_{12,p}\exp(-i2\beta)} \quad r_{012,s}= \frac{r_{01,s}+r_{12,s}\exp(-i2\beta)}{1+r_{01,s}r_{12,s}\exp(-i2\beta)}
+r_{012,p} = \frac{r_{01,p}+r_{12,p}\exp(-i2\beta)}{1+r_{01,p}r_{12,p}\exp(-i2\beta)} %\quad r_{012,s}= \frac{r_{01,s}+r_{12,s}\exp(-i2\beta)}{1+r_{01,s}r_{12,s}\exp(-i2\beta)}
 %t_{012,p} = \frac{t_{01,p}t_{12,p}\exp(-i\beta)}{1+r_{01,p}r_{12,p}\exp(-i2\beta)} \quad t_{012,s} = \frac{t_{01,s}t_{12,s}\exp(-i\beta)}{1+r_{01,s}r_{12,s}\exp(-i2\beta)} \label{eq:2layertrans}
 \end{equation}
 
@@ -232,19 +232,19 @@ N_0\sin(\theta_0)=N_1\sin(\theta_1)=N_2\sin(\theta_2).
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figmulti2.png}
-\caption{The model consists of the ambient,first thin film layer and second thin film layer plus substrate. The second thin film layer and substrate layer has been grouped together because $r_{123}$ and $t_{123}$ has been calculated the model seen in figure \ref{fig:multilayer1} and $r_{0123}$ and $t_{0123}$ can easily be calculated from this model. The ambient and first thin film layer have a refractive index and the first thin film layer has a thickness $d_1$.}
+\caption{The model consists of the ambient,first thin film layer and second thin film layer plus substrate. The second thin film layer and substrate layer has been grouped together. The calculations proceed in steps, first $r_{123}$ is calculated and then $r_{0123}$ is calculated and summed as this figure shows. The ambient and first thin film layer have a refractive index and the first thin film layer has a thickness $d_1$.}
 \label{fig:multilayer2}
 \end{figure}
 
 
-In the previous sections, the Fresnel equations for two different models were evaluated. The Fresnel equations for a multilayer model is an amalgamation of the previous models. The reflection amplitude coefficient $r_{123}$ for the multilayer model seen in the figure \ref{fig:multilayer1} with an ambient, two layers and a substrate can be calculated using equation \ref{eq:2layerreflect}. These equations produce the following expressions:
+In the previous sections, the Fresnel equations for two different models were evaluated. The Fresnel equations for a multilayer model is an amalgamation of the previous models. The reflection amplitude coefficient $r_{0123}$ cannot be calculated in one step, the reflection amplitude coefficient $r_{123}$ is needed first. The reflection amplitude coefficient $r_{123}$ for the multilayer model is the two thin film layers plus the substrate. When the reflection amplitude coefficient $r_{123}$ is calculated the substrate and the layer on top of the substrate can be grouped together and $r_{0123}$ can be calculated. The grouping can be seen in the figure \ref{fig:multilayer2}. The calculations are the following:
 
 \begin{equation}
 r_{123}= \frac{r_{12}+r_{23}\exp(-i2\beta_2)}{1+r_{12}r_{23}\exp(-i2\beta_2)}.
 %t_{123}=\frac{t_{12}t_{23}\exp(-i\beta_2)}{1+r_{12}r_{23}\exp(-i2\beta_2)}
 \end{equation}
 
-$\beta_2$ is the phase variation in the second thin film layer with thickness $d_2$. This is given as $\beta_2=\frac{2\pi d_2N_2\cos(\theta_2)}{\lambda}$. The substrate and the layer on top of the substrate can be considered as one layer as seen in figure \ref{fig:multilayer2}, thus the reflection amplitude coefficient and transmission amplitude coefficient is expressed as:         
+$\beta_2$ is the phase variation in the second thin film layer with thickness $d_2$. This is given as $\beta_2=\frac{2\pi d_2N_2\cos(\theta_2)}{\lambda}$. The substrate and the layer on top of the substrate can be considered as one layer as seen in figure \ref{fig:multilayer2}, thus the reflection amplitude coefficient is expressed as:         
 
 \begin{equation}\label{eq:multilayer}
 r_{0123}= \frac{r_{01}+r_{123}\exp(-i2\beta_1)}{1+r_{01}r_{123}\exp(-i2\beta_1)}.
