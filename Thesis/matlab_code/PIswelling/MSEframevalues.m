@@ -3,15 +3,11 @@ close all
 
 tic
 
- %=5=22   Safe guard so i dont run it again and delete my frame values
-
 %%%%%%%%%%%
 % Physics %
 %%%%%%%%%%%
 
-nm = 10^-9;
 wavelength = (450:900);
-lamda = (450:900);
 
 air = [1:0.1:1.5]; %Defining Refractive index limits.
 thinfilm = [1.1:0.1:2]; %Defining Refractive index limits.
@@ -77,15 +73,9 @@ n_0 = air(k);
 % Reflectance Calculations %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-            r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,lamda); 
+            r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,wavelength); 
 
             R_0123 = r_0123.*conj(r_0123); 
-
-            %plot(lamda.*10^9,R_0123,x,y)
-            %title({'I-T319 out','Measured reflectance vs. Fresnel model'})
-            %xlabel('Wavelength nm')
-            %ylabel('Reflectance')
-            %legend('Reflectance','Fresnel')
 
 %%%%%%%
 % MSE %
@@ -93,7 +83,7 @@ n_0 = air(k);
 
             deltay = y - R_0123;
             sqdeltay = deltay.^2;
-            sumsq = sum(sqdeltay)./length(x);
+            sumsq = sum(sqdeltay);
             
             
             list = [air(k),thinfilm(l),thickness(m),sumsq];
@@ -112,7 +102,7 @@ framevalues = vertcat(framevalues,tempvalue);
 
 end
 
-save('frame_val.mat','framevalues') %Saving to file
+Time = toc
+save('frame_val.mat','framevalues','Time') %Saving to file
 
 
-toc

@@ -2,9 +2,7 @@ Discussion:
 	Light source:
 		Is it continuous or abrupt?
 
-Wednesday:
-Reading through the report:
-	More differentiation between what i do and what nanocalc does	
+Wednesday:	
 Spin coating - ask sina
 Light source flucuations experiment again
 
@@ -18,6 +16,6 @@ Saturday/Sunday:
 Reflectance = How does it look?	
 Parameter Contour plot
 	
-	Polystyrene vs. polyisoprene:
-		when fixing average n?
-		refractive index upper bound 1.5
+Polystyrene vs. polyisoprene:
+	when fixing average n?
+	refractive index upper bound 1.5
