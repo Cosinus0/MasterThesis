@@ -49,7 +49,7 @@ d_2 = 2;
 % Plotting %
 %%%%%%%%%%%%
 
-numframes = length(refldata(:,1)); %22:length(PSreflectance160319(:,1));
+numframes = length(refldata(:,1)); 
 %%
 
 figure('units','normalized','outerposition',[0 0 1 1])

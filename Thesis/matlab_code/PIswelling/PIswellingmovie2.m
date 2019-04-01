@@ -116,10 +116,10 @@ hold off
 %%
 figure('units','normalized','outerposition',[0 0 1 1])
 
-%set(gca,'nextplot','replacechildren');
-%v = VideoWriter('PIsvaframevalue2.avi');
-%v.FrameRate = 10;
-%open(v);
+set(gca,'nextplot','replacechildren');
+v = VideoWriter('PIsvaframevalue2.avi');
+v.FrameRate = 10;
+open(v);
 
 
 for i=1:numframes
@@ -149,8 +149,8 @@ yticks([200 300 400 500 600])
 legend('Thickness','Running Thickness')
 
 
-%frame = getframe(gcf);
-%writeVideo(v,frame);
+frame = getframe(gcf);
+writeVideo(v,frame);
 
 
 pause(0.001);
@@ -159,4 +159,4 @@ pause(0.001);
 
 end
 
-%close(v);
+close(v);
