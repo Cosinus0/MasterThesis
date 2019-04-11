@@ -1,0 +1,7 @@
+Ten_layer_study
+
+Ten layers has been simulated in the Nano-Calc software, and the simulated reflectance curves is saved in the tenlayers.xy file. First coloumn wavelength, second coloumn the reflectance simulated measurement. In the powerpoint the refractive index and thicknes values for each thickness can be seen.
+
+thinfilmlayer1.m through to thinfilmlayer12.m are the fresnel equations implimented as functions into matlab.
+
+simtenlayers.m - loads the tenlayers.xy file and uses the thinfilmlayer functions to investigate if the functions are implimented correctly.

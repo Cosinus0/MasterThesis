@@ -1,0 +1,13 @@
+AmbientInvestigation
+
+Wafer:topsil blank wafer
+Swelling protocol started at 14:03 -- Run 12
+
+Number of Measurements: 1076
+
+Scripts:
+
+MSE_ambient.m - Loops through refractive index values and the mean square error. The refractive index value is save which corresponds to the least mean square.
+
+
+

@@ -1,0 +1,9 @@
+daystudy2
+
+Investigation into whether the same conclusion can be drawn as in daystudy1
+
+Number of measurements: 13
+
+plottingreflectance.m - Plots all 13 reflectance curves
+
+lookingcloser.m - Plots some chosen reflectance curves and plots the first reflectance measurements in the same figure.

@@ -13,10 +13,10 @@ lamda = (400:1041).*nm;
 % Load data %
 %%%%%%%%%%%%%
 
-%load M-T321_asprep3.xy
+load M-T321_asprep3.xy
 
-%x = M_T321_asprep3(:,1);
-%y = M_T321_asprep3(:,2);
+x = M_T321_asprep3(:,1);
+y = M_T321_asprep3(:,2);
 
 %%%%%%%%%%%%%%%%%%%%
 % Reflective Index %
