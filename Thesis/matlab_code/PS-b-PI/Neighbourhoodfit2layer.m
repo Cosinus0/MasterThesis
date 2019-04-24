@@ -46,14 +46,14 @@ for y_it = 2:559
         
         list = [];
         
-        
         n_0 = startvalues(1) + Rstep.*(air_it-1);
+        
         
         
         for R_lay1_it = 1:5
             
             n_1 = startvalues(2) + Rstep.*(R_lay1_it-1);
-            
+           
             
             for R_lay2_it = 1:5
                 
