@@ -32,16 +32,18 @@ load PSbPIframevalstart3.mat
 framevalues = [];
 framevalues = vertcat(framevalues,PSbPIframevaluesstart3);
 
+doublelist = [];
+
 
 for y_it = 2:968
     
     y = reflectance(y_it,:);
-    MSE = [];
+    
     
     startvalues = framevalues(y_it-1,:);
     Rstep = 0.1;
     Tstep = 1;
-    
+    MSE = [];
     for air_it = 1:3
         
         list = [];
@@ -52,7 +54,7 @@ for y_it = 2:968
             n_0 = air_array(air_it);
         
         else
-            n_0 = startvalues(1);
+            continue%n_0 = startvalues(1);
         end
         
         for R_lay1_it = 1:5
@@ -63,7 +65,7 @@ for y_it = 2:968
                 n_1 = R_lay1_array(R_lay1_it);
         
             else
-                n_1 = startvalues(2);
+                continue%n_1 = startvalues(2);
             end
             
             
@@ -75,7 +77,7 @@ for y_it = 2:968
                     n_2 = R_lay2_array(R_lay2_it);
         
                 else
-                    n_2 = startvalues(3);
+                    continue%n_2 = startvalues(3);
                 end                
                 
                 load dispersion_SiOx.dat
@@ -93,7 +95,7 @@ for y_it = 2:968
                     if ismember(D_lay1_array(D_lay1_it),THICKNESS) == true 
                         d_1 = D_lay1_array(D_lay1_it);
                     else
-                        d_1 = startvalues(4);
+                        continue%d_1 = startvalues(4);
                     end  
                     
                     
@@ -104,7 +106,7 @@ for y_it = 2:968
                         if ismember(D_lay2_array(D_lay2_it),THICKNESS) == true 
                             d_2 = D_lay2_array(D_lay2_it);
                         else
-                            d_2 = startvalues(5);
+                            continue%d_2 = startvalues(5);
                         end  
                     
                         
@@ -125,6 +127,7 @@ for y_it = 2:968
             end
         end
     end
+    truerow = [];
     
     [row,column] = find(MSE==min(min(MSE(:,6))));
     tempvalue = MSE(row,:,:,:,:,:);
@@ -132,9 +135,38 @@ for y_it = 2:968
     Unique_framevalues = unique(tempvalue,'rows');
     
     [row1,column1] = find(Unique_framevalues==max(max(Unique_framevalues(:,4))));
-    tempvalue2 = Unique_framevalues(row1,:,:,:,:,:);
+    row2 = find(column1==4);
+    tempvalue2 = Unique_framevalues(row2,:,:,:,:,:);
     
-    framevalues = vertcat(framevalues,tempvalue2);
+    Unique_framevalues2 = unique(tempvalue2,'rows');
+    
+%     if size(Unique_framevalues2) == [1 6]
+%         ;
+%     else
+%         truerow = find(column1==4);
+%         Unique_framevalues3 = Unique_framevalues2(truerow,:,:,:,:,:);
+%         framevalues = vertcat(framevalues,Unique_framevalues3);
+%         
+%         if size(Unique_framevalues3) == [1 6]
+%             ;
+%         else
+%         [N Q] = size(Unique_framevalues3);
+%         doubletemp = [y_it N];
+%         doublelist = vertcat(doublelist,doubletemp);
+%         end
+%     end
+    
+     
+    
+%     if size(Unique_framevalues3) == [1 6] 
+%         ;
+%     else
+%         [N Q] = size(Unique_framevalues2);
+%         doubletemp = [y_it N];
+%         doublelist = vertcat(doublelist,doubletemp);
+%     end
+    
+    framevalues = vertcat(framevalues,Unique_framevalues2);
     
     
 end
@@ -143,7 +175,7 @@ Time = toc;
 
 framevaluesVERSION2=framevalues;
 
-save('Neighbourhoodfit2layerframevaluesVERSION2','framevaluesVERSION2','Time')
+save('Neighbourhoodfit2layerframevaluesVERSION2_doublelist','framevaluesVERSION2','doublelist','Time')
     
     
                 
