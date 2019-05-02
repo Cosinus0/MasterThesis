@@ -39,10 +39,10 @@ numframes = 968;
 %%
 figure('units','normalized','outerposition',[0 0 1 1])
 
-set(gca,'nextplot','replacechildren');
-v = VideoWriter('PSbPI_fit_2layer_model.avi');
-v.FrameRate = 10;
-open(v);
+% set(gca,'nextplot','replacechildren');
+% v = VideoWriter('PSbPI_fit_2layer_model.avi');
+% v.FrameRate = 10;
+% open(v);
 
 for i=1:numframes
 
@@ -56,13 +56,13 @@ for i=1:numframes
     ylabel('Reflectance')
     legend('Reflectance','Fresnel')
     
-    frame = getframe(gcf);
-    writeVideo(v,frame);
+%     frame = getframe(gcf);
+%     writeVideo(v,frame);
     
     pause(0.001);
     
 end
-close(v);
+% close(v);
 
 %%
 figure('units','normalized','outerposition',[0 0 1 1])
@@ -71,7 +71,7 @@ subplot(5,1,1)
 plot((1:numframes).*10,framevaluesVERSION2(:,1))
 title('PS-b-PI 2 layer model')
 axis([0 10000 1 1.2])
-ylabel('Refractive index')
+ylabel('Refractive I')
 yticks([1 1.1])
 legend('Air R-I')
 hold on
@@ -81,7 +81,7 @@ hold off
 subplot(5,1,2)
 plot((1:numframes).*10,framevaluesVERSION2(:,2))
 axis([0 10000 1.3 1.5])
-ylabel('Refractive index')
+ylabel('Refractive I')
 yticks([1.4])
 legend('1 lay Thinfilm R-I')
 hold on
@@ -91,7 +91,7 @@ hold off
 subplot(5,1,3)
 plot((1:numframes).*10,framevaluesVERSION2(:,3))
 axis([0 10000 1.3 1.5])
-ylabel('Refractive index')
+ylabel('Refractive I')
 yticks([1.4])
 legend('2nd layer Thinfilm R-I')
 hold on
