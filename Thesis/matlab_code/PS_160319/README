@@ -1,0 +1,10 @@
+PS_160319
+
+Number of runs: 975
+SVA starts at: 22
+
+MSEframevalues... - calculates the mean square error for different parameters, and saves the values that give the least mean square error.
+
+PIswellingmovie... - plots the results
+
+discussionPSfigure.m - plots results used in discussion.

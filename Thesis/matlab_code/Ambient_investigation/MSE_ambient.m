@@ -45,9 +45,7 @@ MSE = []; %Define empty array to save data for one full SVA Measurement.
     
     n_0 = air(k);
 
-
-        
-
+    
     load dispersion_SiOx.dat
     disp_2 = dispersion_SiOx(301:1:751,:);
     n_1 = transpose(disp_2(:,2)) -1i.*transpose(disp_2(:,3));
@@ -92,7 +90,7 @@ tempvalue = MSE(row,:);
 framevalues = vertcat(framevalues,tempvalue);
 
 end
+Time=toc;
 
-%save('frame_val.mat','framevalues') %Saving to file
+save('frame_val.mat','framevalues','Time') %Saving to file
 
-toc

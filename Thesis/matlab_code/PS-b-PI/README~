@@ -1,0 +1,18 @@
+PS-b-PI
+
+Number of runs:979
+SVA starts at: 12
+
+MSEframestart ... - calculates the values for the refractive indices and thickness which are then used in the fitting version 2 scripts which are much quicker.
+
+MSEframevalues ... - calculating the MSE using different parameter arrays.
+
+PSPIMSEframevalues.m - Script used to find the mse which is used in the master thesis
+
+PSbPIswellingmovie.m - Script used to plot results which is used in the master thesis.
+
+PSbPIswellingmovie ... - Plots results.
+
+Neighbourhoodfit2layerVersion2.m - New improved script which calculates mse for a 2 layer system.
+
+MovieNeighbourhoodfit2layersSVA.m - 

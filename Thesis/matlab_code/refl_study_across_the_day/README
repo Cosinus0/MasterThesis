@@ -1,0 +1,13 @@
+daystudy
+
+Investigation into whether the refectance measurements changing during the day.
+
+Number of measurements: 14
+
+plottingreflectance.m - Plots all 14 reflectance curves
+
+lookingcloser.m - Plots some chosen reflectance curves and plots the first reflectance measurements in the same figure.
+
+swellingmovie.m - Plots the reflectance curves as a movie. An avi file can be saved.
+
+thicknessdifference.m - An attempt at looking at the fitting of the first and last reflectance measurements.

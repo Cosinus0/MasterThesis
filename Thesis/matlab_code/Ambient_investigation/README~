@@ -9,5 +9,9 @@ Scripts:
 
 MSE_ambient.m - Loops through refractive index values and the mean square error. The refractive index value is save which corresponds to the least mean square.
 
+reflectancemovie.m - Writes a swelling movie showing the reflectance measurements and the refractive index for the ambient.
 
+reflectanceplotsambient.m - Plucks out some reflectance measurements during the swelling and deswelling and plots them.
+
+refractiveplotsambient.m - Plots the refractive index and the mean square error as a function of time.s
 

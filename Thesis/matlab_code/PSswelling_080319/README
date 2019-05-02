@@ -1,0 +1,12 @@
+PSswelling_080319
+
+Unused data due to different sva protocol.
+
+Number of measurements: 1107
+
+MSEframevalues.m - Loops through all combinations of the refractive indices for air and the thin film plus the thickness of the thin film and calculates the values that give the least mean square error.
+
+swellingmovie.m - plots the results.
+
+Note:
+Not used in Master Thesis

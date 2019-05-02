@@ -6,10 +6,10 @@ load ambientinvestreflectance
 wavelength = (450:900);
 
 figure('units','normalized','outerposition',[0 0 1 1])
-set(gca,'nextplot','replacechildren');
-v = VideoWriter('ambientinvestigationwithmodel.avi');
-v.FrameRate = 10;
-open(v);
+% set(gca,'nextplot','replacechildren');
+% v = VideoWriter('ambientinvestigationwithmodel.avi');
+% v.FrameRate = 10;
+% open(v);
 
 load frame_val.mat
 
@@ -48,9 +48,9 @@ R_01 = r_01.*conj(r_01);
     
     pause(0.05)
     
-frame = getframe(gcf);
-writeVideo(v,frame);
+% frame = getframe(gcf);
+% writeVideo(v,frame);
     
 end
 
-close(v)
+% close(v)

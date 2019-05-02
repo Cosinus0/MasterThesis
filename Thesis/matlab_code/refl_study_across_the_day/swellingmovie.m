@@ -2,15 +2,8 @@ clear all
 close all
 
 load daystudyreflectance 
-%refldata=transpose(PSreflectance(:,(51:501)));
 
-
-%wave = [450:900];
 wave = [400:1041];
-nm = 10^-9;
-%lamda = (450:900);
-lamda = (400:1041);
-
 time = [10.47 11.19 11.49 12.19 12.49 13.19 13.49 14.19 14.49 15.19 15.49 16.19 16.49 17.19];
 
         

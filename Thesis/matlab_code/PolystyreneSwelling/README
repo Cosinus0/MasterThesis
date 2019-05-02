@@ -1,0 +1,10 @@
+PolystyreneSwelling
+
+Manual sva protocol, purpose was to try the sva setup.
+
+FullMSE.m - Scripts that loops through a large set of combinations.
+MSE.m - Scripts that loops through a smaller set of combinations.
+PSswellingmovie.m - plots the results.
+
+Note:
+Not used in Master Thesis

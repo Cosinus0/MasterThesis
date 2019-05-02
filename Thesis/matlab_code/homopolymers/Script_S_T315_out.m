@@ -7,7 +7,6 @@ close all
 
 nm = 10^-9;
 wavelength = (400:1041);
-lamda = (400:1041).*nm;
 
 %%%%%%%%%%%%%
 % Load data %
@@ -42,22 +41,23 @@ n_3 = transpose(disp_3(:,2)) -1i.*transpose(disp_3(:,3));
 % Thickness %
 %%%%%%%%%%%%%
 
-d_1 = 104.6.*nm;
-d_2 = 2.*nm;
+d_1 = 104.6;
+d_2 = 2;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reflectance Calculations %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,lamda); 
+r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,wavelength); 
 
 R_0123 = r_0123.*conj(r_0123); 
 
-plot(lamda.*10^9,R_0123,x,y)
+figure('units','normalized','outerposition',[0 0 1 1])
+plot(wavelength,R_0123,x,y)
 title({'S-T315 Out','Measured reflectance vs. Fresnel model'})
 xlabel('Wavelength nm')
 ylabel('Reflectance')
-legend('Reflectance','Fresnel')
+legend('Fresnel','Reflectance')
 
 deltay = R_0123(2:642) - transpose(y);
 sqdeltay = deltay.^2;

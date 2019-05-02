@@ -5,9 +5,7 @@ close all
 % Physics %
 %%%%%%%%%%%
 
-nm = 10^-9;
-wavelength = [400:1041];
-lamda = [452:901].*nm;
+wavelength = [452:901];
 
 %%%%%%%%%%%%%
 % Load data %
@@ -16,7 +14,7 @@ lamda = [452:901].*nm;
 load PSreflectance
 
 x = wavelength;
-y = PSreflectance(8,:);
+y = PSreflectance(8,53:502);
 
 %%%%%%%%%%%%%%%%%%%%
 % Reflective Index %
@@ -37,18 +35,18 @@ n_3 = transpose(disp_3(:,2)) -1i.*transpose(disp_3(:,3));
 % Thickness %
 %%%%%%%%%%%%%
 
-d_1 = 115.9.*nm;
-d_2 = 2.*nm;	
+d_1 = 115.9;
+d_2 = 2;	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reflectance Calculations %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,lamda);
+r_0123 = fresnel_am_tf_lay_sub(n_0,n_1,n_2,n_3,d_1,d_2,wavelength);
 
 R_0123 = r_0123.*conj(r_0123); 
 
-plot(lamda.*10^9,R_0123,x,y)
+plot(wavelength,R_0123,x,y)
 title({'PS-338','Measured reflectance vs. Fresnel model'})
 xlabel('Wavelength nm')
 ylabel('Reflectance')

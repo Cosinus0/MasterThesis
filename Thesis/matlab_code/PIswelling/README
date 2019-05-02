@@ -1,0 +1,10 @@
+PIswelling
+
+number of runs: 963
+SVA starts at: ? (missing log file)
+
+MSEframevalues... - calculates the mean square error for different parameters, and saves the values that give the least mean square error.
+
+PIswellingmovie... - plots the results
+
+discussionPIfigure.m - plots results used in discussion.

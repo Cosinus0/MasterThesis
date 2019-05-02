@@ -49,10 +49,15 @@ for i=1:numframes
     r_01234 = thinfilmlayer5(framevaluesVERSION2(i,1),framevaluesVERSION2(i,2),framevaluesVERSION2(i,3),n_3,n_4,framevaluesVERSION2(i,4),framevaluesVERSION2(i,5),d_3,wavelength);
     R_01234 = r_01234.*conj(r_01234); 
     
-    plot(wavelength,refldata(i,:),wavelength,R_01234);
+    plot(wavelength,refldata(i,:),wavelength,R_01234)
     axis([450 900 0 1])
     title({['PSbPI swelling 2 Layer fitting'];['Seconds =',num2str(i*10)];['MSE =',num2str(framevaluesVERSION2(i,6))]})
+    xlabel('Wavelength')
+    ylabel('Reflectance')
     legend('Reflectance','Fresnel')
+    
+    frame = getframe(gcf);
+    writeVideo(v,frame);
     
     pause(0.001);
     
@@ -62,55 +67,57 @@ close(v);
 %%
 figure('units','normalized','outerposition',[0 0 1 1])
 
-% set(gca,'nextplot','replacechildren');
-% v = VideoWriter('PSbPIsinglemodel.avi');
-% v.FrameRate = 10;
-% open(v);
-
-
-for i=1:numframes
-
 subplot(5,1,1)
-plot((1:numframes).*10,framevaluesVERSION2(:,1),(1:i).*10,framevaluesVERSION2(1:i,1))
+plot((1:numframes).*10,framevaluesVERSION2(:,1))
+title('PS-b-PI 2 layer model')
 axis([0 10000 1 1.2])
+ylabel('Refractive index')
 yticks([1 1.1])
-legend('Air R-I','Running air R-I')
+legend('Air R-I')
+hold on
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hold off
 
 subplot(5,1,2)
-plot((1:numframes).*10,framevaluesVERSION2(:,2),(1:i).*10,framevaluesVERSION2(1:i,2))
-%axis([0 10000 1.3 1.4])
+plot((1:numframes).*10,framevaluesVERSION2(:,2))
+axis([0 10000 1.3 1.5])
+ylabel('Refractive index')
 yticks([1.4])
-legend('1 lay Thinfilm R-I','1 lay Running Thinfilm R-I')
+legend('1 lay Thinfilm R-I')
+hold on
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hold off
 
 subplot(5,1,3)
-plot((1:numframes).*10,framevaluesVERSION2(:,3),(1:i).*10,framevaluesVERSION2(1:i,3))
-%axis([0 10000 1.3 1.4])
+plot((1:numframes).*10,framevaluesVERSION2(:,3))
+axis([0 10000 1.3 1.5])
+ylabel('Refractive index')
 yticks([1.4])
-legend('2 lay Thinfilm R-I','2 lay Running Thinfilm R-I')
+legend('2nd layer Thinfilm R-I')
+hold on
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hold off
  
 subplot(5,1,4)
-plot((1:numframes).*10,framevaluesVERSION2(:,4),(1:i).*10,framevaluesVERSION2(1:i,4))
+plot((1:numframes).*10,framevaluesVERSION2(:,4))
 axis([0 10000 50 125])
+ylabel('Thickness')
 yticks([50 75 100 125])
-legend('1 lay Thickness','1 lay Running Thickness')
+legend('1st layer Thickness')
+hold on
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hold off
 
 subplot(5,1,5)
-plot((1:numframes).*10,framevaluesVERSION2(:,5),(1:i).*10,framevaluesVERSION2(1:i,5))
+plot((1:numframes).*10,framevaluesVERSION2(:,5))
 axis([0 10000 50 125])
+xlabel('Seconds')
+ylabel('Thickness')
 yticks([50 75 100 125])
-legend('2 lay Thickness','2 lay Running Thickness')
-
-% frame = getframe(gcf);
-% writeVideo(v,frame);
-
-
-pause(0.001);
-
-
-
-end
-
-% close(v);
+legend('2nd layer Thickness')
+hold on
+line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+hold off
 
 %%
 

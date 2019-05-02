@@ -5,3 +5,6 @@ Ten layers has been simulated in the Nano-Calc software, and the simulated refle
 thinfilmlayer1.m through to thinfilmlayer12.m are the fresnel equations implimented as functions into matlab.
 
 simtenlayers.m - loads the tenlayers.xy file and uses the thinfilmlayer functions to investigate if the functions are implimented correctly.
+
+Note:
+Not used in Master Thesis
