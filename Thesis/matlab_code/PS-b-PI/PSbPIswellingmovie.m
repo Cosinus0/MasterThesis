@@ -137,12 +137,14 @@ legend('Reflectance','Fresnel')
 
 subplot(4,1,2)
 plot((1:numframes).*10,framevalues(:,1),(1:i).*10,framevalues(1:i,1))
+axis([0 10000 1 1.3])
 yticks([1 1.1 1.2 1.3])
 legend('Air R-I','Running air R-I')
 
 subplot(4,1,3)
 plot((1:numframes).*10,framevalues(:,2),(1:i).*10,framevalues(1:i,2))
-yticks([1.5 1.6 1.7 1.8])
+axis([0 10000 1.4 2.1])
+yticks([1.5 1.6 1.7 1.8 1.9 2])
 legend('Thinfilm R-I','Running Thinfilm R-I')
  
 subplot(4,1,4)
