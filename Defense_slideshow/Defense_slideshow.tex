@@ -11,6 +11,7 @@
 \usepackage{multimedia}
 \usepackage{media9}
 \usepackage{caption}
+\graphicspath{{figures/}}
 
 \usepackage{wrapfig}
 
@@ -41,34 +42,22 @@
 	\section{Master Thesis Background}
 
 \begin{frame}{Cornell High Energy Synchrotron Source (CHESS)}
+	December '17 and May '18
 	\includegraphics[width=\textwidth]{Ring.jpg}
 \end{frame}
 
 \begin{frame}{D-Line}
-\begin{figure}
-	\includegraphics[scale=0.15]{chess3.JPG}
-\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.15]{chess3.JPG}
+	\end{figure}
 \end{frame}
 
-\begin{frame}{Problems with the reflectance measurements (Nanocalc)}
-
-\centering
-\includegraphics[height=0.35\textheight]{badmeasure2.png}
-\captionof{figure}{first image}
-\includegraphics[height=0.35\textheight]{badmeasure3.png}
-\captionof{figure}{second image}
-
-
-%		\begin{minipage}{0.47\textwidth}
-%		\begin{figure}
-%		\includegraphics[scale=0.14]{badmeasure2.png}
-%		\end{figure}
-%		\end{minipage}
-%		\begin{minipage}{0.5\textwidth}
-%		\begin{figure}
-%		\includegraphics[scale=0.14]{badmeasure3.png}
-%		\end{figure}
-%		\end{minipage}
+\begin{frame}{Problems with the reflectance measurements during swelling}
+	\centering
+	\includegraphics[height=0.35\textheight]{badmeasure2.png}
+	\captionof{figure}{Polystyrene - SVA run used in Master Thesis}
+	\includegraphics[height=0.35\textheight]{badmeasure3.png}
+	\captionof{figure}{Polyisoprene - SVA run used in Master Thesis}
 \end{frame}
 
 
@@ -84,7 +73,15 @@ Can the same thickness determination be used on thin films with a horizontal nan
 \end{frame}
 	
 	
-	\section{Experimental Setup, polymers and model}
+	\section{Experimental Setup}
+	
+\begin{frame}{Experimental Setup Overview}
+	\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{nanocalcsetup.png}
+	\caption{Taken from NanoCalc Software Manual v.4}
+	\end{figure}
+\end{frame}	
 		
 \begin{frame}{Experimental Components}
 NanoCalc XR, Halogen Light Source, Test Chamber and Single Point Stage
@@ -114,91 +111,211 @@ NanoCalc XR, Halogen Light Source, Test Chamber and Single Point Stage
 \end{figure}
 \end{minipage}
 \end{frame}
+
+\begin{frame}{Step Wafer}
+	\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth,angle=-90]{stepwafer.JPG}
+	\end{figure}
+\end{frame}
 	
 	
 \begin{frame}{NanoCalc Software}
-	
-\begin{figure}
-	\includegraphics[width=\textwidth]{nanocalc.png}
-\end{figure}
-	
+	\begin{figure}
+		\includegraphics[width=\textwidth]{nanocalc.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Taking Measurements}
+
 \begin{equation*}
-	Reflectance = \frac{Meas-Dark}{Ref} \cdot R_{sub}
+Reflectance = \frac{Meas-Dark}{Ref}\cdot R_{sub}
 \end{equation*}
+
+\begin{itemize}
+\item Dark Measurement - $Dark$\\
+\begin{itemize}
+\item Measuring stray light.
+\end{itemize}
+\item Reference Measurement - $Ref$\\
+\begin{itemize}
+\item Measuring light from blank wafer - SiOx/Si
+\item Ref data - minus dark
+\end{itemize}
+\item Wafer Measurement - $Meas$\\
+\begin{itemize}
+\item Wafer with spincoated polymer
+\end{itemize}
+\item Reflectance from ambient/substrate model - $R_{sub}$
+\begin{itemize}
+\item Calculation - Fresnel model
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+	\section{Polymers}
 	
+	\section{Fresnel Models}
+	
+\begin{frame}{Fresnel Equations - Substrate}
+
+		\begin{figure}
+			\hfill\includegraphics[width = \textwidth]{subrefl.png}\hspace*{\fill}
+		\end{figure}
+		\begin{equation*}
+			r_p = \frac{E_{r,p}}{E_{i,p}} = \frac{N_1-N_0}{N_0+N_1}
+		\end{equation*}
+		\begin{equation*}
+			R_p = \mid r_p \mid ^2 
+		\end{equation*}
+
+	
+%	\begin{minipage}{0.6\textwidth}
+%		\begin{figure}
+%		\centering
+%		\includegraphics[scale=0.3]{subrefl.png}
+%		\end{figure}
+%	\end{minipage}
+%	\begin{minipage}{0.4\textwidth}
+%		\begin{equation*}
+%			r_p = \frac{E_{r,p}}{E_{i,p}} = \frac{n_1-n_0}{n_0+n_1}
+%		\end{equation*}
+%		\begin{equation*}
+%			R_p = \mid r_p \mid ^2 
+%		\end{equation*}
+%	\end{minipage}
+
 \end{frame}
 	
-	\section{Preliminary Models}
-	
-	\begin{frame}{Fresnel Equations - Substrate}
-	
-	\begin{minipage}{0.47\textwidth}
-	\begin{equation*}
-	r_p = \frac{E_{r,p}}{E_{i,p}} = \frac{n_t\cos(\theta_i)-n_i\cos(\theta_t)}{n_i\cos(\theta_t)+n_t\cos(\theta_i)}
-	\end{equation*}
-	\begin{equation*}
-	R_p = \mid r_p \mid ^2 
-	\end{equation*}
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-	\includegraphics[scale=0.2]{subrefl.png}
-	\end{minipage}
-	\end{frame}
-	
-	\begin{frame}{Fresnel Equations - One layer}
+\begin{frame}{Fresnel Equations - One layer}
 	
 	\begin{figure} 
 		 \begin{center}
-		   \includegraphics[width=\textwidth]{figreflre.png}
+		   \includegraphics[width=\textwidth]{figrefl.png}
 		 \end{center}
 	\end{figure}
 	\begin{align*}
 	r_{012} = &r_{01} + t_{01}t_{10}r_{12}\exp(-i2\beta) + t_{01}t_{10}r_{10}r_{12}^2\exp(-i4\beta)+ \\ &t_{01}t_{10}r_{10}^2r_{12}^3\exp(-i6\beta)+ \cdots
 	\end{align*} 
 	
-	\end{frame}
+\end{frame}
 	
-	\begin{frame}{Fresnel Equations - One layer}
+\begin{frame}{Fresnel Equations - One layer}
 	
-	\begin{minipage}{0.47\textwidth}
+	\begin{align*}
+	r_{012} &= \frac{r_{01}+r_{12}\exp(-i2\beta)}{1+r_{01}r_{12}\exp(-i2\beta)}\\
+	r_{jk} &= \frac{N_k-N_j}{N_j+N_k}\\
+	\beta &=\frac{2\pi d_1}{\lambda} N_1\\
+	R_{012} &= \mid r_{012} \mid ^2 
+	\end{align*}	
 	
-	%\begin{equation*} \label{eq:r012big}
-	%r_{012}=r_{01}+\frac{t_{01}t_{10}r_{12}\exp(-i2\beta)}{1-r_{10}r_{12}\exp(-i2\beta)}
-	%\end{equation*}
-		
-	\begin{equation*}\label{eq:2layerreflect}
-	r_{012}= \frac{r_{01}+r_{12}\exp(-i2\beta)}{1+r_{01}r_{12}\exp(-i2\beta)}
-	\end{equation*}
-	
-	\begin{equation*}
-	R_{012} = \mid r_{012} \mid ^2 
-	\end{equation*}
-	 
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-	\begin{equation*}
-	\beta=\frac{2\pi d_1}{\lambda} n_1\cos(\theta_1)
-	\end{equation*}
-	\end{minipage}	
-	\end{frame}
-	
+\end{frame}
 
-\section{Results}
+\begin{frame}{Homopolymer Fresnel Model}
+	\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{figmulti1.png}
+	\end{figure}
+\end{frame}
+\begin{frame}{Homopolymer Fresnel equations}
 
-\begin{frame}{Solvent Vapor Annealing of Polystyrene in Toluene}
+
+\begin{align*}
+r_{0123} &= \frac{r_{01}+r_{123}\exp{-i2\beta_1}}{1+r_{01}r_{123}\exp{-i2\beta_1}}\\
+r_{123} &= \frac{r_{12}+r_{23}\exp{-i2\beta_2}}{1+r_{12}r_{23}\exp{-i2\beta_2}}\\
+r_jk &= \frac{N_k-N_j}{N_j+N_k}\\
+R_{0123} &= \mid r_{0123} \mid ^2 \\
+\beta_i &= \frac{2\pi d_i}{\lambda}N_i
+\end{align*}
+
+$N_0$,$N_1$ and $d_1$ fitted during solvent vapour annealing.
 
 \end{frame}
 
-\section{Why look at structure?}
+\begin{frame}{Diblock copolymer Fresnel model}
+	\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{diblock.png}
+\end{figure}
+\end{frame}
 
-\begin{frame}{Structure in thinfilms}
-\includegraphics[width=\textwidth]{multipolymer.png}
+\begin{frame}{Diblock copolymer Fresnel Equations}
+
+\begin{align*}
+r_{01234}&= \frac{r_{01}+r_{1234}\exp(-i2\beta_1)}{1+r_{01}r_{1234}\exp(-i2\beta_1)} \\
+r_{1234} &= \frac{r_{12}+r_{234}\exp(-i2\beta_2)}{1+r_{12}r_{234}\exp(-i2\beta_2)} \\
+r_{234}  &= \frac{r_{23}+r_{34}\exp(-i2\beta_3)}{1+r_{23}r_{34}\exp(-i2\beta_3)} \\
+r_{jk}   &= \frac{N_k-N_j}{N_k + N_j}\\  
+\beta_i  &= \frac{2\pi d_i}{\lambda}N_i
+\end{align*}
+
+$N_0$,$N_1$,$N_2$,$d_1$ and $d_2$ fitted during solvent vapour annealing.
+\end{frame}
+
+\begin{frame}{Plotted Fresnel models}
+
+\end{frame}	
+
+	\section{Solvent vapour Annealling}
+\begin{frame}{SVA protocol}
+
 \end{frame}
 
 
-\begin{frame}{Structure in Nature}
-\includegraphics[width=\textwidth]{structure.png}
+	\section{Results - 1 polymer layer}
+
+\begin{frame}{Polystyrene}
+\begin{center}
+\Huge Movie: PSsva.avi
+\end{center}
 \end{frame}
+
+\begin{frame}{Polystyrene Results}
+\includegraphics[width=\textwidth]{PSswelling1.png}
+\end{frame}
+
+\begin{frame}{Polystyrene MSE}
+\includegraphics[width=\textwidth]{PSswelling2.png}
+\end{frame}
+
+
+\begin{frame}{Polyisoprene}
+\begin{center}
+\Huge Movie:PIsvaframevalue2.avi
+\end{center}
+\end{frame}
+
+\begin{frame}{Polyisoprene Results}
+\includegraphics[width=\textwidth]{PIswelling1.png}
+\end{frame}
+
+\begin{frame}{Polyisoprene MSE}
+\includegraphics[width=\textwidth]{PIswelling2.png}
+\end{frame}
+
+\begin{frame}{Polystyrene-b-polyisoprene}
+\begin{center}
+\huge Movie: PSbPIsinglemodel.avi
+\end{center}
+\end{frame}
+
+\begin{frame}{Polystyrene-b-polyisoprene Results}
+\includegraphics[width=\textwidth]{PSbPIsinglemodel1.png}
+\end{frame}
+
+\begin{frame}{Polystyrene-b-polyisoprene MSE}
+\includegraphics[width=\textwidth]{PSbPIsinglemodel2.png}
+\end{frame}
+
+	\section{Results - 2 polymer layers}
+	
+	\section{Using a 3rd party apparatus and software}
+\begin{frame}{}
+content...
+\end{frame}
+
+\section{Missing}
 
 
 
