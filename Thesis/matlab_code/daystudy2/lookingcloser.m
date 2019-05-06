@@ -18,10 +18,10 @@ wavelength = (400:1041);
 % Plotting %
 %%%%%%%%%%%%
 
-diff1 = y(1,:) - y(4,:);
-diff2 = y(1,:) - y(7,:);
-diff3 = y(1,:) - y(10,:);
-diff4 = y(1,:) - y(13,:);
+diff1 = abs(y(1,:) - y(4,:));
+diff2 = abs(y(1,:) - y(7,:));
+diff3 = abs(y(1,:) - y(10,:));
+diff4 = abs(y(1,:) - y(13,:));
 
 
 
