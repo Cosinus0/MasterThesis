@@ -11,6 +11,7 @@
 \usepackage{multimedia}
 \usepackage{media9}
 \usepackage{caption}
+\usepackage{multicol}
 \graphicspath{{figures/}}
 
 \usepackage{wrapfig}
@@ -34,10 +35,17 @@
 
 \maketitle
 
-\begin{frame}{Table of contents}
-  \setbeamertemplate{section in toc}[sections numbered]
-  \tableofcontents[hideallsubsections]
+\begin{frame}{Tabel of contents}
+\begin{multicols}{2}
+\setbeamertemplate{section in toc}[sections numbered]
+\tableofcontents[hideallsubsections]
+\end{multicols}
 \end{frame}
+
+%\begin{frame}{Table of contents}
+%  \setbeamertemplate{section in toc}[sections numbered]
+%  \tableofcontents[hideallsubsections]
+%\end{frame}
 
 	\section{Master Thesis Prelude}
 
@@ -116,7 +124,7 @@ Single Point Stage and SVA test chamber.
 \begin{frame}{Step Wafer}
 	\begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth,angle=-90]{stepwafer.JPG}
+	\includegraphics[scale=0.06,angle=-90]{stepwafer.JPG}
 	\end{figure}
 \end{frame}
 	
@@ -158,6 +166,27 @@ Reflectance = \frac{Meas-Dark}{Ref}\cdot R_{sub}
 
 
 	\section{Polymers}
+	
+\begin{frame}{Polymers used in Master Thesis}    
+    \begin{columns}[t]
+        \column{.5\textwidth}
+        \includegraphics[width=\columnwidth,height=3cm]{pswebsite.jpg}
+        \captionof{figure}{Source:www.isowall.co.za}
+        \includegraphics[width=\columnwidth,height=3cm]{PSphoto1.png}
+        \captionof{figure}{Polystyrene wafer}
+        \column{.5\textwidth}
+        \includegraphics[width=\columnwidth,height=3cm]{piwebsite.jpeg}
+        \captionof{figure}{Source:wbcsd.org}
+        \includegraphics[width=\columnwidth,height=3cm]{PIphoto1.png}
+        \captionof{figure}{Polyisoprene wafer}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Polymers used in Master Thesis}
+\centering
+\includegraphics[scale=0.8]{PSbPIBsva.png}
+\captionof{figure}{Polystyrene-b-polyisoprene}
+\end{frame}
 
 	
 
@@ -228,8 +257,8 @@ Reflectance = \frac{Meas-Dark}{Ref}\cdot R_{sub}
 
 
 \begin{align*}
-r_{0123} &= \frac{r_{01}+r_{123}\exp{-i2\beta_1}}{1+r_{01}r_{123}\exp{-i2\beta_1}}\\
-r_{123} &= \frac{r_{12}+r_{23}\exp{-i2\beta_2}}{1+r_{12}r_{23}\exp{-i2\beta_2}}\\
+r_{0123} &= \frac{r_{01}+r_{123}\exp{(-i2\beta_1)}}{1+r_{01}r_{123}\exp{(-i2\beta_1)}}\\
+r_{123} &= \frac{r_{12}+r_{23}\exp{(-i2\beta_2)}}{1+r_{12}r_{23}\exp{(-i2\beta_2)}}\\
 r_jk &= \frac{N_k-N_j}{N_j+N_k}\\
 R_{0123} &= \mid r_{0123} \mid ^2 \\
 \beta_i &= \frac{2\pi d_i}{\lambda}N_i
@@ -260,7 +289,9 @@ $N_0$,$N_1$,$N_2$,$d_1$ and $d_2$ fitted during solvent vapour annealing.
 \end{frame}
 
 \begin{frame}{Plotted Fresnel models}
-
+\begin{center}
+\Huge Movie:varyRI.avi
+\end{center}
 \end{frame}	
 
 	\section{Solvent vapour Annealing}
@@ -273,18 +304,20 @@ $N_0$,$N_1$,$N_2$,$d_1$ and $d_2$ fitted during solvent vapour annealing.
 	
 \begin{frame}{Light Fluctuation}
 \centering
-\includegraphics[height=0.35\textheight]{refldiffday.png}
-\captionof{figure}{}
-\includegraphics[height=0.35\textheight]{lightstudy2.png}
-\captionof{figure}{}
+\includegraphics[width=\textwidth]{refldiffday.png}
+\captionof{figure}{Light Fluction study 1}
+\end{frame}
+\begin{frame}{Light Fluctuation continued}
+\includegraphics[width=\textwidth]{lightstudy2.png}
+\captionof{figure}{Light Fluction study 2}
 \end{frame}
 
 \begin{frame}{Solvent vapour annealing ambient study}
 \centering
 \includegraphics[height=0.35\textheight]{ambientreflectancestep.png}
-\captionof{figure}{}
+\captionof{figure}{Reflectance curves at different times during SVA}
 \includegraphics[height=0.35\textheight]{ambientstudyrefr.png}
-\captionof{figure}{}
+\captionof{figure}{Ambient refractive index}
 \end{frame}
 
 
@@ -373,11 +406,23 @@ $N_0$,$N_1$,$N_2$,$d_1$ and $d_2$ fitted during solvent vapour annealing.
 \end{columns}
 \end{frame}
 
+	\section{Conclusion}
+	
+\begin{frame}{Conclusion}
+
+\begin{itemize}
+\item Fresnel equations easily calculated
+\item Care when taking dark measurements
+\item Homopolymer Fresnel model seems optimal for polystyrene and polyisoprene   
+\end{itemize}
+
+\end{frame}
+
 	\section{Results - 2 polymer layers}
 	
 \begin{frame}{PS-b-PI}
 \begin{center}
-	\huge Movie: PSbPIfit2layermodel.avi (Might Delete)
+	\huge Movie: PSbPIfit2layermodelV2.avi
 \end{center}
 \end{frame}
 
@@ -405,12 +450,7 @@ $N_0$,$N_1$,$N_2$,$d_1$ and $d_2$ fitted during solvent vapour annealing.
 \end{columns}
 \end{frame}
 	
-	\section{Using a 3rd party apparatus and software}
-\begin{frame}{}
-content...
-\end{frame}
-
-\section{Missing}
+	\section{Perspective}
 
 
 

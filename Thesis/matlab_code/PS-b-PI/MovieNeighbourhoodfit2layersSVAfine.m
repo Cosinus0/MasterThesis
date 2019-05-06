@@ -49,12 +49,45 @@ for i=1:numframes
     r_01234 = thinfilmlayer5(V2framevaluesfine(i,1),V2framevaluesfine(i,2),V2framevaluesfine(i,3),n_3,n_4,V2framevaluesfine(i,4),V2framevaluesfine(i,5),d_3,wavelength);
     R_01234 = r_01234.*conj(r_01234); 
     
+    subplot(4,1,1)
     plot(wavelength,refldata(i,:),wavelength,R_01234)
     axis([450 900 0 1])
     title({['PSbPI swelling 2 Layer fitting, start n=1.5'];['Seconds =',num2str(i*10)];['MSE =',num2str(V2framevaluesfine(i,6))]})
-    xlabel('Wavelength')
-    ylabel('Reflectance')
-    legend('Reflectance','Fresnel')
+
+    
+%     xlabel('Wavelength')
+%     ylabel('Reflectance')
+%     legend('Reflectance','Fresnel')
+    
+    subplot(4,1,2)
+    plot((1:numframes).*10,V2framevaluesfine(:,1),(1:i).*10,V2framevaluesfine(1:i,1))
+    axis([0 10000 1 1.2])
+    yticks([1 1.1 1.2])
+    legend('Ambient R-I','Ambient R-I')
+    hold on
+    %hline([1.1],{'k:'},{''})
+    line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+    hold off
+    
+    subplot(4,1,3)
+    plot((1:numframes).*10,V2framevaluesfine(:,4),(1:i).*10,V2framevaluesfine(1:i,4))
+    axis([0 10000 50 125])
+    yticks([50 75 100 125])
+    legend('Thickness Layer 1','Running Thickness Layer 1')
+    hold on
+    %hline([75 100],{'k:','k:'},{'',''})
+    line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+    hold off
+    
+    subplot(4,1,4)
+    plot((1:numframes).*10,V2framevaluesfine(:,5),(1:i).*10,V2framevaluesfine(1:i,5))
+    axis([0 10000 50 125])
+    yticks([50 75 100 125])
+    legend('Thickness Layer 2','Running Thickness Layer 2')
+    hold on
+    %hline([75 100],{'k:','k:'},{'',''})
+    line1 = vline([1000 2000 3000 4000 5500 6500 7500 8500 9500],{'k:','k:','k:','r:','r:','k:','k:','k:'},{'','','','Max swelling','','','',''});
+    hold off
     
     frame = getframe(gcf);
     writeVideo(v,frame);
